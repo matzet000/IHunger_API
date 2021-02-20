@@ -5,7 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mappings\" />
+    <Compile Remove="Migrations\20210220184905_initial.cs" />
+    <Compile Remove="Migrations\20210220184905_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210220185353_initial.cs" />
+    <Compile Remove="Migrations\20210220185353_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210220190355_initial.cs" />
+    <Compile Remove="Migrations\20210220190355_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210220193247_initial.cs" />
+    <Compile Remove="Migrations\20210220193247_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210220194126_teste.cs" />
+    <Compile Remove="Migrations\20210220194126_teste.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repository\" />
   </ItemGroup>
 

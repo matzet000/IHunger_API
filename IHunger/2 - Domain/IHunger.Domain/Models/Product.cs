@@ -8,7 +8,7 @@ namespace IHunger.Domain.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public Boolean Vegan { get; set; }
         public Boolean Vegetarian { get; set; }
         public Boolean Kosher { get; set; }
@@ -16,7 +16,9 @@ namespace IHunger.Domain.Models
 
         #region EFCRelations
         public CategoryProduct CategoryProduct { get; set; }
-        public IEnumerable<Item> Items { get; set; }
+        public Guid RestaurantId { get; set; }
+        public Restaurant Restaurant { get; set; }
+        public IEnumerable<Item> Itens { get; set; }
 
         #endregion
     }

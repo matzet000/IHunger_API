@@ -58,7 +58,7 @@ namespace IHunger.WebAPI.Configuration
                             .AllowAnyHeader());
             });
 
-            services.AddHealthChecksUI();
+            //services.AddHealthChecksUI();
 
             return services;
         }
@@ -90,6 +90,8 @@ namespace IHunger.WebAPI.Configuration
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                
+                /*
                 endpoints.MapHealthChecks("/api/hc", new HealthCheckOptions()
                 {
                     Predicate = _ => true,
@@ -104,7 +106,8 @@ namespace IHunger.WebAPI.Configuration
                     options.UseRelativeResourcesPath = false;
                     options.UseRelativeWebhookPath = false;
                 });
-
+                */
+                
             });
 
             return app;

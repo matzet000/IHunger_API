@@ -24,7 +24,7 @@ namespace IHunger.WebAPI.Configuration
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDefaultIdentity<User>()
-                .AddRoles<IdentityRole>()
+                .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<DataIdentityDbContext>()
                 .AddDefaultTokenProviders();
 

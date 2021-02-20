@@ -7,7 +7,7 @@ namespace IHunger.Domain.Models
     public class Comment : Entity
     {
         public string Text { get; set; }
-        public double Starts { get; set; }
+        public decimal Starts { get; set; }
 
         #region EFCRelations
         public Guid RatingId { get; set; }

@@ -6,7 +6,7 @@ namespace IHunger.Domain.Models
 {
     public class Rating : Entity
     {
-        public double Starts { get; set; }
+        public decimal Starts { get; set; }
 
         #region EFCRelations
         public IEnumerable<Comment> Comments { get; set; }

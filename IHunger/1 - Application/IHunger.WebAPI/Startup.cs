@@ -38,11 +38,6 @@ namespace IHunger.WebAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
-
             services.AddIdentityConfig(Configuration);
 
             services.AddApiConfig();

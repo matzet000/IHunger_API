@@ -6,7 +6,7 @@ namespace IHunger.Domain.Models
 {
     public class Order : Entity
     {
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public TypeOrderStatus OrderStatus { get; set; }
 
         #region EFCRelations

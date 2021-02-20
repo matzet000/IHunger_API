@@ -17,7 +17,6 @@ namespace IHunger.WebAPI.Configuration
     {
         public static IServiceCollection ResolveDependencies(this IServiceCollection services)
         {
-            services.AddScoped<DataDbContext>();
             services.AddScoped<DataIdentityDbContext>();
 
             services.AddScoped<INotifier, Notifier>();

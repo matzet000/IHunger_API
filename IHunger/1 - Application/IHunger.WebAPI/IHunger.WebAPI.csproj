@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>e45da69e-f600-4ad3-a58d-26d522df5d7f</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,10 +26,6 @@
     <ProjectReference Include="..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
     <ProjectReference Include="..\..\3 - Service\IHunger.Service\IHunger.Service.csproj" />
     <ProjectReference Include="..\..\4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="V1\Controllers\" />
   </ItemGroup>
 
 
