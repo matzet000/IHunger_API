@@ -130,6 +130,5 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 
-appsettings.Development.json
-appsettings.Production.json
-appsettings.Staging.json
+*.json
+!appsettings.json
