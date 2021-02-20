@@ -1,4 +1,5 @@
 ﻿using IHunger.Domain.Interfaces;
+using IHunger.Domain.Notifications;
 using IHunger.Infra.Data.Context;
 using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Http;
@@ -19,6 +20,7 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<DataDbContext>();
             services.AddScoped<DataIdentityDbContext>();
 
+            services.AddScoped<INotifier, Notifier>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IUser, AspNetUser>();
 
