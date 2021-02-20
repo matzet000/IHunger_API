@@ -7,6 +7,7 @@ Food delivery API
 * HealthChecks
 * Swagger 
 * Fluent Validation
+* Identity 
 
 ## Architecture:
 * Layer architecture
