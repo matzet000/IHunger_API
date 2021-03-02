@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IHunger.Infra.Data.Migrations
 {
     [DbContext(typeof(DataIdentityDbContext))]
-    [Migration("20210220193345_initial")]
-    partial class initial
+    [Migration("20210302061515_Started")]
+    partial class Started
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -217,7 +217,8 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");

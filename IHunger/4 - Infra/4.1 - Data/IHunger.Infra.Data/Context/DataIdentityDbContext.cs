@@ -22,12 +22,11 @@ namespace IHunger.Infra.Data.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<Item> Itens { get; set; }
         public DbSet<Coupon> Coupons { get; set; }
-        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Restaurant> Comments { get; set; }
         public DbSet<CategoryRestaurant> CategoryRestaurants { get; set; }
         public DbSet<CategoryProduct> CategoryProducts { get; set; }
         public DbSet<AddressRestaurant> AddressRestaurants { get; set; }
         public DbSet<AddressUser> AddressUsers { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

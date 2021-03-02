@@ -33,10 +33,6 @@ namespace IHunger.Infra.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(15)");
 
-            builder.Property(p => p.Street)
-                .IsRequired()
-                .HasColumnType("varchar(80)");
-
             builder.Property(p => p.Latitude)
                 .HasColumnType("varchar(80)");
 

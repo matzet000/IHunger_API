@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IHunger.Infra.Data.Migrations
 {
-    public partial class initial : Migration
+    public partial class Started : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,7 +57,7 @@ namespace IHunger.Infra.Data.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Code = table.Column<string>(nullable: true),
+                    Code = table.Column<string>(type: "varchar(50)", nullable: false),
                     Value = table.Column<int>(nullable: false),
                     ExpireAt = table.Column<DateTime>(nullable: false)
                 },
