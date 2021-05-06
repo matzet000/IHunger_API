@@ -48,7 +48,7 @@ namespace IHunger.WebAPI.V1.Controllers
                 Name = registerUser.Name,
                 Email = registerUser.Email,
                 BirthDate = DateTime.Parse(registerUser.BirthDate),
-                Identity = registerUser.Identity,
+                IdentityDoc = registerUser.Identity,
                 EmailConfirmed = true
             };
 

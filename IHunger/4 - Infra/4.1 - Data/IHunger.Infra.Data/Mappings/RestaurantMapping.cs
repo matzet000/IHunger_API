@@ -26,16 +26,18 @@ namespace IHunger.Infra.Data.Mappings
                .HasColumnType("varchar(100)");
 
             builder.HasOne(r => r.CategoryRestaurant)
-                .WithOne(c => c.Restaurant);
+                .WithOne(a => a.Restaurant)
+                .HasForeignKey<Restaurant>(r => r.CategoryRestaurantId);
 
             builder.HasOne(r => r.AddressRestaurant)
-                .WithOne(a => a.Restaurant);
+                .WithOne(a => a.Restaurant)
+                .HasForeignKey<Restaurant>(r => r.AddressRestaurantId);
 
             builder.HasMany(r => r.Products)
                 .WithOne(c => c.Restaurant)
                 .HasForeignKey(c => c.RestaurantId);
 
-            builder.ToTable("Restaurants");
+            builder.ToTable("restaurant");
         }
     }
 }

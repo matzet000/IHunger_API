@@ -15,10 +15,11 @@ namespace IHunger.Domain.Models
         public string Image { get; set; }
 
         #region EFCRelations
-        public CategoryProduct CategoryProduct { get; set; }
+        public Guid CategoryProductId { get; set; }
+        public virtual CategoryProduct CategoryProduct { get; set; }
         public Guid RestaurantId { get; set; }
-        public Restaurant Restaurant { get; set; }
-        public IEnumerable<Item> Itens { get; set; }
+        public virtual Restaurant Restaurant { get; set; }
+        public virtual IEnumerable<Item> Itens { get; set; }
 
         #endregion
     }

@@ -21,7 +21,7 @@ namespace IHunger.Infra.Data.Mappings
                 .IsRequired()
                 .HasColumnType("DECIMAL");
 
-            builder.ToTable("Comments");
+            builder.ToTable("comment");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace IHunger.Infra.Data.Mappings
                .IsRequired()
                .HasColumnType("TINYINT");
 
-            builder.ToTable("Itens");
+            builder.ToTable("item");
         }
     }
 }

@@ -42,13 +42,14 @@ namespace IHunger.Infra.Data.Mappings
                .HasColumnType("varchar(100)");
 
             builder.HasOne(p => p.CategoryProduct)
-                .WithOne(c => c.Product);
+                .WithOne(c => c.Product)
+                .HasForeignKey<Product>(c => c.CategoryProductId);
 
             builder.HasMany(r => r.Itens)
                 .WithOne(c => c.Product)
                 .HasForeignKey(c => c.ProductId);
 
-            builder.ToTable("Products");
+            builder.ToTable("product");
         }
     }
 }

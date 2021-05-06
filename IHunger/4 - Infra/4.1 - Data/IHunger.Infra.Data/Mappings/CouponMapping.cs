@@ -27,7 +27,7 @@ namespace IHunger.Infra.Data.Mappings
                .WithOne(c => c.Coupon)
                .HasForeignKey(c => c.CouponId);
 
-            builder.ToTable("Coupons");
+            builder.ToTable("coupon");
         }
     }
 }

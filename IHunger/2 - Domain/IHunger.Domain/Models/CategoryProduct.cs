@@ -10,9 +10,7 @@ namespace IHunger.Domain.Models
         public string Description { get; set; }
 
         #region EFCRelations
-        public Guid ProductId { get; set; }
-        public Product Product { get; set; }
-
+        public virtual Product Product { get; set; }
         #endregion
     }
 }

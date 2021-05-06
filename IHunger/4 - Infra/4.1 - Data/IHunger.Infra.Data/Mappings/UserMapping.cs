@@ -12,7 +12,8 @@ namespace IHunger.Infra.Data.Mappings
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasOne(u => u.AddressUser)
-                .WithOne(a => a.User);
+                .WithOne(a => a.User)
+                .HasForeignKey<User>(a => a.AddressUserId);
 
             builder.HasMany(u => u.Orders)
                .WithOne(c => c.User)

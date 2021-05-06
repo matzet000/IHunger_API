@@ -11,7 +11,7 @@ namespace IHunger.Domain.Models
         public DateTime ExpireAt { get; set; }
 
         #region EFCRelations
-        public IEnumerable<Order> Orders { get; set; }
+        public virtual IEnumerable<Order> Orders { get; set; }
 
         #endregion
     }

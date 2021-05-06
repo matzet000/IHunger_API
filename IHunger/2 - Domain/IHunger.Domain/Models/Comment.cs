@@ -11,7 +11,7 @@ namespace IHunger.Domain.Models
 
         #region EFCRelations
         public Guid RatingId { get; set; }
-        public Rating Rating { get; set; }
+        public virtual Rating Rating { get; set; }
 
         #endregion
     }

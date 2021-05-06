@@ -22,7 +22,7 @@ namespace IHunger.Infra.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
-            builder.ToTable("CategorysProduct");
+            builder.ToTable("category_product");
         }
     }
 }

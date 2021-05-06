@@ -21,7 +21,7 @@ namespace IHunger.Infra.Data.Mappings
                 .WithOne(c => c.Rating)
                 .HasForeignKey(c => c.RatingId);
 
-            builder.ToTable("Ratings");
+            builder.ToTable("rating");
         }
     }
 }

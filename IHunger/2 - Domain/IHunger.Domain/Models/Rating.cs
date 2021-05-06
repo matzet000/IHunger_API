@@ -9,7 +9,7 @@ namespace IHunger.Domain.Models
         public decimal Starts { get; set; }
 
         #region EFCRelations
-        public IEnumerable<Comment> Comments { get; set; }
+        public virtual IEnumerable<Comment> Comments { get; set; }
         #endregion
     }
 }

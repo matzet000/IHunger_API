@@ -22,7 +22,7 @@ namespace IHunger.Infra.Data.Mappings
                 .HasColumnType("tinyint");
 
 
-            builder.ToTable("OrdersStatus");
+            builder.ToTable("order_status");
         }
     }
 }

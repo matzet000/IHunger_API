@@ -21,7 +21,7 @@ namespace IHunger.Infra.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
-            builder.ToTable("CategorysRestaurant");
+            builder.ToTable("category_restaurant");
         }
     }
 }

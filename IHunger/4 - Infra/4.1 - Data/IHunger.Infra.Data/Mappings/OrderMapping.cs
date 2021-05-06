@@ -22,7 +22,7 @@ namespace IHunger.Infra.Data.Mappings
                .HasForeignKey(c => c.OrderId);
 
 
-            builder.ToTable("Orders");
+            builder.ToTable("order");
         }
     }
 }

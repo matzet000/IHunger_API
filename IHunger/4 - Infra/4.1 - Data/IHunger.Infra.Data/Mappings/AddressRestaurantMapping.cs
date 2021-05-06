@@ -39,7 +39,7 @@ namespace IHunger.Infra.Data.Mappings
             builder.Property(p => p.Longitude)
                 .HasColumnType("varchar(80)");
 
-            builder.ToTable("AddressRestaurants");
+            builder.ToTable("address_restaurants");
         }
     }
 }

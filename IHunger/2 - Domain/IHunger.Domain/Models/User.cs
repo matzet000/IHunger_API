@@ -12,7 +12,7 @@ namespace IHunger.Domain.Models
         public string Name { get; set; }
 
         [Required]
-        public string Identity { get; set; }
+        public string IdentityDoc { get; set; }
 
         [Required]
         public DateTime BirthDate { get; set; }
@@ -20,8 +20,9 @@ namespace IHunger.Domain.Models
         public string Image { get; set; }
 
         #region EFCRelations
-        public AddressUser AddressUser { get; set; }
-        public IEnumerable<Order> Orders { get; set; }
+        public Guid AddressUserId { get; set; }
+        public virtual AddressUser AddressUser { get; set; }
+        public virtual IEnumerable<Order> Orders { get; set; }
 
         #endregion
     }
