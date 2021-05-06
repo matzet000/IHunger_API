@@ -49,6 +49,7 @@ namespace IHunger.Infra.Data.Context
 
                 if (entry.State == EntityState.Modified)
                 {
+                    entry.Property("UpdatedAt").CurrentValue = DateTime.Now;
                     entry.Property("CreatedAt").IsModified = false;
                 }
             }

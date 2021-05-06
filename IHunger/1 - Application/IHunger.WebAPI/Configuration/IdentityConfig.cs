@@ -23,7 +23,19 @@ namespace IHunger.WebAPI.Configuration
             services.AddDbContext<DataIdentityDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<User>()
+            services.AddDefaultIdentity<User>(x => 
+            {
+                x.Password.RequireDigit = true;
+                x.Password.RequireLowercase = true;
+                x.Password.RequireNonAlphanumeric = true;
+                x.Password.RequireUppercase = true;
+                x.Password.RequiredLength = 6;
+                x.Password.RequiredUniqueChars = 1;
+
+                x.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()_=?. ";
+                x.User.RequireUniqueEmail = true;
+            })
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<DataIdentityDbContext>()
                 .AddDefaultTokenProviders();

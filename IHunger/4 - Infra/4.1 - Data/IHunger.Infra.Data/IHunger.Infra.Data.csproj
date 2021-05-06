@@ -33,8 +33,4 @@
     <ProjectReference Include="..\..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>
