@@ -8,6 +8,7 @@ using IHunger.Infra.Data.Repository;
 using IHunger.Service;
 using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;

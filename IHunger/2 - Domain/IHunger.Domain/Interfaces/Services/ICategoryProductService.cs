@@ -1,4 +1,5 @@
-﻿using IHunger.Domain.Models;
+﻿using IHunger.Domain.Filters;
+using IHunger.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,5 +11,8 @@ namespace IHunger.Domain.Interfaces.Services
     {
         Task<CategoryProduct> Create(CategoryProduct categoryProduct);
         Task<List<CategoryProduct>> GetAll();
+        Task<List<CategoryProduct>> GetAllWithFilter(CategoryProductFilter categoryProductFilter);
+        Task<CategoryProduct> GetById(Guid id);
+        Task<CategoryProduct> Delete(Guid id);
     }
 }

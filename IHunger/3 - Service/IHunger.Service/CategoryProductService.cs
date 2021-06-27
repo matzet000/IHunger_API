@@ -1,11 +1,14 @@
-﻿using IHunger.Domain.Interfaces;
+﻿using IHunger.Domain.Filters;
+using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Repository;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Domain.Models.Validations;
+using LinqKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,6 +54,126 @@ namespace IHunger.Service
         public async Task<List<CategoryProduct>> GetAll()
         {
             return await _unitOfWork.RepositoryFactory.CategoryProductRepository.GetAll();
+        }
+
+        public async Task<List<CategoryProduct>> GetAllWithFilter(CategoryProductFilter categoryProductFilter)
+        {
+            Expression<Func<CategoryProduct, bool>> filter = null;
+            Func<IQueryable<CategoryProduct>, IOrderedQueryable<CategoryProduct>> ordeBy = null;
+            int? skip = null;
+            int? take = 25;
+
+            if (!string.IsNullOrWhiteSpace(categoryProductFilter.Name))
+            {
+                if(filter == null)
+                {
+                    filter = PredicateBuilder.New<CategoryProduct>();
+                    filter = x => true;
+                }
+
+                filter = filter.And(x => x.Name == categoryProductFilter.Name);
+            }
+
+            if (!string.IsNullOrWhiteSpace(categoryProductFilter.Description))
+            {
+                if (filter == null)
+                {
+                    filter = PredicateBuilder.New<CategoryProduct>();
+                    filter = x => true;
+                }
+
+                filter = filter.And(x => x.Description == categoryProductFilter.Description);
+            }
+
+            if (!string.IsNullOrWhiteSpace(categoryProductFilter.Order))
+            {
+                switch (categoryProductFilter.Order)
+                {
+                    case "Id":
+                        ordeBy = x => x.OrderBy(n => n.Id);
+                        break;
+                    case "Name":
+                        ordeBy = x => x.OrderBy(n => n.Name);
+                        break;
+                    case "Description":
+                        ordeBy = x => x.OrderBy(n => n.Description);
+                        break;
+                    case "CreatedAt":
+                        ordeBy = x => x.OrderBy(n => n.CreatedAt);
+                        break;
+                }
+            }
+
+            if(categoryProductFilter.Id != Guid.Empty)
+            {
+                if (filter == null)
+                {
+                    filter = PredicateBuilder.New<CategoryProduct>();
+                    filter = x => true;
+                }
+
+                filter = filter.And(x => x.Id == categoryProductFilter.Id);
+            }
+
+            if (categoryProductFilter.CreatedAt.Year > 1)
+            {
+                if (filter == null)
+                {
+                    filter = PredicateBuilder.New<CategoryProduct>();
+                    filter = x => true;
+                }
+
+                filter = filter.And(x => x.Id == categoryProductFilter.Id);
+            }
+
+            if (categoryProductFilter.PageIndex != null)
+            {
+                if(categoryProductFilter.PageIndex > 1)
+                {
+                    skip = categoryProductFilter.PageIndex * 25;
+                }
+            }
+
+            if (categoryProductFilter.PageSize != null)
+            {
+                if (categoryProductFilter.PageSize > 0)
+                {
+                    take = categoryProductFilter.PageSize;
+                }
+            }
+
+            return await _unitOfWork.RepositoryFactory.CategoryProductRepository.Search(filter, null, ordeBy, skip, take);
+        }
+
+        public async Task<CategoryProduct> GetById(Guid id)
+        {
+            return await _unitOfWork.RepositoryFactory.CategoryProductRepository.GetById(id);
+        }
+
+        public async Task<CategoryProduct> Delete(Guid id)
+        {
+            var categoryProduct = await _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository
+                .GetById(id);
+
+            if(categoryProduct == null)
+            {
+                NotifyError("Not found");
+                return await Task.FromResult<CategoryProduct>(null);
+            }
+
+            _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository.Remove(id);
+
+            if (await _unitOfWork.Commit())
+            {
+                return await Task.FromResult(categoryProduct);
+            }
+
+            NotifyError("Error deleting entity");
+            return await Task.FromResult<CategoryProduct>(null);
         }
     }
 }

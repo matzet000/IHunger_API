@@ -17,6 +17,8 @@ namespace IHunger.WebAPI.Extensions
                 .ForMember(x => x.CreatedAt, y => y.Ignore())
                 .ForMember(x => x.UpdatedAt, y => y.Ignore())
                 .ForMember(x => x.Id, y => y.Ignore());
+            CreateMap<CategoryProductCreatedViewModel, CategoryProduct>();
+
         }
     }
 }

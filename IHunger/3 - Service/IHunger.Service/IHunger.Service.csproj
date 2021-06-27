@@ -8,6 +8,7 @@
     <ProjectReference Include="..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
     <ProjectReference Include="..\..\4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj" />
     <PackageReference Include="FluentValidation" Version="9.5.1" />
+    <PackageReference Include="LinqKit" Version="1.1.24" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.12" />
   </ItemGroup>

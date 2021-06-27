@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using IHunger.Domain.Filters;
 using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
@@ -22,7 +23,7 @@ namespace IHunger.WebAPI.V1.Controllers
         public CategoryProductController(
             ICategoryProductService categoryProductService,
             IMapper mapper,
-            INotifier notifier, 
+            INotifier notifier,
             IUser appUser) : base(notifier, appUser)
         {
             _categoryProductService = categoryProductService;
@@ -30,7 +31,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<CategoryProductViewModel>> Create(CategoryProductViewModel categoryProductViewModel)
+        public async Task<ActionResult<CategoryProductViewModel>> Create(CategoryProductCreatedViewModel categoryProductViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
@@ -42,9 +43,21 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<CategoryProductViewModel>> GetAll()
+        public async Task<IEnumerable<CategoryProductViewModel>> GetAllWithFilter([FromQuery] CategoryProductFilter categoryProductFilter)
         {
-            return _mapper.Map<IEnumerable<CategoryProductViewModel>>(await _categoryProductService.GetAll());
+            return _mapper.Map<IEnumerable<CategoryProductViewModel>>(await _categoryProductService.GetAllWithFilter(categoryProductFilter));
+        }
+
+        [HttpGet("{id}")]
+        public async Task<CategoryProductViewModel> GetById(Guid id)
+        {
+            return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.GetById(id));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<CategoryProductViewModel> Delete(Guid id)
+        {
+            return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.GetById(id));
         }
     }
 }
