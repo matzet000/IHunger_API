@@ -9,8 +9,5 @@ namespace IHunger.Domain.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        #region EFCRelations
-        public virtual Restaurant Restaurant { get; set; }
-        #endregion
     }
 }

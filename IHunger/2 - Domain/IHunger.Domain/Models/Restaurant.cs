@@ -12,9 +12,8 @@ namespace IHunger.Domain.Models
 
         #region EFCRelations
         public virtual IEnumerable<Product> Products { get; set; }
-        public Guid CategoryRestaurantId { get; set; }
+        public virtual IEnumerable<Comment> Comments { get; set; }
         public virtual CategoryRestaurant CategoryRestaurant { get; set; }
-        public Guid AddressRestaurantId { get; set; }
         public virtual AddressRestaurant AddressRestaurant { get; set; }
 
         #endregion

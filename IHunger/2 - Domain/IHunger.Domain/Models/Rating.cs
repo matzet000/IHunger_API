@@ -7,9 +7,5 @@ namespace IHunger.Domain.Models
     public class Rating : Entity
     {
         public decimal Starts { get; set; }
-
-        #region EFCRelations
-        public virtual IEnumerable<Comment> Comments { get; set; }
-        #endregion
     }
 }

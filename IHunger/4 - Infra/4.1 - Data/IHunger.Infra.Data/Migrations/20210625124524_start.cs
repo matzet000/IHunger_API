@@ -3,50 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IHunger.Infra.Data.Migrations
 {
-    public partial class Frist : Migration
+    public partial class start : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "address_restaurants",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    CreatedAt = table.Column<DateTime>(nullable: false),
-                    UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Street = table.Column<string>(type: "varchar(80)", nullable: false),
-                    District = table.Column<string>(type: "varchar(80)", nullable: false),
-                    City = table.Column<string>(type: "varchar(80)", nullable: false),
-                    County = table.Column<string>(type: "varchar(80)", nullable: false),
-                    ZipCode = table.Column<string>(type: "varchar(15)", nullable: false),
-                    Latitude = table.Column<string>(type: "varchar(80)", nullable: true),
-                    Longitude = table.Column<string>(type: "varchar(80)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_address_restaurants", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "address_users",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    CreatedAt = table.Column<DateTime>(nullable: false),
-                    UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Street = table.Column<string>(type: "varchar(80)", nullable: false),
-                    District = table.Column<string>(type: "varchar(80)", nullable: false),
-                    City = table.Column<string>(type: "varchar(80)", nullable: false),
-                    County = table.Column<string>(type: "varchar(80)", nullable: false),
-                    ZipCode = table.Column<string>(type: "varchar(15)", nullable: false),
-                    Latitude = table.Column<string>(type: "varchar(80)", nullable: true),
-                    Longitude = table.Column<string>(type: "varchar(80)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_address_users", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -59,6 +19,31 @@ namespace IHunger.Infra.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUsers",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
+                    Email = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(nullable: false),
+                    PasswordHash = table.Column<string>(nullable: true),
+                    SecurityStamp = table.Column<string>(nullable: true),
+                    ConcurrencyStamp = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
+                    LockoutEnabled = table.Column<bool>(nullable: false),
+                    AccessFailedCount = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -137,42 +122,6 @@ namespace IHunger.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AspNetUsers",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    UserName = table.Column<string>(maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
-                    Email = table.Column<string>(maxLength: 256, nullable: true),
-                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(nullable: false),
-                    PasswordHash = table.Column<string>(nullable: true),
-                    SecurityStamp = table.Column<string>(nullable: true),
-                    ConcurrencyStamp = table.Column<string>(nullable: true),
-                    PhoneNumber = table.Column<string>(nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
-                    LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(nullable: false),
-                    IdentityDoc = table.Column<string>(nullable: false),
-                    BirthDate = table.Column<DateTime>(nullable: false),
-                    Image = table.Column<string>(nullable: true),
-                    AddressUserId = table.Column<Guid>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AspNetUsers_address_users_AddressUserId",
-                        column: x => x.AddressUserId,
-                        principalTable: "address_users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -194,53 +143,28 @@ namespace IHunger.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "restaurant",
+                name: "address_users",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Description = table.Column<string>(type: "varchar(200)", nullable: false),
-                    Image = table.Column<string>(type: "varchar(100)", nullable: false),
-                    CategoryRestaurantId = table.Column<Guid>(nullable: false),
-                    AddressRestaurantId = table.Column<Guid>(nullable: false)
+                    Street = table.Column<string>(type: "varchar(80)", nullable: false),
+                    District = table.Column<string>(type: "varchar(80)", nullable: false),
+                    City = table.Column<string>(type: "varchar(80)", nullable: false),
+                    County = table.Column<string>(type: "varchar(80)", nullable: false),
+                    ZipCode = table.Column<string>(type: "varchar(15)", nullable: false),
+                    Latitude = table.Column<string>(type: "varchar(80)", nullable: true),
+                    Longitude = table.Column<string>(type: "varchar(80)", nullable: true),
+                    UserId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_restaurant", x => x.Id);
+                    table.PrimaryKey("PK_address_users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_restaurant_address_restaurants_AddressRestaurantId",
-                        column: x => x.AddressRestaurantId,
-                        principalTable: "address_restaurants",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_restaurant_category_restaurant_CategoryRestaurantId",
-                        column: x => x.CategoryRestaurantId,
-                        principalTable: "category_restaurant",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "comment",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    CreatedAt = table.Column<DateTime>(nullable: false),
-                    UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Text = table.Column<string>(type: "varchar(200)", nullable: false),
-                    Starts = table.Column<decimal>(type: "DECIMAL", nullable: false),
-                    RatingId = table.Column<Guid>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_comment", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_comment_rating_RatingId",
-                        column: x => x.RatingId,
-                        principalTable: "rating",
+                        name: "FK_address_users_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -331,6 +255,29 @@ namespace IHunger.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "restaurant",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    Name = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Description = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Image = table.Column<string>(type: "varchar(100)", nullable: false),
+                    CategoryRestaurantId = table.Column<Guid>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_restaurant", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_restaurant_category_restaurant_CategoryRestaurantId",
+                        column: x => x.CategoryRestaurantId,
+                        principalTable: "category_restaurant",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "order",
                 columns: table => new
                 {
@@ -360,6 +307,62 @@ namespace IHunger.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "address_restaurants",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    Street = table.Column<string>(type: "varchar(80)", nullable: false),
+                    District = table.Column<string>(type: "varchar(80)", nullable: false),
+                    City = table.Column<string>(type: "varchar(80)", nullable: false),
+                    County = table.Column<string>(type: "varchar(80)", nullable: false),
+                    ZipCode = table.Column<string>(type: "varchar(15)", nullable: false),
+                    Latitude = table.Column<string>(type: "varchar(80)", nullable: true),
+                    Longitude = table.Column<string>(type: "varchar(80)", nullable: true),
+                    RestaurantId = table.Column<Guid>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_address_restaurants", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_address_restaurants_restaurant_RestaurantId",
+                        column: x => x.RestaurantId,
+                        principalTable: "restaurant",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "comment",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    Text = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Starts = table.Column<decimal>(type: "DECIMAL", nullable: false),
+                    RatingId = table.Column<Guid>(nullable: false),
+                    RestaurantId = table.Column<Guid>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_comment", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_comment_rating_RatingId",
+                        column: x => x.RatingId,
+                        principalTable: "rating",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_comment_restaurant_RestaurantId",
+                        column: x => x.RestaurantId,
+                        principalTable: "restaurant",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "product",
                 columns: table => new
                 {
@@ -373,7 +376,7 @@ namespace IHunger.Infra.Data.Migrations
                     Vegetarian = table.Column<bool>(type: "bit", nullable: false),
                     Kosher = table.Column<bool>(type: "bit", nullable: false),
                     Image = table.Column<string>(type: "varchar(100)", nullable: false),
-                    CategoryProductId = table.Column<Guid>(nullable: false),
+                    CategoryProductId = table.Column<Guid>(nullable: true),
                     RestaurantId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
@@ -423,6 +426,18 @@ namespace IHunger.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_address_restaurants_RestaurantId",
+                table: "address_restaurants",
+                column: "RestaurantId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_address_users_UserId",
+                table: "address_users",
+                column: "UserId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -450,12 +465,6 @@ namespace IHunger.Infra.Data.Migrations
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_AddressUserId",
-                table: "AspNetUsers",
-                column: "AddressUserId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "EmailIndex",
                 table: "AspNetUsers",
                 column: "NormalizedEmail");
@@ -471,6 +480,11 @@ namespace IHunger.Infra.Data.Migrations
                 name: "IX_comment_RatingId",
                 table: "comment",
                 column: "RatingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_comment_RestaurantId",
+                table: "comment",
+                column: "RestaurantId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_item_OrderId",
@@ -495,8 +509,7 @@ namespace IHunger.Infra.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_product_CategoryProductId",
                 table: "product",
-                column: "CategoryProductId",
-                unique: true);
+                column: "CategoryProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_product_RestaurantId",
@@ -504,20 +517,19 @@ namespace IHunger.Infra.Data.Migrations
                 column: "RestaurantId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_restaurant_AddressRestaurantId",
-                table: "restaurant",
-                column: "AddressRestaurantId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_restaurant_CategoryRestaurantId",
                 table: "restaurant",
-                column: "CategoryRestaurantId",
-                unique: true);
+                column: "CategoryRestaurantId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "address_restaurants");
+
+            migrationBuilder.DropTable(
+                name: "address_users");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -565,12 +577,6 @@ namespace IHunger.Infra.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "restaurant");
-
-            migrationBuilder.DropTable(
-                name: "address_users");
-
-            migrationBuilder.DropTable(
-                name: "address_restaurants");
 
             migrationBuilder.DropTable(
                 name: "category_restaurant");

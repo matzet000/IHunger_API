@@ -41,10 +41,6 @@ namespace IHunger.Infra.Data.Mappings
                .IsRequired()
                .HasColumnType("varchar(100)");
 
-            builder.HasOne(p => p.CategoryProduct)
-                .WithOne(c => c.Product)
-                .HasForeignKey<Product>(c => c.CategoryProductId);
-
             builder.HasMany(r => r.Itens)
                 .WithOne(c => c.Product)
                 .HasForeignKey(c => c.ProductId);

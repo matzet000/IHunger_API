@@ -24,7 +24,7 @@ namespace IHunger.Infra.Data.Repository
 
         public async Task Add(TEntity entity)
         {
-            DbSet.Add(entity);
+            await DbSet.AddAsync(entity);
             await SaveChanges();
         }
 

@@ -15,6 +15,12 @@
     <Compile Remove="Migrations\20210220193247_initial.Designer.cs" />
     <Compile Remove="Migrations\20210220194126_teste.cs" />
     <Compile Remove="Migrations\20210220194126_teste.Designer.cs" />
+    <Compile Remove="Migrations\20210506120145_Frist.cs" />
+    <Compile Remove="Migrations\20210506120145_Frist.Designer.cs" />
+    <Compile Remove="Migrations\20210625114522_start.cs" />
+    <Compile Remove="Migrations\20210625114522_start.Designer.cs" />
+    <Compile Remove="Migrations\20210625123409_start.cs" />
+    <Compile Remove="Migrations\20210625123409_start.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

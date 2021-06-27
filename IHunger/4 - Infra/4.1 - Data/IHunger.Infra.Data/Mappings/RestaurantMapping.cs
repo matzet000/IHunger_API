@@ -25,15 +25,11 @@ namespace IHunger.Infra.Data.Mappings
                .IsRequired()
                .HasColumnType("varchar(100)");
 
-            builder.HasOne(r => r.CategoryRestaurant)
-                .WithOne(a => a.Restaurant)
-                .HasForeignKey<Restaurant>(r => r.CategoryRestaurantId);
-
-            builder.HasOne(r => r.AddressRestaurant)
-                .WithOne(a => a.Restaurant)
-                .HasForeignKey<Restaurant>(r => r.AddressRestaurantId);
-
             builder.HasMany(r => r.Products)
+                .WithOne(c => c.Restaurant)
+                .HasForeignKey(c => c.RestaurantId);
+
+            builder.HasMany(r => r.Comments)
                 .WithOne(c => c.Restaurant)
                 .HasForeignKey(c => c.RestaurantId);
 

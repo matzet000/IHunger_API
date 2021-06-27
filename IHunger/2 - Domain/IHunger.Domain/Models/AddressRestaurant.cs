@@ -8,6 +8,7 @@ namespace IHunger.Domain.Models
     {
 
         #region EFCRelations
+        public Guid RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; }
 
         #endregion

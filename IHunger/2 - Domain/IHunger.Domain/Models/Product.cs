@@ -15,7 +15,6 @@ namespace IHunger.Domain.Models
         public string Image { get; set; }
 
         #region EFCRelations
-        public Guid CategoryProductId { get; set; }
         public virtual CategoryProduct CategoryProduct { get; set; }
         public Guid RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; }

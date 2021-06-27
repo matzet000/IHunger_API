@@ -17,10 +17,6 @@ namespace IHunger.Infra.Data.Mappings
                 .IsRequired()
                 .HasColumnType("DECIMAL");
 
-            builder.HasMany(r => r.Comments)
-                .WithOne(c => c.Rating)
-                .HasForeignKey(c => c.RatingId);
-
             builder.ToTable("rating");
         }
     }

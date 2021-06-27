@@ -63,11 +63,11 @@ namespace IHunger.WebAPI.Controllers
             foreach (var erro in erros)
             {
                 var errorMsg = erro.Exception == null ? erro.ErrorMessage : erro.Exception.Message;
-                NotificarErro(errorMsg);
+                NotifyError(errorMsg);
             }
         }
 
-        protected void NotificarErro(string mensagem)
+        protected void NotifyError(string mensagem)
         {
             _notifier.Handle(new Notification(mensagem));
         }

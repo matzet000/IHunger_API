@@ -42,25 +42,19 @@ namespace IHunger.WebAPI.V1.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var user = new User
-            {
-                UserName = registerUser.Email,
-                Name = registerUser.Name,
-                Email = registerUser.Email,
-                BirthDate = DateTime.Parse(registerUser.BirthDate),
-                IdentityDoc = registerUser.Identity,
-                EmailConfirmed = true
-            };
+            var user = registerUser.ToDomain();
 
             var result = await _userManager.CreateAsync(user, registerUser.Password);
+            
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
                 return CustomResponse(await GetJwt(user.Email));
             }
+
             foreach (var error in result.Errors)
             {
-                NotificarErro(error.Description);
+                NotifyError(error.Description);
             }
 
             return CustomResponse(registerUser);
@@ -76,14 +70,14 @@ namespace IHunger.WebAPI.V1.Controllers
             if (result.Succeeded)
             {
                 return CustomResponse(await GetJwt(loginUser.Email));
-            }
-            if (result.IsLockedOut)
+            } 
+            else if (result.IsLockedOut)
             {
-                NotificarErro("User temporarily blocked");
+                NotifyError("User temporarily blocked");
                 return CustomResponse(loginUser);
             }
 
-            NotificarErro("Usuário ou Senha incorretos");
+            NotifyError("Incorrect username or password");
             return CustomResponse(loginUser);
         }
 
@@ -103,8 +97,7 @@ namespace IHunger.WebAPI.V1.Controllers
                 claims.Add(new Claim("role", userRole));
             }
 
-            var identityClaims = new ClaimsIdentity();
-            identityClaims.AddClaims(claims);
+            var identityClaims = new ClaimsIdentity(claims);
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
@@ -123,12 +116,7 @@ namespace IHunger.WebAPI.V1.Controllers
             {
                 AccessToken = encodedToken,
                 ExpiresIn = TimeSpan.FromHours(_appSettings.ExpirationHours).TotalSeconds,
-                UserToken = new UserTokenViewModel
-                {
-                    Id = user.Id.ToString(),
-                    Email = user.Email,
-                    Claims = claims.Select(c => new ClaimViewModel { Type = c.Type, Value = c.Value })
-                }
+                UserToken = new UserTokenViewModel(user, claims)
             };
 
             return response;
