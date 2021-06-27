@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -20,10 +21,20 @@ namespace IHunger.WebAPI.Configuration
         public static IServiceCollection AddIdentityConfig(this IServiceCollection services,
            IConfiguration configuration)
         {
-            services.AddDbContext<DataIdentityDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddConsole()
+                    .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information);
+                loggingBuilder.AddDebug();
+            });
 
-            services.AddDefaultIdentity<User>(x => 
+            services.AddDbContext<DataIdentityDbContext>(options =>
+            {
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                options.EnableSensitiveDataLogging(true);
+            });
+
+            services.AddDefaultIdentity<User>(x =>
             {
                 x.Password.RequireDigit = true;
                 x.Password.RequireLowercase = true;

@@ -57,7 +57,7 @@ namespace IHunger.WebAPI.V1.Controllers
         [HttpDelete("{id}")]
         public async Task<CategoryProductViewModel> Delete(Guid id)
         {
-            return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.GetById(id));
+            return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.Delete(id));
         }
     }
 }

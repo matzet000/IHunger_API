@@ -16,12 +16,10 @@ namespace IHunger.Service
 {
     public class CategoryProductService : BaseService, ICategoryProductService
     {
-        private readonly INotifier _notifier;
         private readonly IUnitOfWork _unitOfWork;
 
         public CategoryProductService(INotifier notifier, IUnitOfWork unitOfWork) : base(notifier)
         {
-            _notifier = notifier;
             _unitOfWork = unitOfWork;
         }
 

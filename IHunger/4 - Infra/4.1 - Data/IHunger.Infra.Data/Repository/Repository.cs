@@ -40,7 +40,7 @@ namespace IHunger.Infra.Data.Repository
 
         public virtual async Task<TEntity> GetById(Guid id)
         {
-            return await DbSet.FindAsync(id);
+            return await DbSet.AsNoTracking().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
         public virtual void Remove(Guid id)
