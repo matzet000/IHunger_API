@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IHunger.Infra.Data.Migrations
 {
-    [DbContext(typeof(DataDbContext))]
+    [DbContext(typeof(DataIdentityDbContext))]
     [Migration("20210625124524_start")]
     partial class start
     {

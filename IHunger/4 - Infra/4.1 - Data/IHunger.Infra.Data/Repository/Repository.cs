@@ -2,6 +2,7 @@
 using IHunger.Domain.Models;
 using IHunger.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,6 @@ namespace IHunger.Infra.Data.Repository
         public async Task Add(TEntity entity)
         {
             await DbSet.AddAsync(entity);
-            await SaveChanges();
         }
 
         public void Dispose()
@@ -43,10 +43,9 @@ namespace IHunger.Infra.Data.Repository
             return await DbSet.FindAsync(id);
         }
 
-        public virtual async Task Remove(Guid id)
+        public virtual void Remove(Guid id)
         {
             DbSet.Remove(new TEntity { Id = id });
-            await SaveChanges();
         }
 
         public virtual async Task<int> SaveChanges()
@@ -54,16 +53,47 @@ namespace IHunger.Infra.Data.Repository
             return await Db.SaveChangesAsync();
         }
 
-        public virtual async Task<IEnumerable<TEntity>> Search(Expression<Func<TEntity, bool>> predicate)
+        public virtual async Task<List<TEntity>> Search(
+            Expression<Func<TEntity, bool>> predicate = null,
+            Func<System.Linq.IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            int? skip = null,
+            int? take = null)
         {
-            return await DbSet.AsNoTracking().Where(predicate).ToListAsync();
+            var query = DbSet.AsQueryable();
+            
+            if (predicate != null)
+            {
+                query = query.Where(predicate);
+            }
+
+            if (include != null)
+            {
+                query = include(query);
+            }
+
+            if (skip != null && skip.HasValue)
+            {
+                query = query.Skip(skip.Value);
+            }
+
+            if (take != null && take.HasValue)
+            {
+                query = query.Take(take.Value);
+            }
+
+            if (orderBy != null)
+            {
+                return await orderBy(query).ToListAsync();
+            }
+
+            return await query.ToListAsync();
         }
 
-        public virtual async Task Update(TEntity entity)
+        public virtual void Update(TEntity entity)
         {
             entity.UpdatedAt = DateTime.Now;
             DbSet.Update(entity);
-            await SaveChanges();
         }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IHunger.Infra.Data.Migrations
 {
-    [DbContext(typeof(DataDbContext))]
+    [DbContext(typeof(DataIdentityDbContext))]
     partial class DataIdentityDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

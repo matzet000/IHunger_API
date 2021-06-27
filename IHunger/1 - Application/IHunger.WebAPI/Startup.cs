@@ -39,6 +39,8 @@ namespace IHunger.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityConfig(Configuration);
+            
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddApiConfig();
             

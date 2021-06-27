@@ -14,5 +14,6 @@ Food delivery API
 * S.O.L.I.D. principles
 * Clean Code
 * Repository Pattern
+* Unit of work Pattern
 * Notification Pattern
 * Domain Driven Design

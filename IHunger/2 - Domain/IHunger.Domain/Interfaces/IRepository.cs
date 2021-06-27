@@ -1,6 +1,8 @@
 ﻿using IHunger.Domain.Models;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +14,14 @@ namespace IHunger.Domain.Interfaces
         Task Add(TEntity entity);
         Task<TEntity> GetById(Guid id);
         Task<List<TEntity>> GetAll();
-        Task Update(TEntity entity);
-        Task Remove(Guid id);
-        Task<IEnumerable<TEntity>> Search(Expression<Func<TEntity, bool>> predicate);
+        void Update(TEntity entity);
+        void Remove(Guid id);
+        Task<List<TEntity>> Search(
+            Expression<Func<TEntity, bool>> predicate = null,
+            Func<System.Linq.IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            int? skip = null,
+            int? take = null);
         Task<int> SaveChanges();
     }
 }

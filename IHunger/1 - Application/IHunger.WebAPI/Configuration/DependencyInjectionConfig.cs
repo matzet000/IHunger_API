@@ -2,6 +2,7 @@
 using IHunger.Domain.Interfaces.Repository;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Notifications;
+using IHunger.Infra.Data;
 using IHunger.Infra.Data.Context;
 using IHunger.Infra.Data.Repository;
 using IHunger.Service;
@@ -28,6 +29,8 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<IUser, AspNetUser>();
 
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+            
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             #region Repository
             services.AddScoped<IAddressRestaurantRepository, AddressRestaurantRepository>();
@@ -42,7 +45,6 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IRatingRepository, RatingRepository>();
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
 
             #endregion
 
