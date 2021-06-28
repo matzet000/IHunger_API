@@ -13,6 +13,7 @@ namespace IHunger.Domain.Interfaces.Services
         Task<List<CategoryProduct>> GetAll();
         Task<List<CategoryProduct>> GetAllWithFilter(CategoryProductFilter categoryProductFilter);
         Task<CategoryProduct> GetById(Guid id);
+        Task<CategoryProduct> Update(CategoryProduct categoryProduct);
         Task<CategoryProduct> Delete(Guid id);
     }
 }

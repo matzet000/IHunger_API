@@ -23,7 +23,7 @@ namespace IHunger.WebAPI.V1.Controllers
         public CategoryRestaurantController(
             ICategoryRestaurantService categoryRestaurantService,
             IMapper mapper,
-            INotifier notifier, 
+            INotifier notifier,
             IUser appUser) : base(notifier, appUser)
         {
             _categoryRestaurantService = categoryRestaurantService;
@@ -52,6 +52,19 @@ namespace IHunger.WebAPI.V1.Controllers
         public async Task<CategoryRestaurantViewModel> GetById(Guid id)
         {
             return _mapper.Map<CategoryRestaurantViewModel>(await _categoryRestaurantService.GetById(id));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<CategoryRestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryRestaurantViewModel categoryProductViewModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            if (id != categoryProductViewModel.Id) return NotFound();
+
+            var categoryProduct = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(categoryProductViewModel));
+
+            var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryProduct);
+
+            return CustomResponse(resp);
         }
 
         [HttpDelete("{id}")]

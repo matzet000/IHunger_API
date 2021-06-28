@@ -28,12 +28,12 @@ namespace IHunger.Service
         {
             if (!Validation(new CategoryRestaurantValidation(), categoryRestaurant)) return null;
 
-            var CategoryRestaurantBD = await _unitOfWork
+            var categoryRestaurantDb = await _unitOfWork
                 .RepositoryFactory
                 .CategoryRestaurantRepository
                 .Search(x => x.Name == categoryRestaurant.Name);
 
-            if (CategoryRestaurantBD != null && CategoryRestaurantBD.Any())
+            if (categoryRestaurantDb != null && categoryRestaurantDb.Any())
             {
                 NotifyError("Already exists CategoryRestaurant the same name");
                 return await Task.FromResult<CategoryRestaurant>(null);
@@ -149,14 +149,50 @@ namespace IHunger.Service
             return await _unitOfWork.RepositoryFactory.CategoryRestaurantRepository.GetById(id);
         }
 
+        public async Task<CategoryRestaurant> Update(CategoryRestaurant categoryRestaurant)
+        {
+            var categoryRestaurantDb = await _unitOfWork
+                .RepositoryFactory
+                .CategoryRestaurantRepository
+                .GetById(categoryRestaurant.Id);
+
+            if (categoryRestaurantDb == null)
+            {
+                NotifyError("Not found");
+                return await Task.FromResult<CategoryRestaurant>(null);
+            }
+            
+            if(categoryRestaurantDb.Name != categoryRestaurant.Name)
+            {
+                categoryRestaurantDb.Name = categoryRestaurant.Name;
+            }
+
+            if (categoryRestaurantDb.Description != categoryRestaurant.Description)
+            {
+                categoryRestaurantDb.Description = categoryRestaurant.Description;
+            }
+
+            _unitOfWork
+                .RepositoryFactory
+                .CategoryRestaurantRepository.Update(categoryRestaurantDb);
+
+            if (await _unitOfWork.Commit())
+            {
+                return await Task.FromResult(categoryRestaurantDb);
+            }
+
+            NotifyError("Error deleting entity");
+            return await Task.FromResult<CategoryRestaurant>(null);
+        }
+
         public async Task<CategoryRestaurant> Delete(Guid id)
         {
-            var CategoryRestaurant = await _unitOfWork
+            var categoryRestaurantDb = await _unitOfWork
                 .RepositoryFactory
                 .CategoryRestaurantRepository
                 .GetById(id);
 
-            if (CategoryRestaurant == null)
+            if (categoryRestaurantDb == null)
             {
                 NotifyError("Not found");
                 return await Task.FromResult<CategoryRestaurant>(null);
@@ -168,7 +204,7 @@ namespace IHunger.Service
 
             if (await _unitOfWork.Commit())
             {
-                return await Task.FromResult(CategoryRestaurant);
+                return await Task.FromResult(categoryRestaurantDb);
             }
 
             NotifyError("Error deleting entity");

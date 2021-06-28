@@ -54,6 +54,19 @@ namespace IHunger.WebAPI.V1.Controllers
             return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.GetById(id));
         }
 
+        [HttpPut("{id}")]
+        public async Task<ActionResult<CategoryProductViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryProductViewModel categoryProductViewModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            if (id != categoryProductViewModel.Id) return NotFound();
+
+            var categoryProduct = await _categoryProductService.Update(_mapper.Map<CategoryProduct>(categoryProductViewModel));
+
+            var resp = _mapper.Map<CategoryProductViewModel>(categoryProduct);
+
+            return CustomResponse(resp);
+        }
+
         [HttpDelete("{id}")]
         public async Task<CategoryProductViewModel> Delete(Guid id)
         {

@@ -14,18 +14,12 @@ namespace IHunger.WebAPI.Configuration
         public AutoMapperConfig()
         {
             CreateMap<CategoryProduct, CategoryProductViewModel>();
-            CreateMap<CategoryProductViewModel, CategoryProduct>()
-                .ForMember(x => x.CreatedAt, y => y.Ignore())
-                .ForMember(x => x.UpdatedAt, y => y.Ignore())
-                .ForMember(x => x.Id, y => y.Ignore());
             CreateMap<CategoryProductCreatedViewModel, CategoryProduct>();
+            CreateMap<CategoryProductViewModel, CategoryProduct>();
 
             CreateMap<CategoryRestaurant, CategoryRestaurantViewModel>();
-            CreateMap<CategoryRestaurantViewModel, CategoryRestaurant>()
-                .ForMember(x => x.CreatedAt, y => y.Ignore())
-                .ForMember(x => x.UpdatedAt, y => y.Ignore())
-                .ForMember(x => x.Id, y => y.Ignore());
             CreateMap<CategoryRestaurantCreatedViewModel, CategoryRestaurant>();
+            CreateMap<CategoryRestaurantViewModel, CategoryRestaurant>();
         }
     }
 }

@@ -147,6 +147,41 @@ namespace IHunger.Service
         {
             return await _unitOfWork.RepositoryFactory.CategoryProductRepository.GetById(id);
         }
+        public async Task<CategoryProduct> Update(CategoryProduct categoryProduct)
+        {
+            var categoryProductDb = await _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository
+                .GetById(categoryProduct.Id);
+
+            if (categoryProductDb == null)
+            {
+                NotifyError("Not found");
+                return await Task.FromResult<CategoryProduct>(null);
+            }
+
+            if (categoryProductDb.Name != categoryProduct.Name)
+            {
+                categoryProductDb.Name = categoryProduct.Name;
+            }
+
+            if (categoryProductDb.Description != categoryProduct.Description)
+            {
+                categoryProductDb.Description = categoryProduct.Description;
+            }
+
+            _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository.Update(categoryProductDb);
+
+            if (await _unitOfWork.Commit())
+            {
+                return await Task.FromResult<CategoryProduct>(categoryProductDb);
+            }
+
+            NotifyError("Error deleting entity");
+            return await Task.FromResult<CategoryProduct>(null);
+        }
 
         public async Task<CategoryProduct> Delete(Guid id)
         {
