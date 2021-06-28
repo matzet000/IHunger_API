@@ -18,7 +18,9 @@ namespace IHunger.Service
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryProductService(INotifier notifier, IUnitOfWork unitOfWork) : base(notifier)
+        public CategoryProductService(
+            INotifier notifier, 
+            IUnitOfWork unitOfWork) : base(notifier)
         {
             _unitOfWork = unitOfWork;
         }
@@ -38,7 +40,10 @@ namespace IHunger.Service
                 return await Task.FromResult<CategoryProduct>(null);
             }
 
-            await _unitOfWork.RepositoryFactory.CategoryProductRepository.Add(categoryProduct);
+            await _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository
+                .Add(categoryProduct);
 
             if(await _unitOfWork.Commit())
             {
@@ -51,7 +56,10 @@ namespace IHunger.Service
 
         public async Task<List<CategoryProduct>> GetAll()
         {
-            return await _unitOfWork.RepositoryFactory.CategoryProductRepository.GetAll();
+            return await _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository
+                .GetAll();
         }
 
         public async Task<List<CategoryProduct>> GetAllWithFilter(CategoryProductFilter categoryProductFilter)
@@ -140,13 +148,20 @@ namespace IHunger.Service
                 }
             }
 
-            return await _unitOfWork.RepositoryFactory.CategoryProductRepository.Search(filter, null, ordeBy, skip, take);
+            return await _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository
+                .Search(filter, null, ordeBy, skip, take);
         }
 
         public async Task<CategoryProduct> GetById(Guid id)
         {
-            return await _unitOfWork.RepositoryFactory.CategoryProductRepository.GetById(id);
+            return await _unitOfWork
+                .RepositoryFactory
+                .CategoryProductRepository
+                .GetById(id);
         }
+
         public async Task<CategoryProduct> Update(CategoryProduct categoryProduct)
         {
             var categoryProductDb = await _unitOfWork
@@ -172,7 +187,8 @@ namespace IHunger.Service
 
             _unitOfWork
                 .RepositoryFactory
-                .CategoryProductRepository.Update(categoryProductDb);
+                .CategoryProductRepository
+                .Update(categoryProductDb);
 
             if (await _unitOfWork.Commit())
             {
@@ -198,7 +214,8 @@ namespace IHunger.Service
 
             _unitOfWork
                 .RepositoryFactory
-                .CategoryProductRepository.Remove(id);
+                .CategoryProductRepository
+                .Remove(id);
 
             if (await _unitOfWork.Commit())
             {

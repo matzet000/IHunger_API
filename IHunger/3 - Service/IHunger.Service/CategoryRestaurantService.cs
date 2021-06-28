@@ -39,7 +39,10 @@ namespace IHunger.Service
                 return await Task.FromResult<CategoryRestaurant>(null);
             }
 
-            await _unitOfWork.RepositoryFactory.CategoryRestaurantRepository.Add(categoryRestaurant);
+            await _unitOfWork
+                .RepositoryFactory
+                .CategoryRestaurantRepository
+                .Add(categoryRestaurant);
 
             if (await _unitOfWork.Commit())
             {
@@ -52,7 +55,10 @@ namespace IHunger.Service
 
         public async Task<List<CategoryRestaurant>> GetAll()
         {
-            return await _unitOfWork.RepositoryFactory.CategoryRestaurantRepository.GetAll();
+            return await _unitOfWork
+                .RepositoryFactory
+                .CategoryRestaurantRepository
+                .GetAll();
         }
 
         public async Task<List<CategoryRestaurant>> GetAllWithFilter(CategoryRestaurantFilter CategoryRestaurantFilter)
@@ -141,12 +147,18 @@ namespace IHunger.Service
                 }
             }
 
-            return await _unitOfWork.RepositoryFactory.CategoryRestaurantRepository.Search(filter, null, ordeBy, skip, take);
+            return await _unitOfWork
+                .RepositoryFactory
+                .CategoryRestaurantRepository
+                .Search(filter, null, ordeBy, skip, take);
         }
 
         public async Task<CategoryRestaurant> GetById(Guid id)
         {
-            return await _unitOfWork.RepositoryFactory.CategoryRestaurantRepository.GetById(id);
+            return await _unitOfWork
+                .RepositoryFactory
+                .CategoryRestaurantRepository
+                .GetById(id);
         }
 
         public async Task<CategoryRestaurant> Update(CategoryRestaurant categoryRestaurant)
@@ -174,7 +186,8 @@ namespace IHunger.Service
 
             _unitOfWork
                 .RepositoryFactory
-                .CategoryRestaurantRepository.Update(categoryRestaurantDb);
+                .CategoryRestaurantRepository
+                .Update(categoryRestaurantDb);
 
             if (await _unitOfWork.Commit())
             {
@@ -200,7 +213,8 @@ namespace IHunger.Service
 
             _unitOfWork
                 .RepositoryFactory
-                .CategoryRestaurantRepository.Remove(id);
+                .CategoryRestaurantRepository
+                .Remove(id);
 
             if (await _unitOfWork.Commit())
             {

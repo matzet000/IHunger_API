@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/category-product")]
+    [Route("api/v{version:apiVersion}/category-products")]
     public class CategoryProductController : MainController
     {
         private readonly ICategoryProductService _categoryProductService;
