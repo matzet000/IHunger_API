@@ -72,8 +72,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<CategoryRestaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<CategoryRestaurant>(true);
                 }
 
                 filter = filter.And(x => x.Name == CategoryRestaurantFilter.Name);
@@ -83,8 +82,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<CategoryRestaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<CategoryRestaurant>(true);
                 }
 
                 filter = filter.And(x => x.Description == CategoryRestaurantFilter.Description);
@@ -113,8 +111,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<CategoryRestaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<CategoryRestaurant>(true);
                 }
 
                 filter = filter.And(x => x.Id == CategoryRestaurantFilter.Id);
@@ -124,8 +121,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<CategoryRestaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<CategoryRestaurant>(true);
                 }
 
                 filter = filter.And(x => x.Id == CategoryRestaurantFilter.Id);

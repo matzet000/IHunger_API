@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IHunger.Domain.Models
+namespace IHunger.Domain.Enumeration
 {
     public enum TypeOrderStatus
     {

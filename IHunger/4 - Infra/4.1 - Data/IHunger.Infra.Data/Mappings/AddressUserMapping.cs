@@ -39,9 +39,10 @@ namespace IHunger.Infra.Data.Mappings
             builder.Property(p => p.Longitude)
                 .HasColumnType("varchar(80)");
 
-            builder.HasOne(a => a.User)
+            builder.HasOne(a => a.ProfileUser)
                 .WithOne(a => a.AddressUser)
-                .HasForeignKey<AddressUser>(r => r.UserId);
+                .HasForeignKey<AddressUser>(r => r.ProfileUserId)
+                .IsRequired(false);
 
             builder.ToTable("address_users");
         }

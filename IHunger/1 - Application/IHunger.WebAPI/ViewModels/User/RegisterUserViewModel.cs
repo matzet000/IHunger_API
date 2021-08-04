@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IHunger.WebAPI.ViewModels.Profile;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace IHunger.WebAPI.ViewModels.User
         [Compare("Password", ErrorMessage = "Passwords do not match.")]
         public string ConfirmPassword { get; set; }
 
+        public ProfileViewModel Profile { get; set; }
+
         public Domain.Models.User ToDomain()
         {
             var entity = new Domain.Models.User();
@@ -26,6 +29,12 @@ namespace IHunger.WebAPI.ViewModels.User
             entity.UserName = Email;
             entity.Email = Email;
             entity.EmailConfirmed = true;
+
+            entity.ProfileUser = new Domain.Models.ProfileUser();
+            entity.ProfileUser.Name = Profile.Name;
+            entity.ProfileUser.LastName = Profile.LastName;
+            entity.ProfileUser.BirthDate = Profile.BirthDate;
+            entity.ProfileUser.Type = Profile.Type;
 
             return entity;
         }

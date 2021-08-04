@@ -11,9 +11,11 @@ namespace IHunger.Infra.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasMany(u => u.Orders)
-               .WithOne(c => c.User)
-               .HasForeignKey(c => c.UserId);
+            builder
+                .HasOne(p => p.ProfileUser)
+                .WithOne(p => p.User)
+                .HasForeignKey<ProfileUser>(p => p.UserId);
+
         }
     }
 }

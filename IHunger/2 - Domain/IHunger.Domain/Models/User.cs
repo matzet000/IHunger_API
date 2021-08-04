@@ -8,10 +8,9 @@ namespace IHunger.Domain.Models
 {
     public class User : IdentityUser<Guid>
     {
-        #region EFCRelations
-        public virtual AddressUser AddressUser { get; set; }
-        public virtual IEnumerable<Order> Orders { get; set; }
 
+        #region EFCRelations
+        public virtual ProfileUser ProfileUser { get; set; }
         #endregion
     }
 }

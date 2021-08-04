@@ -34,18 +34,18 @@ namespace IHunger.WebAPI.Configuration
                 options.EnableSensitiveDataLogging(true);
             });
 
-            services.AddDefaultIdentity<User>(x =>
+            services.AddDefaultIdentity<User>(options =>
             {
-                x.Password.RequireDigit = true;
-                x.Password.RequireLowercase = true;
-                x.Password.RequireNonAlphanumeric = true;
-                x.Password.RequireUppercase = true;
-                x.Password.RequiredLength = 6;
-                x.Password.RequiredUniqueChars = 1;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
 
-                x.User.AllowedUserNameCharacters =
+                options.User.AllowedUserNameCharacters =
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()_=?. ";
-                x.User.RequireUniqueEmail = true;
+                options.User.RequireUniqueEmail = true;
             })
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<DataIdentityDbContext>()
@@ -59,15 +59,15 @@ namespace IHunger.WebAPI.Configuration
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 
-            services.AddAuthentication(x =>
+            services.AddAuthentication(options =>
             {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(x =>
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
             {
-                x.RequireHttpsMetadata = true;
-                x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
+                options.RequireHttpsMetadata = true;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),

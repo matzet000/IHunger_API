@@ -27,6 +27,7 @@ namespace IHunger.Infra.Data.Context
         public DbSet<CategoryProduct> CategoryProducts { get; set; }
         public DbSet<AddressRestaurant> AddressRestaurants { get; set; }
         public DbSet<AddressUser> AddressUsers { get; set; }
+        public DbSet<ProfileUser> ProfileUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -45,6 +46,7 @@ namespace IHunger.Infra.Data.Context
                 if (entry.State == EntityState.Added)
                 {
                     entry.Property("CreatedAt").CurrentValue = DateTime.Now;
+                    entry.Property("UpdatedAt").CurrentValue = DateTime.Now;
                 }
 
                 if (entry.State == EntityState.Modified)

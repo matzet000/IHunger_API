@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IHunger.Domain.Enumeration;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,10 +12,12 @@ namespace IHunger.Domain.Models
 
         #region EFCRelations
         public IEnumerable<Item> Items { get; set; }
-        public virtual Coupon Coupon { get; set; }
+        
         public Guid? CouponId { get; set; }
-        public Guid UserId { get; set; }
-        public virtual User User { get; set; }
+        public virtual Coupon Coupon { get; set; }
+        
+        public Guid? ProfileUserId { get; set; }
+        public virtual ProfileUser ProfileUser { get; set; }
         #endregion
     }
 }

@@ -78,8 +78,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<Restaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<Restaurant>(true);
                 }
 
                 filter = filter.And(x => x.Name == restaurantFilter.Name);
@@ -89,8 +88,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<Restaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<Restaurant>(true);
                 }
 
                 filter = filter.And(x => x.Description == restaurantFilter.Description);
@@ -100,8 +98,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<Restaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<Restaurant>(true);
                 }
 
                 filter = filter.And(x => x.CategoryRestaurant.Name == restaurantFilter.CategoryName);
@@ -130,8 +127,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<Restaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<Restaurant>(true);
                 }
 
                 filter = filter.And(x => x.Id == restaurantFilter.Id);
@@ -141,8 +137,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<Restaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<Restaurant>(true);
                 }
 
                 filter = filter.And(x => x.CategoryRestaurant.Id == restaurantFilter.CategoryId);
@@ -152,8 +147,7 @@ namespace IHunger.Service
             {
                 if (filter == null)
                 {
-                    filter = PredicateBuilder.New<Restaurant>();
-                    filter = x => true;
+                    filter = PredicateBuilder.New<Restaurant>(true);
                 }
 
                 filter = filter.And(x => x.Id == restaurantFilter.Id);

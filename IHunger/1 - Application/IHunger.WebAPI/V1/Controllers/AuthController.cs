@@ -44,15 +44,15 @@ namespace IHunger.WebAPI.V1.Controllers
 
             var user = registerUser.ToDomain();
 
-            var result = await _userManager.CreateAsync(user, registerUser.Password);
+            var resultCreateUser = await _userManager.CreateAsync(user, registerUser.Password);
             
-            if (result.Succeeded)
+            if (resultCreateUser.Succeeded)
             {
                 await _signInManager.SignInAsync(user, false);
                 return CustomResponse(await GetJwt(user.Email));
             }
 
-            foreach (var error in result.Errors)
+            foreach (var error in resultCreateUser.Errors)
             {
                 NotifyError(error.Description);
             }

@@ -7,8 +7,8 @@ namespace IHunger.Domain.Models
     public class AddressUser : AddressBase
     {
         #region EFCRelations
-        public Guid UserId { get; set; }
-        public virtual User User { get; set; }
+        public Guid? ProfileUserId { get; set; }
+        public virtual ProfileUser ProfileUser { get; set; }
 
         #endregion
     }

@@ -5,6 +5,7 @@ using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.WebAPI.Controllers;
 using IHunger.WebAPI.ViewModels.CategoryRestaurant;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
+    [Authorize]
     [Route("api/v{version:apiVersion}/category-restaurants")]
     public class CategoryRestaurantController : MainController
     {
