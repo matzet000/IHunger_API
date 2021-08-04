@@ -27,13 +27,17 @@ namespace IHunger.Infra.Data.Mappings
 
             builder.HasMany(r => r.Products)
                 .WithOne(c => c.Restaurant)
-                .HasForeignKey(c => c.RestaurantId);
+                .HasForeignKey(c => c.IdRestaurant);
 
             builder.HasMany(r => r.Comments)
                 .WithOne(c => c.Restaurant)
-                .HasForeignKey(c => c.RestaurantId);
+                .HasForeignKey(c => c.IdRestaurant);
 
-            builder.ToTable("restaurant");
+            builder.Property(x => x.IdAddressRestaurant).IsRequired();
+            builder.HasOne(x => x.AddressRestaurant).WithMany().HasForeignKey(x => x.IdAddressRestaurant);
+
+            builder.Property(x => x.IdCategoryRestaurant).IsRequired();
+            builder.HasOne(x => x.CategoryRestaurant).WithMany().HasForeignKey(x => x.IdCategoryRestaurant);
         }
     }
 }

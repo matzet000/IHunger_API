@@ -20,8 +20,6 @@ namespace IHunger.Infra.Data.Mappings
             builder.Property(c => c.Name)
                 .IsRequired()
                 .HasColumnType("varchar(50)");
-
-            builder.ToTable("category_restaurant");
         }
     }
 }

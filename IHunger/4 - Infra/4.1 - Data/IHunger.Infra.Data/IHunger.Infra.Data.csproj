@@ -23,12 +23,21 @@
     <Compile Remove="Migrations\20210625123409_start.Designer.cs" />
     <Compile Remove="Migrations\20210625124524_start.cs" />
     <Compile Remove="Migrations\20210625124524_start.Designer.cs" />
+    <Compile Remove="Migrations\20210804074340_start.cs" />
+    <Compile Remove="Migrations\20210804074340_start.Designer.cs" />
+    <Compile Remove="Migrations\20210804090037_start.cs" />
+    <Compile Remove="Migrations\20210804090037_start.Designer.cs" />
+    <Compile Remove="Migrations\20210804172055_start.cs" />
+    <Compile Remove="Migrations\20210804172055_start.Designer.cs" />
+    <Compile Remove="Migrations\20210804173701_start.cs" />
+    <Compile Remove="Migrations\20210804173701_start.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.17">
@@ -39,10 +48,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

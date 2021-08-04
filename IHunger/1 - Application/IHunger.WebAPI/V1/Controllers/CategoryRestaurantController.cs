@@ -1,21 +1,21 @@
 ﻿using AutoMapper;
-using IHunger.Domain.Filters;
 using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
+using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
 using IHunger.WebAPI.ViewModels.CategoryRestaurant;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/v{version:apiVersion}/category-restaurants")]
     public class CategoryRestaurantController : MainController
     {
@@ -33,11 +33,11 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<CategoryRestaurantViewModel>> Create(CategoryRestaurantCreatedViewModel categoryProductViewModel)
+        public async Task<ActionResult<CategoryRestaurantViewModel>> Create(CategoryRestaurantCreatedViewModel categoryRestaurantViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var categoryProduct = await _categoryRestaurantService.Create(_mapper.Map<CategoryRestaurant>(categoryProductViewModel));
+            var categoryProduct = await _categoryRestaurantService.Create(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
 
             var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryProduct);
 
@@ -45,9 +45,9 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<CategoryRestaurantViewModel>> GetAllWithFilter([FromQuery] CategoryRestaurantFilter categoryProductFilter)
+        public async Task<IEnumerable<CategoryRestaurantViewModel>> GetAllWithFilter([FromQuery] CategoryRestaurantFilter categoryRestaurantFilter)
         {
-            return _mapper.Map<IEnumerable<CategoryRestaurantViewModel>>(await _categoryRestaurantService.GetAllWithFilter(categoryProductFilter));
+            return _mapper.Map<IEnumerable<CategoryRestaurantViewModel>>(await _categoryRestaurantService.GetAllWithFilter(categoryRestaurantFilter));
         }
 
         [HttpGet("{id}")]
@@ -57,12 +57,12 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<CategoryRestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryRestaurantViewModel categoryProductViewModel)
+        public async Task<ActionResult<CategoryRestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryRestaurantViewModel categoryRestaurantViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
-            if (id != categoryProductViewModel.Id) return NotFound();
+            if (id != categoryRestaurantViewModel.Id) return NotFound();
 
-            var categoryProduct = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(categoryProductViewModel));
+            var categoryProduct = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
 
             var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryProduct);
 

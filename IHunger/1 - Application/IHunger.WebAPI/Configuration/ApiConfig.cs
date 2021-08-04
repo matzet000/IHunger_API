@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,7 @@ namespace IHunger.WebAPI.Configuration
                 options.SuppressModelStateInvalidFilter = true;
 
             });
-
+            
             services.AddCors(options =>
             {
                 options.AddPolicy("Development",
@@ -60,6 +61,9 @@ namespace IHunger.WebAPI.Configuration
 
             //services.AddHealthChecksUI();
 
+            services.AddControllers()
+                .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             return services;
         }
 
@@ -75,13 +79,12 @@ namespace IHunger.WebAPI.Configuration
                 app.UseCors("Production");
                 app.UseHsts();
             }
-
+            
             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -90,7 +93,7 @@ namespace IHunger.WebAPI.Configuration
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                
+
                 /*
                 endpoints.MapHealthChecks("/api/hc", new HealthCheckOptions()
                 {
@@ -107,7 +110,7 @@ namespace IHunger.WebAPI.Configuration
                     options.UseRelativeWebhookPath = false;
                 });
                 */
-                
+
             });
 
             return app;

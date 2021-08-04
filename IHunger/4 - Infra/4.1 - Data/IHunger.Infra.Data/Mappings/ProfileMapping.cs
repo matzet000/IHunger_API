@@ -29,7 +29,12 @@ namespace IHunger.Infra.Data.Mappings
 
             builder.HasMany(u => u.Orders)
                .WithOne(c => c.ProfileUser)
-               .HasForeignKey(c => c.ProfileUserId);
+               .HasForeignKey(c => c.IdProfileUser)
+               .IsRequired(false);
+
+            builder.Property(x => x.IdAddressUser).IsRequired();
+
+            builder.HasOne(x => x.AddressUser).WithMany().HasForeignKey(x => x.IdAddressUser);
         }
     }
 }

@@ -1,8 +1,11 @@
-﻿using IHunger.Domain.Interfaces;
+﻿using IHunger.Domain.Enumeration;
+using IHunger.Domain.Interfaces;
+using IHunger.Domain.Interfaces.Repository;
 using IHunger.Domain.Models;
 using IHunger.WebAPI.Controllers;
 using IHunger.WebAPI.Extensions;
 using IHunger.WebAPI.ViewModels.User;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -25,18 +28,23 @@ namespace IHunger.WebAPI.V1.Controllers
         private readonly UserManager<User> _userManager;
         private readonly AppSettings _appSettings;
 
+        private readonly IProfileUserRepository _profileUserRepository;
+
         public AuthController(
             INotifier notifier,
             SignInManager<User> signInManager,
             UserManager<User> userManager,
             IOptions<AppSettings> appSettings,
+            IProfileUserRepository profileUserRepository,
             IUser user) : base(notifier, user)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _appSettings = appSettings.Value;
+            _profileUserRepository = profileUserRepository;
         }
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<ActionResult> Register(RegisterUserViewModel registerUser)
         {
@@ -60,6 +68,7 @@ namespace IHunger.WebAPI.V1.Controllers
             return CustomResponse(registerUser);
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult> Login(LoginUserViewModel loginUser)
         {
@@ -92,6 +101,7 @@ namespace IHunger.WebAPI.V1.Controllers
             claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
             claims.Add(new Claim(JwtRegisteredClaimNames.Nbf, ToUnixEpochDate(DateTime.UtcNow).ToString()));
             claims.Add(new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(DateTime.UtcNow).ToString(), ClaimValueTypes.Integer64));
+
             foreach (var userRole in userRoles)
             {
                 claims.Add(new Claim("role", userRole));

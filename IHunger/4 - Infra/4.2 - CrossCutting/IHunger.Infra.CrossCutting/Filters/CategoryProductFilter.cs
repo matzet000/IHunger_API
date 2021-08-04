@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IHunger.Domain.Filters
+namespace IHunger.Infra.CrossCutting.Filters
 {
     public class CategoryProductFilter
     {

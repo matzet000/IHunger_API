@@ -13,10 +13,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.17" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.17" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.17" />
@@ -27,6 +29,11 @@
     <ProjectReference Include="..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
     <ProjectReference Include="..\..\3 - Service\IHunger.Service\IHunger.Service.csproj" />
     <ProjectReference Include="..\..\4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\Rating\" />
+    <Folder Include="ViewModels\Product\" />
   </ItemGroup>
 
 

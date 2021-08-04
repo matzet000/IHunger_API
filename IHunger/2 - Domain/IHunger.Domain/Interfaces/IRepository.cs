@@ -18,7 +18,6 @@ namespace IHunger.Domain.Interfaces
         void Remove(Guid id);
         Task<List<TEntity>> Search(
             Expression<Func<TEntity, bool>> predicate = null,
-            Func<System.Linq.IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             int? skip = null,
             int? take = null);

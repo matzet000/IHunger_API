@@ -20,8 +20,6 @@ namespace IHunger.Infra.Data.Mappings
             builder.Property(c => c.Starts)
                 .IsRequired()
                 .HasColumnType("DECIMAL");
-
-            builder.ToTable("comment");
         }
     }
 }

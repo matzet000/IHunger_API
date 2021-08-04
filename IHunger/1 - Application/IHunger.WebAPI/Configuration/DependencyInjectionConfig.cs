@@ -46,6 +46,7 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IRatingRepository, RatingRepository>();
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+            services.AddScoped<IProfileUserRepository, ProfileUserRepository>();
 
             #endregion
 

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace IHunger.WebAPI.ViewModels.Profile
 {
-    public class ProfileViewModel
+    public class ProfileCreatedViewModel
     {
         public string Name { get; set; }
         public string LastName { get; set; }

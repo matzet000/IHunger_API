@@ -1,8 +1,7 @@
-﻿using IHunger.Domain.Filters;
-using IHunger.Domain.Models;
+﻿using IHunger.Domain.Models;
+using IHunger.Infra.CrossCutting.Filters;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace IHunger.Domain.Interfaces.Services

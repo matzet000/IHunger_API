@@ -29,6 +29,13 @@ namespace IHunger.Infra.Data.Context
         public DbSet<AddressUser> AddressUsers { get; set; }
         public DbSet<ProfileUser> ProfileUsers { get; set; }
 
+        /*
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseLazyLoadingProxies();
+        }
+        */
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataIdentityDbContext).Assembly);

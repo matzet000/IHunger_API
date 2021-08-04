@@ -10,11 +10,16 @@ namespace IHunger.Domain.Models
         public decimal Starts { get; set; }
 
         #region EFCRelations
-        public Guid RatingId { get; set; }
+        public Guid IdRating { get; set; }
         public virtual Rating Rating { get; set; }
-        public Guid RestaurantId { get; set; }
+        public Guid IdRestaurant { get; set; }
         public virtual Restaurant Restaurant { get; set; }
 
         #endregion
+
+        public Comment()
+        {
+
+        }
     }
 }

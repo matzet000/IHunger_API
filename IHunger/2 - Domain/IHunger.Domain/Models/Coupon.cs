@@ -14,5 +14,10 @@ namespace IHunger.Domain.Models
         public virtual IEnumerable<Order> Orders { get; set; }
 
         #endregion
+
+        public Coupon()
+        {
+
+        }
     }
 }

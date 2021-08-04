@@ -1,14 +1,13 @@
-﻿using IHunger.Domain.Filters;
-using IHunger.Domain.Interfaces;
+﻿using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Domain.Models.Validations;
+using IHunger.Infra.CrossCutting.Filters;
 using LinqKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace IHunger.Service
@@ -146,7 +145,7 @@ namespace IHunger.Service
             return await _unitOfWork
                 .RepositoryFactory
                 .CategoryRestaurantRepository
-                .Search(filter, null, ordeBy, skip, take);
+                .Search(filter, ordeBy, skip, take);
         }
 
         public async Task<CategoryRestaurant> GetById(Guid id)

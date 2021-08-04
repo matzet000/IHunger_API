@@ -1,4 +1,5 @@
-﻿using IHunger.WebAPI.ViewModels.Profile;
+﻿using IHunger.WebAPI.ViewModels.Address;
+using IHunger.WebAPI.ViewModels.Profile;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,7 +21,8 @@ namespace IHunger.WebAPI.ViewModels.User
         [Compare("Password", ErrorMessage = "Passwords do not match.")]
         public string ConfirmPassword { get; set; }
 
-        public ProfileViewModel Profile { get; set; }
+        public ProfileCreatedViewModel Profile { get; set; }
+        public AddressUserCreatedViewModel Address { get; set; }
 
         public Domain.Models.User ToDomain()
         {
@@ -36,6 +38,19 @@ namespace IHunger.WebAPI.ViewModels.User
             entity.ProfileUser.BirthDate = Profile.BirthDate;
             entity.ProfileUser.Type = Profile.Type;
 
+
+            if(Address != null)
+            {
+                entity.ProfileUser.AddressUser = new Domain.Models.AddressUser();
+                entity.ProfileUser.AddressUser.Street = Address.Street;
+                entity.ProfileUser.AddressUser.District = Address.District;
+                entity.ProfileUser.AddressUser.City = Address.City;
+                entity.ProfileUser.AddressUser.County = Address.County;
+                entity.ProfileUser.AddressUser.ZipCode = Address.ZipCode;
+                entity.ProfileUser.AddressUser.Latitude = Address.Latitude;
+                entity.ProfileUser.AddressUser.Longitude = Address.Longitude;
+            }
+            
             return entity;
         }
     }

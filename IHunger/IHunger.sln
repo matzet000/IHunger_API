@@ -13,13 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{E686F5A0-9EEF-470F-9E86-7A0685C0FDDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Domain", "2 - Domain\IHunger.Domain\IHunger.Domain.csproj", "{91A64F39-A662-45B7-8DA5-7E65AF7AB276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Domain", "2 - Domain\IHunger.Domain\IHunger.Domain.csproj", "{91A64F39-A662-45B7-8DA5-7E65AF7AB276}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Service", "3 - Service\IHunger.Service\IHunger.Service.csproj", "{CFE65409-F2E6-410C-A7E6-7F497DB87B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Service", "3 - Service\IHunger.Service\IHunger.Service.csproj", "{CFE65409-F2E6-410C-A7E6-7F497DB87B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Infra.Data", "4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj", "{A8DDF60C-848F-4148-B9CD-50DB60B7C445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Infra.Data", "4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj", "{A8DDF60C-848F-4148-B9CD-50DB60B7C445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.WebAPI", "1 - Application\IHunger.WebAPI\IHunger.WebAPI.csproj", "{9DF96FC6-9818-434F-B96B-47C6CEDEE2F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.WebAPI", "1 - Application\IHunger.WebAPI\IHunger.WebAPI.csproj", "{9DF96FC6-9818-434F-B96B-47C6CEDEE2F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{7D2BEF98-B6F0-4772-AB05-53C7E3E3A14C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Infra.CrossCutting", "4 - Infra\4.2 - CrossCutting\IHunger.Infra.CrossCutting\IHunger.Infra.CrossCutting.csproj", "{8D37C465-EDD0-493C-B67E-33E56528CCF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{9DF96FC6-9818-434F-B96B-47C6CEDEE2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DF96FC6-9818-434F-B96B-47C6CEDEE2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DF96FC6-9818-434F-B96B-47C6CEDEE2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D37C465-EDD0-493C-B67E-33E56528CCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D37C465-EDD0-493C-B67E-33E56528CCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D37C465-EDD0-493C-B67E-33E56528CCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D37C465-EDD0-493C-B67E-33E56528CCF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,8 @@ Global
 		{CFE65409-F2E6-410C-A7E6-7F497DB87B59} = {172FC6C8-37B2-477B-9313-1DB623B368E1}
 		{A8DDF60C-848F-4148-B9CD-50DB60B7C445} = {E686F5A0-9EEF-470F-9E86-7A0685C0FDDF}
 		{9DF96FC6-9818-434F-B96B-47C6CEDEE2F7} = {DAA04DAA-EA2E-4CDF-AC42-81FF44420370}
+		{7D2BEF98-B6F0-4772-AB05-53C7E3E3A14C} = {F1F4FC24-A01B-4731-A3D6-ED1C7373D2B3}
+		{8D37C465-EDD0-493C-B67E-33E56528CCF9} = {7D2BEF98-B6F0-4772-AB05-53C7E3E3A14C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B1F82F9-014F-47AF-A212-A7560DE29861}

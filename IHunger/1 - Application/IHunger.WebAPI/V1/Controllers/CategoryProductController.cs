@@ -1,21 +1,21 @@
 ﻿using AutoMapper;
-using IHunger.Domain.Filters;
 using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
+using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
 using IHunger.WebAPI.ViewModels.CategoryProduct;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/v{version:apiVersion}/category-products")]
     public class CategoryProductController : MainController
     {

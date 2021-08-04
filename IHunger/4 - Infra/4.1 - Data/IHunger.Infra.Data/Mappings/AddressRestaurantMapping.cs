@@ -38,12 +38,6 @@ namespace IHunger.Infra.Data.Mappings
 
             builder.Property(p => p.Longitude)
                 .HasColumnType("varchar(80)");
-
-            builder.HasOne(a => a.Restaurant)
-                .WithOne(a => a.AddressRestaurant)
-                .HasForeignKey<AddressRestaurant>(r => r.RestaurantId);
-
-            builder.ToTable("address_restaurants");
         }
     }
 }

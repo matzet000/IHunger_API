@@ -10,11 +10,16 @@ namespace IHunger.Domain.Models
         public int Quantity { get; set; }
 
         #region EFCRelations
-        public Guid ProductId { get; set; }
+        public Guid IdProduct { get; set; }
         public virtual Product Product { get; set; }
-        public Guid OrderId { get; set; }
+        public Guid IdOrder { get; set; }
         public virtual Order Order { get; set; }
 
         #endregion
+
+        public Item()
+        {
+
+        }
     }
 }

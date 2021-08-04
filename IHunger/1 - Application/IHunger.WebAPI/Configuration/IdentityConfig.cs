@@ -2,6 +2,7 @@
 using IHunger.Infra.Data.Context;
 using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,6 +31,7 @@ namespace IHunger.WebAPI.Configuration
 
             services.AddDbContext<DataIdentityDbContext>(options =>
             {
+                //options.UseLazyLoadingProxies();
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
                 options.EnableSensitiveDataLogging(true);
             });
@@ -42,6 +44,7 @@ namespace IHunger.WebAPI.Configuration
                 options.Password.RequireUppercase = true;
                 options.Password.RequiredLength = 6;
                 options.Password.RequiredUniqueChars = 1;
+                options.SignIn.RequireConfirmedAccount = true;
 
                 options.User.AllowedUserNameCharacters =
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*()_=?. ";
@@ -52,7 +55,6 @@ namespace IHunger.WebAPI.Configuration
                 .AddDefaultTokenProviders();
 
             // JWT
-
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 

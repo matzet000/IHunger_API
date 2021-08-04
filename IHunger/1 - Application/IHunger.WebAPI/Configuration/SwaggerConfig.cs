@@ -21,14 +21,14 @@ namespace IHunger.WebAPI.Configuration
             {
                 c.OperationFilter<SwaggerDefaultValues>();
 
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                c.AddSecurityDefinition("jwt_auth", new OpenApiSecurityScheme
                 {
                     Description = "Insert the JWT token as follows: Bearer {your token}",
                     Name = "Authorization",
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey
+                    Type = SecuritySchemeType.Http,
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -39,7 +39,7 @@ namespace IHunger.WebAPI.Configuration
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
+                                Id = "jwt_auth"
                             }
                         },
                         new string[] {}
@@ -149,13 +149,14 @@ namespace IHunger.WebAPI.Configuration
 
         public async Task Invoke(HttpContext context)
         {
+            
             if (context.Request.Path.StartsWithSegments("/swagger")
                 && !context.User.Identity.IsAuthenticated)
             {
                 context.Response.StatusCode = StatusCodes.Status401Unauthorized;
                 return;
             }
-
+            
             await _next.Invoke(context);
         }
     }

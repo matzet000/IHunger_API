@@ -1,14 +1,15 @@
-﻿using IHunger.Domain.Filters;
-using IHunger.Domain.Interfaces;
+﻿using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Domain.Models.Validations;
+using IHunger.Infra.CrossCutting.Filters;
 using LinqKit;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace IHunger.Service
@@ -43,15 +44,13 @@ namespace IHunger.Service
             var categoryRestaurant = await _unitOfWork
                 .RepositoryFactory
                 .CategoryRestaurantRepository
-                .GetById(restaurant.CategoryRestaurant.Id);
+                .GetById(restaurant.IdCategoryRestaurant);
 
-            if(categoryRestaurant == null)
+            if (categoryRestaurant == null)
             {
                 NotifyError("Not fround categoryRestaurant");
                 return await Task.FromResult<Restaurant>(null);
             }
-
-            restaurant.CategoryRestaurant = categoryRestaurant;
 
             await _unitOfWork
                 .RepositoryFactory
@@ -93,7 +92,7 @@ namespace IHunger.Service
 
                 filter = filter.And(x => x.Description == restaurantFilter.Description);
             }
-            
+
             if (!string.IsNullOrWhiteSpace(restaurantFilter.CategoryName))
             {
                 if (filter == null)
@@ -172,7 +171,11 @@ namespace IHunger.Service
             return await _unitOfWork
                 .RepositoryFactory
                 .RestaurantRepository
-                .Search(filter, null, ordeBy, skip, take);
+                .Search(
+                    filter,
+                    ordeBy, 
+                    skip, 
+                    take);
         }
 
         public async Task<Restaurant> GetById(Guid id)
@@ -196,12 +199,12 @@ namespace IHunger.Service
                 return await Task.FromResult<Restaurant>(null);
             }
 
-            if(restaurant.CategoryRestaurant != null)
+            if (restaurant.CategoryRestaurant != null)
             {
                 var categoryRestaurant = await _unitOfWork
                 .RepositoryFactory
                 .CategoryRestaurantRepository
-                .GetById(restaurant.CategoryRestaurant.Id);
+                .GetById(restaurant.IdCategoryRestaurant);
 
                 if (categoryRestaurant == null)
                 {
@@ -209,10 +212,9 @@ namespace IHunger.Service
                     return await Task.FromResult<Restaurant>(null);
                 }
 
-                restaurantDB.CategoryRestaurant = categoryRestaurant;
             }
-            
-            if(restaurant.AddressRestaurant != null)
+
+            if (restaurant.AddressRestaurant != null)
             {
                 if (restaurantDB.AddressRestaurant.Street != restaurant.AddressRestaurant.Street)
                 {

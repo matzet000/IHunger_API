@@ -1,18 +1,21 @@
 ﻿using AutoMapper;
 using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
+using IHunger.Domain.Models;
+using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
+using IHunger.WebAPI.ViewModels.Restaurant;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/v{version:apiVersion}/restaurants")]
     public class RestaurantController : MainController
     {
@@ -27,6 +30,49 @@ namespace IHunger.WebAPI.V1.Controllers
         {
             _restaurantService = restaurantService;
             _mapper = mapper;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<RestaurantViewModel>> Create(RestaurantCreatedViewModel restaurantViewModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            var categoryProduct = await _restaurantService.Create(_mapper.Map<Restaurant>(restaurantViewModel));
+
+            var resp = _mapper.Map<RestaurantViewModel>(categoryProduct);
+
+            return CustomResponse(resp);
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable<RestaurantViewModel>> GetAllWithFilter([FromQuery] RestaurantFilter restaurantFilter)
+        {
+            return _mapper.Map<IEnumerable<RestaurantViewModel>>(await _restaurantService.GetAllWithFilter(restaurantFilter));
+        }
+
+        [HttpGet("{id}")]
+        public async Task<RestaurantViewModel> GetById(Guid id)
+        {
+            return _mapper.Map<RestaurantViewModel>(await _restaurantService.GetById(id));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<RestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] RestaurantViewModel restaurantViewModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            if (id != restaurantViewModel.Id) return NotFound();
+
+            var categoryProduct = await _restaurantService.Update(_mapper.Map<Restaurant>(restaurantViewModel));
+
+            var resp = _mapper.Map<RestaurantViewModel>(categoryProduct);
+
+            return CustomResponse(resp);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<RestaurantViewModel> Delete(Guid id)
+        {
+            return _mapper.Map<RestaurantViewModel>(await _restaurantService.Delete(id));
         }
     }
 }

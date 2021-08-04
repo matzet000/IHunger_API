@@ -16,8 +16,6 @@ namespace IHunger.Infra.Data.Mappings
             builder.Property(r => r.Starts)
                 .IsRequired()
                 .HasColumnType("DECIMAL");
-
-            builder.ToTable("rating");
         }
     }
 }

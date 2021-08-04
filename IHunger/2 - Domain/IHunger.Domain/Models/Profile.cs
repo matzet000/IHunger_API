@@ -13,10 +13,14 @@ namespace IHunger.Domain.Models
 
 
         #region EFCRelations
-        public Guid UserId { get; set; }
-        public virtual User User { get; set; }
+        public Guid? IdAddressUser { get; set; }
         public virtual AddressUser AddressUser { get; set; }
         public virtual IEnumerable<Order> Orders { get; set; }
         #endregion
+
+        public ProfileUser()
+        {
+
+        }
     }
 }

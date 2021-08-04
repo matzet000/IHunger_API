@@ -43,9 +43,11 @@ namespace IHunger.Infra.Data.Mappings
 
             builder.HasMany(r => r.Itens)
                 .WithOne(c => c.Product)
-                .HasForeignKey(c => c.ProductId);
+                .HasForeignKey(c => c.IdProduct);
 
-            builder.ToTable("product");
+            builder.Property(x => x.IdCategoryProduct).IsRequired();
+
+            builder.HasOne(x => x.CategoryProduct).WithMany().HasForeignKey(x => x.IdCategoryProduct);
         }
     }
 }

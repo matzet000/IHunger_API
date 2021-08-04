@@ -19,10 +19,7 @@ namespace IHunger.Infra.Data.Mappings
 
             builder.HasMany(r => r.Items)
                .WithOne(c => c.Order)
-               .HasForeignKey(c => c.OrderId);
-
-
-            builder.ToTable("order");
+               .HasForeignKey(c => c.IdOrder);
         }
     }
 }

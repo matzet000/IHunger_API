@@ -6,11 +6,9 @@ namespace IHunger.Domain.Models
 {
     public class AddressRestaurant : AddressBase
     {
+        public AddressRestaurant()
+        {
 
-        #region EFCRelations
-        public Guid RestaurantId { get; set; }
-        public virtual Restaurant Restaurant { get; set; }
-
-        #endregion
+        }
     }
 }

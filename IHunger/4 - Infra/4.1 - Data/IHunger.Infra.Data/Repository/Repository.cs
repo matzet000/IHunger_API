@@ -55,7 +55,6 @@ namespace IHunger.Infra.Data.Repository
 
         public virtual async Task<List<TEntity>> Search(
             Expression<Func<TEntity, bool>> predicate = null,
-            Func<System.Linq.IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             int? skip = null,
             int? take = null)
@@ -65,11 +64,6 @@ namespace IHunger.Infra.Data.Repository
             if (predicate != null)
             {
                 query = query.Where(predicate);
-            }
-
-            if (include != null)
-            {
-                query = include(query);
             }
 
             if (skip != null && skip.HasValue)

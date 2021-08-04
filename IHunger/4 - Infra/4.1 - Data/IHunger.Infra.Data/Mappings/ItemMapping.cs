@@ -20,8 +20,6 @@ namespace IHunger.Infra.Data.Mappings
             builder.Property(p => p.Quantity)
                .IsRequired()
                .HasColumnType("TINYINT");
-
-            builder.ToTable("item");
         }
     }
 }

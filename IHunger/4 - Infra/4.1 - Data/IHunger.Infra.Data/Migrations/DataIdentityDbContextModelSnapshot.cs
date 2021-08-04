@@ -46,9 +46,6 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<string>("Longitude")
                         .HasColumnType("varchar(80)");
 
-                    b.Property<Guid>("RestaurantId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Street")
                         .IsRequired()
                         .HasColumnType("varchar(80)");
@@ -62,10 +59,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RestaurantId")
-                        .IsUnique();
-
-                    b.ToTable("address_restaurants");
+                    b.ToTable("AddressRestaurants");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.AddressUser", b =>
@@ -95,9 +89,6 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<string>("Longitude")
                         .HasColumnType("varchar(80)");
 
-                    b.Property<Guid?>("ProfileUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Street")
                         .IsRequired()
                         .HasColumnType("varchar(80)");
@@ -111,11 +102,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProfileUserId")
-                        .IsUnique()
-                        .HasFilter("[ProfileUserId] IS NOT NULL");
-
-                    b.ToTable("address_users");
+                    b.ToTable("AddressUsers");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.CategoryProduct", b =>
@@ -140,7 +127,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("category_product");
+                    b.ToTable("CategoryProducts");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.CategoryRestaurant", b =>
@@ -165,7 +152,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("category_restaurant");
+                    b.ToTable("CategoryRestaurants");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Comment", b =>
@@ -177,10 +164,13 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("RatingId")
+                    b.Property<Guid>("IdRating")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("RestaurantId")
+                    b.Property<Guid>("IdRestaurant")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("RatingId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Starts")
@@ -195,11 +185,11 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IdRestaurant");
+
                     b.HasIndex("RatingId");
 
-                    b.HasIndex("RestaurantId");
-
-                    b.ToTable("comment");
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Coupon", b =>
@@ -226,7 +216,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("coupon");
+                    b.ToTable("Coupons");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Item", b =>
@@ -238,14 +228,14 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("OrderId")
+                    b.Property<Guid>("IdOrder")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdProduct")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("DECIMAL");
-
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<byte>("Quantity")
                         .HasColumnType("TINYINT");
@@ -255,11 +245,11 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
+                    b.HasIndex("IdOrder");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("IdProduct");
 
-                    b.ToTable("item");
+                    b.ToTable("Itens");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Order", b =>
@@ -268,11 +258,14 @@ namespace IHunger.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CouponId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("IdCoupon")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("IdProfileUser")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("OrderStatus")
                         .HasColumnType("int");
@@ -280,19 +273,16 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("DECIMAL");
 
-                    b.Property<Guid?>("ProfileUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CouponId");
+                    b.HasIndex("IdCoupon");
 
-                    b.HasIndex("ProfileUserId");
+                    b.HasIndex("IdProfileUser");
 
-                    b.ToTable("order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.OrderStatus", b =>
@@ -316,7 +306,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("order_status");
+                    b.ToTable("OrdersStatus");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Product", b =>
@@ -325,15 +315,18 @@ namespace IHunger.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CategoryProductId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("varchar(200)");
+
+                    b.Property<Guid>("IdCategoryProduct")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdRestaurant")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -349,9 +342,6 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("DECIMAL");
 
-                    b.Property<Guid>("RestaurantId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -363,11 +353,11 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryProductId");
+                    b.HasIndex("IdCategoryProduct");
 
-                    b.HasIndex("RestaurantId");
+                    b.HasIndex("IdRestaurant");
 
-                    b.ToTable("product");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.ProfileUser", b =>
@@ -381,6 +371,10 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("IdAddressUser")
+                        .IsRequired()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -396,13 +390,9 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("IdAddressUser");
 
                     b.ToTable("ProfileUsers");
                 });
@@ -424,7 +414,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("rating");
+                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Restaurant", b =>
@@ -433,15 +423,18 @@ namespace IHunger.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CategoryRestaurantId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("varchar(200)");
+
+                    b.Property<Guid>("IdAddressRestaurant")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdCategoryRestaurant")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -456,9 +449,11 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryRestaurantId");
+                    b.HasIndex("IdAddressRestaurant");
 
-                    b.ToTable("restaurant");
+                    b.HasIndex("IdCategoryRestaurant");
+
+                    b.ToTable("Restaurant");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.User", b =>
@@ -480,6 +475,9 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<Guid>("IdProfileUser")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -515,6 +513,8 @@ namespace IHunger.Infra.Data.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdProfileUser");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -660,44 +660,28 @@ namespace IHunger.Infra.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("IHunger.Domain.Models.AddressRestaurant", b =>
-                {
-                    b.HasOne("IHunger.Domain.Models.Restaurant", "Restaurant")
-                        .WithOne("AddressRestaurant")
-                        .HasForeignKey("IHunger.Domain.Models.AddressRestaurant", "RestaurantId")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("IHunger.Domain.Models.AddressUser", b =>
-                {
-                    b.HasOne("IHunger.Domain.Models.ProfileUser", "ProfileUser")
-                        .WithOne("AddressUser")
-                        .HasForeignKey("IHunger.Domain.Models.AddressUser", "ProfileUserId");
-                });
-
             modelBuilder.Entity("IHunger.Domain.Models.Comment", b =>
                 {
-                    b.HasOne("IHunger.Domain.Models.Rating", "Rating")
-                        .WithMany()
-                        .HasForeignKey("RatingId")
-                        .IsRequired();
-
                     b.HasOne("IHunger.Domain.Models.Restaurant", "Restaurant")
                         .WithMany("Comments")
-                        .HasForeignKey("RestaurantId")
+                        .HasForeignKey("IdRestaurant")
                         .IsRequired();
+
+                    b.HasOne("IHunger.Domain.Models.Rating", "Rating")
+                        .WithMany()
+                        .HasForeignKey("RatingId");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Item", b =>
                 {
                     b.HasOne("IHunger.Domain.Models.Order", "Order")
                         .WithMany("Items")
-                        .HasForeignKey("OrderId")
+                        .HasForeignKey("IdOrder")
                         .IsRequired();
 
                     b.HasOne("IHunger.Domain.Models.Product", "Product")
                         .WithMany("Itens")
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("IdProduct")
                         .IsRequired();
                 });
 
@@ -705,38 +689,53 @@ namespace IHunger.Infra.Data.Migrations
                 {
                     b.HasOne("IHunger.Domain.Models.Coupon", "Coupon")
                         .WithMany("Orders")
-                        .HasForeignKey("CouponId");
+                        .HasForeignKey("IdCoupon");
 
                     b.HasOne("IHunger.Domain.Models.ProfileUser", "ProfileUser")
                         .WithMany("Orders")
-                        .HasForeignKey("ProfileUserId");
+                        .HasForeignKey("IdProfileUser");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Product", b =>
                 {
                     b.HasOne("IHunger.Domain.Models.CategoryProduct", "CategoryProduct")
                         .WithMany()
-                        .HasForeignKey("CategoryProductId");
+                        .HasForeignKey("IdCategoryProduct")
+                        .IsRequired();
 
                     b.HasOne("IHunger.Domain.Models.Restaurant", "Restaurant")
                         .WithMany("Products")
-                        .HasForeignKey("RestaurantId")
+                        .HasForeignKey("IdRestaurant")
                         .IsRequired();
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.ProfileUser", b =>
                 {
-                    b.HasOne("IHunger.Domain.Models.User", "User")
-                        .WithOne("ProfileUser")
-                        .HasForeignKey("IHunger.Domain.Models.ProfileUser", "UserId")
+                    b.HasOne("IHunger.Domain.Models.AddressUser", "AddressUser")
+                        .WithMany()
+                        .HasForeignKey("IdAddressUser")
                         .IsRequired();
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Restaurant", b =>
                 {
+                    b.HasOne("IHunger.Domain.Models.AddressRestaurant", "AddressRestaurant")
+                        .WithMany()
+                        .HasForeignKey("IdAddressRestaurant")
+                        .IsRequired();
+
                     b.HasOne("IHunger.Domain.Models.CategoryRestaurant", "CategoryRestaurant")
                         .WithMany()
-                        .HasForeignKey("CategoryRestaurantId");
+                        .HasForeignKey("IdCategoryRestaurant")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("IHunger.Domain.Models.User", b =>
+                {
+                    b.HasOne("IHunger.Domain.Models.ProfileUser", "ProfileUser")
+                        .WithMany()
+                        .HasForeignKey("IdProfileUser")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
