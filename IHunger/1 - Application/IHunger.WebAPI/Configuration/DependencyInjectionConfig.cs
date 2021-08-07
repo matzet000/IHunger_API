@@ -8,14 +8,9 @@ using IHunger.Infra.Data.Repository;
 using IHunger.Service;
 using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace IHunger.WebAPI.Configuration
 {
@@ -44,7 +39,6 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderStatusRepository, OrderStatusRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IRatingRepository, RatingRepository>();
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
             services.AddScoped<IProfileUserRepository, ProfileUserRepository>();
 
@@ -61,7 +55,6 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderStatusService, OrderStatusService>();
             services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IRatingService, RatingService>();
             services.AddScoped<IRestaurantService, RestaurantService>();
             services.AddScoped<IUserService, UserService>();
 

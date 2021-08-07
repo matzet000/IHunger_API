@@ -123,20 +123,6 @@ namespace IHunger.Infra.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Ratings",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    CreatedAt = table.Column<DateTime>(nullable: false),
-                    UpdatedAt = table.Column<DateTime>(nullable: false),
-                    Starts = table.Column<decimal>(type: "DECIMAL", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Ratings", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "ProfileUsers",
                 columns: table => new
                 {
@@ -281,8 +267,6 @@ namespace IHunger.Infra.Data.Migrations
                     UpdatedAt = table.Column<DateTime>(nullable: false),
                     Text = table.Column<string>(type: "varchar(200)", nullable: false),
                     Starts = table.Column<decimal>(type: "DECIMAL", nullable: false),
-                    IdRating = table.Column<Guid>(nullable: false),
-                    RatingId = table.Column<Guid>(nullable: true),
                     IdRestaurant = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
@@ -292,12 +276,6 @@ namespace IHunger.Infra.Data.Migrations
                         name: "FK_Comment_Restaurant_IdRestaurant",
                         column: x => x.IdRestaurant,
                         principalTable: "Restaurant",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Comment_Ratings_RatingId",
-                        column: x => x.RatingId,
-                        principalTable: "Ratings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -500,11 +478,6 @@ namespace IHunger.Infra.Data.Migrations
                 column: "IdRestaurant");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_RatingId",
-                table: "Comment",
-                column: "RatingId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Itens_IdOrder",
                 table: "Itens",
                 column: "IdOrder");
@@ -581,9 +554,6 @@ namespace IHunger.Infra.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Ratings");
 
             migrationBuilder.DropTable(
                 name: "Orders");

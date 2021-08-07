@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IHunger.Infra.Data.Migrations
 {
     [DbContext(typeof(DataIdentityDbContext))]
-    [Migration("20210804200246_start")]
+    [Migration("20210805134402_start")]
     partial class start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -166,13 +166,7 @@ namespace IHunger.Infra.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("IdRating")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("IdRestaurant")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("RatingId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Starts")
@@ -188,8 +182,6 @@ namespace IHunger.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("IdRestaurant");
-
-                    b.HasIndex("RatingId");
 
                     b.ToTable("Comment");
                 });
@@ -397,26 +389,6 @@ namespace IHunger.Infra.Data.Migrations
                     b.HasIndex("IdAddressUser");
 
                     b.ToTable("ProfileUsers");
-                });
-
-            modelBuilder.Entity("IHunger.Domain.Models.Rating", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("Starts")
-                        .HasColumnType("DECIMAL");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Restaurant", b =>
@@ -668,10 +640,6 @@ namespace IHunger.Infra.Data.Migrations
                         .WithMany("Comments")
                         .HasForeignKey("IdRestaurant")
                         .IsRequired();
-
-                    b.HasOne("IHunger.Domain.Models.Rating", "Rating")
-                        .WithMany()
-                        .HasForeignKey("RatingId");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Item", b =>

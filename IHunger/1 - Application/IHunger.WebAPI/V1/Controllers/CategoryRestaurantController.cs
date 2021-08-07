@@ -37,9 +37,9 @@ namespace IHunger.WebAPI.V1.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var categoryProduct = await _categoryRestaurantService.Create(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
+            var categoryRestaurant = await _categoryRestaurantService.Create(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
 
-            var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryProduct);
+            var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryRestaurant);
 
             return CustomResponse(resp);
         }
@@ -62,9 +62,9 @@ namespace IHunger.WebAPI.V1.Controllers
             if (!ModelState.IsValid) return CustomResponse(ModelState);
             if (id != categoryRestaurantViewModel.Id) return NotFound();
 
-            var categoryProduct = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
+            var categoryRestaurant = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
 
-            var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryProduct);
+            var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryRestaurant);
 
             return CustomResponse(resp);
         }

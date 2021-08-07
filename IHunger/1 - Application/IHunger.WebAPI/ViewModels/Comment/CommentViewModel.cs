@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace IHunger.WebAPI.ViewModels.Comment
+﻿namespace IHunger.WebAPI.ViewModels.Comment
 {
     public class CommentViewModel : BaseViewModel
     {

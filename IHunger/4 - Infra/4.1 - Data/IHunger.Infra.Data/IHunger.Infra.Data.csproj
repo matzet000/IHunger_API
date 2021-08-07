@@ -31,6 +31,8 @@
     <Compile Remove="Migrations\20210804172055_start.Designer.cs" />
     <Compile Remove="Migrations\20210804173701_start.cs" />
     <Compile Remove="Migrations\20210804173701_start.Designer.cs" />
+    <Compile Remove="Migrations\20210804200246_start.cs" />
+    <Compile Remove="Migrations\20210804200246_start.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +50,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -10,5 +10,13 @@ namespace IHunger.Domain.Models
         {
 
         }
+
+        public Restaurant Restaurant
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

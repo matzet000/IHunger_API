@@ -77,12 +77,6 @@ namespace IHunger.Infra.Data
             get => _productRepository ?? (_productRepository = new ProductRepository(_dbContext));
         }
 
-        private IRatingRepository _ratingRepository;
-        public IRatingRepository RatingRepository
-        {
-            get => _ratingRepository ?? (_ratingRepository = new RatingRepository(_dbContext));
-        }
-
         private IRestaurantRepository _restaurantRepository;
         public IRestaurantRepository RestaurantRepository
         {

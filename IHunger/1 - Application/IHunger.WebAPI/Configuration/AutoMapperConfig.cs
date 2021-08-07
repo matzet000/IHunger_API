@@ -3,11 +3,8 @@ using IHunger.Domain.Models;
 using IHunger.WebAPI.ViewModels.Address;
 using IHunger.WebAPI.ViewModels.CategoryProduct;
 using IHunger.WebAPI.ViewModels.CategoryRestaurant;
+using IHunger.WebAPI.ViewModels.Comment;
 using IHunger.WebAPI.ViewModels.Restaurant;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace IHunger.WebAPI.Configuration
 {
@@ -34,6 +31,10 @@ namespace IHunger.WebAPI.Configuration
             CreateMap<Restaurant, RestaurantViewModel>();
             CreateMap<RestaurantCreatedViewModel, Restaurant>();
             CreateMap<RestaurantViewModel, Restaurant>().ForMember(dest => dest.AddressRestaurant, opt => opt.MapFrom(src => src.AddressRestaurant));
+
+            CreateMap<Comment, CommentViewModel>();
+            CreateMap<CommentCreatedViewModel, Comment>().ForMember(dest => dest.IdRestaurant, opt => opt.MapFrom(src => src.IdRestaurant));
+            CreateMap<CommentViewModel, Comment>();
         }
     }
 }

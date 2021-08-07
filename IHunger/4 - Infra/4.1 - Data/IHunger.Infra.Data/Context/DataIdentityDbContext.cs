@@ -17,7 +17,6 @@ namespace IHunger.Infra.Data.Context
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
-        public DbSet<Rating> Ratings { get; set; }
         public DbSet<OrderStatus> OrdersStatus { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Item> Itens { get; set; }

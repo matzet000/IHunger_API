@@ -17,7 +17,6 @@ namespace IHunger.Domain.Interfaces
         IOrderRepository OrderRepository { get; }
         IOrderStatusRepository OrderStatusRepository { get; }
         IProductRepository ProductRepository { get; }
-        IRatingRepository RatingRepository { get; }
         IRestaurantRepository RestaurantRepository { get; }
     }
 }
