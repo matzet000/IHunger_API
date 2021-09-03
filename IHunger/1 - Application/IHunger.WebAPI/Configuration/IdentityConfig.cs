@@ -32,7 +32,7 @@ namespace IHunger.WebAPI.Configuration
             services.AddDbContext<DataIdentityDbContext>(options =>
             {
                 //options.UseLazyLoadingProxies();
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
                 options.EnableSensitiveDataLogging(true);
             });
 

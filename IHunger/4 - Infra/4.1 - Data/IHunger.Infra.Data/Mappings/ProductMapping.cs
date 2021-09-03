@@ -27,15 +27,15 @@ namespace IHunger.Infra.Data.Mappings
 
             builder.Property(p => p.Kosher)
               .IsRequired()
-              .HasColumnType("bit");
+              .HasColumnType("boolean");
 
             builder.Property(p => p.Vegan)
               .IsRequired()
-              .HasColumnType("bit");
+              .HasColumnType("boolean");
 
             builder.Property(p => p.Vegetarian)
               .IsRequired()
-              .HasColumnType("bit");
+              .HasColumnType("boolean");
 
             builder.Property(p => p.Image)
                .IsRequired()

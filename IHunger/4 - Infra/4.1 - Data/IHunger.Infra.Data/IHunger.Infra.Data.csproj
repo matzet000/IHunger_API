@@ -1,59 +1,32 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210220184905_initial.cs" />
-    <Compile Remove="Migrations\20210220184905_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210220185353_initial.cs" />
-    <Compile Remove="Migrations\20210220185353_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210220190355_initial.cs" />
-    <Compile Remove="Migrations\20210220190355_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210220193247_initial.cs" />
-    <Compile Remove="Migrations\20210220193247_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210220194126_teste.cs" />
-    <Compile Remove="Migrations\20210220194126_teste.Designer.cs" />
-    <Compile Remove="Migrations\20210506120145_Frist.cs" />
-    <Compile Remove="Migrations\20210506120145_Frist.Designer.cs" />
-    <Compile Remove="Migrations\20210625114522_start.cs" />
-    <Compile Remove="Migrations\20210625114522_start.Designer.cs" />
-    <Compile Remove="Migrations\20210625123409_start.cs" />
-    <Compile Remove="Migrations\20210625123409_start.Designer.cs" />
-    <Compile Remove="Migrations\20210625124524_start.cs" />
-    <Compile Remove="Migrations\20210625124524_start.Designer.cs" />
-    <Compile Remove="Migrations\20210804074340_start.cs" />
-    <Compile Remove="Migrations\20210804074340_start.Designer.cs" />
-    <Compile Remove="Migrations\20210804090037_start.cs" />
-    <Compile Remove="Migrations\20210804090037_start.Designer.cs" />
-    <Compile Remove="Migrations\20210804172055_start.cs" />
-    <Compile Remove="Migrations\20210804172055_start.Designer.cs" />
-    <Compile Remove="Migrations\20210804173701_start.cs" />
-    <Compile Remove="Migrations\20210804173701_start.Designer.cs" />
-    <Compile Remove="Migrations\20210804200246_start.cs" />
-    <Compile Remove="Migrations\20210804200246_start.Designer.cs" />
+    <Folder Include="Context\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.17" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.17" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.17" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.17" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.17" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.17" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.17">
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\2 - Domain\IHunger.Domain\IHunger.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
+    <ProjectReference Include="..\..\4.2 - CrossCutting\IHunger.Infra.CrossCutting\IHunger.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

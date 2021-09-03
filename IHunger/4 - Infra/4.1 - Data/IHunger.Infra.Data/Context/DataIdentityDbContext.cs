@@ -28,15 +28,16 @@ namespace IHunger.Infra.Data.Context
         public DbSet<AddressUser> AddressUsers { get; set; }
         public DbSet<ProfileUser> ProfileUsers { get; set; }
 
-        /*
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
         }
-        */
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("public");
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataIdentityDbContext).Assembly);
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;

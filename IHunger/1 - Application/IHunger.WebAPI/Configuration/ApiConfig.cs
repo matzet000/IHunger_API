@@ -1,5 +1,4 @@
-﻿using HealthChecks.UI.Client;
-using IHunger.WebAPI.Extensions;
+﻿using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -59,8 +58,6 @@ namespace IHunger.WebAPI.Configuration
                             .AllowAnyHeader());
             });
 
-            //services.AddHealthChecksUI();
-
             services.AddControllers()
                 .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
@@ -93,24 +90,6 @@ namespace IHunger.WebAPI.Configuration
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-
-                /*
-                endpoints.MapHealthChecks("/api/hc", new HealthCheckOptions()
-                {
-                    Predicate = _ => true,
-                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                });
-                endpoints.MapHealthChecksUI(options =>
-                {
-                    options.UIPath = "/api/hc-ui";
-                    options.ResourcesPath = "/api/hc-ui-resources";
-
-                    options.UseRelativeApiPath = false;
-                    options.UseRelativeResourcesPath = false;
-                    options.UseRelativeWebhookPath = false;
-                });
-                */
-
             });
 
             return app;
