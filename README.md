@@ -4,10 +4,11 @@ Food delivery API
 ## Technologies implemented:
 * Asp.Net Core
 * Entity Framework Core
-* HealthChecks
 * Swagger 
 * Fluent Validation
 * Identity 
+* Docker 
+* PostgreSQL
 
 ## Architecture:
 * Layer architecture
