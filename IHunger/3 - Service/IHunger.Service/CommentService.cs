@@ -11,13 +11,12 @@ namespace IHunger.Service
 {
     public class CommentService : BaseService, ICommentService
     {
-        private readonly IUnitOfWork _unitOfWork;
 
         public CommentService(
             IUnitOfWork unitOfWork,
-            INotifier notifier) : base(notifier)
+            INotifier notifier) : base(notifier, unitOfWork)
         {
-            _unitOfWork = unitOfWork;
+
         }
 
         public async Task<Comment> Create(Guid idRestaurant, Comment comment)

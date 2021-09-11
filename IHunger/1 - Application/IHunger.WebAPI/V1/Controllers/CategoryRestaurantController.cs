@@ -4,6 +4,7 @@ using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
+using IHunger.WebAPI.Extensions;
 using IHunger.WebAPI.ViewModels.CategoryRestaurant;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -45,6 +46,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
+        //[ClaimsAuthorize("Admin","Admin")]
         public async Task<IEnumerable<CategoryRestaurantViewModel>> GetAllWithFilter([FromQuery] CategoryRestaurantFilter categoryRestaurantFilter)
         {
             return _mapper.Map<IEnumerable<CategoryRestaurantViewModel>>(await _categoryRestaurantService.GetAllWithFilter(categoryRestaurantFilter));

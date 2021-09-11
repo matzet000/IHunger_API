@@ -14,13 +14,10 @@ namespace IHunger.Service
 {
     public class CategoryProductService : BaseService, ICategoryProductService
     {
-        private readonly IUnitOfWork _unitOfWork;
-
         public CategoryProductService(
             INotifier notifier, 
-            IUnitOfWork unitOfWork) : base(notifier)
+            IUnitOfWork unitOfWork) : base(notifier, unitOfWork)
         {
-            _unitOfWork = unitOfWork;
         }
 
         public async Task<CategoryProduct> Create(CategoryProduct categoryProduct)

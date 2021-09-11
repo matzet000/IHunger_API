@@ -51,11 +51,17 @@ namespace IHunger.WebAPI
             services.ResolveDependencies();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider, IServiceProvider serviceProvider)
+        public void Configure(
+            IApplicationBuilder app, 
+            IWebHostEnvironment env, 
+            IApiVersionDescriptionProvider provider, 
+            IServiceProvider serviceProvider)
         {
-            app.UseApiConfig(env);
+            app.UseApiConfig(env, serviceProvider);
 
             app.UseSwaggerConfig(provider);
+
+            //RoleConfig.CreateRoles(serviceProvider).GetAwaiter().GetResult();
         }
 
     }

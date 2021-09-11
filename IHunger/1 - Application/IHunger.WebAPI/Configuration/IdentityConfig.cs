@@ -1,4 +1,5 @@
 ﻿using IHunger.Domain.Models;
+using IHunger.Infra.CrossCutting.Extensions;
 using IHunger.Infra.Data.Context;
 using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

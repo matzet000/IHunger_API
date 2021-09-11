@@ -1,6 +1,7 @@
 ﻿using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Repository;
 using IHunger.Domain.Interfaces.Services;
+using IHunger.Domain.Models;
 using IHunger.Domain.Notifications;
 using IHunger.Infra.Data;
 using IHunger.Infra.Data.Context;
@@ -8,9 +9,11 @@ using IHunger.Infra.Data.Repository;
 using IHunger.Service;
 using IHunger.WebAPI.Extensions;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System;
 
 namespace IHunger.WebAPI.Configuration
 {
@@ -20,9 +23,13 @@ namespace IHunger.WebAPI.Configuration
         {
             services.AddScoped<DataIdentityDbContext>();
 
+           
             services.AddScoped<INotifier, Notifier>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IUser, AspNetUser>();
+            
+            services.AddScoped<RoleManager<IdentityRole<Guid>>>();
+            services.AddScoped<UserManager<User>>();
 
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             
@@ -57,6 +64,7 @@ namespace IHunger.WebAPI.Configuration
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IRestaurantService, RestaurantService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             #endregion
 
