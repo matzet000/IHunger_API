@@ -34,6 +34,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
+        [ClaimsAuthorize("CategoryRestaurant", "Create")]
         public async Task<ActionResult<CategoryRestaurantViewModel>> Create(CategoryRestaurantCreatedViewModel categoryRestaurantViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -46,19 +47,21 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
-        //[ClaimsAuthorize("Admin","Admin")]
+        [ClaimsAuthorize("CategoryRestaurant", "Get")]
         public async Task<IEnumerable<CategoryRestaurantViewModel>> GetAllWithFilter([FromQuery] CategoryRestaurantFilter categoryRestaurantFilter)
         {
             return _mapper.Map<IEnumerable<CategoryRestaurantViewModel>>(await _categoryRestaurantService.GetAllWithFilter(categoryRestaurantFilter));
         }
 
         [HttpGet("{id}")]
+        [ClaimsAuthorize("CategoryRestaurant", "Get")]
         public async Task<CategoryRestaurantViewModel> GetById(Guid id)
         {
             return _mapper.Map<CategoryRestaurantViewModel>(await _categoryRestaurantService.GetById(id));
         }
 
         [HttpPut("{id}")]
+        [ClaimsAuthorize("CategoryRestaurant", "Update")]
         public async Task<ActionResult<CategoryRestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryRestaurantViewModel categoryRestaurantViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -72,6 +75,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ClaimsAuthorize("CategoryRestaurant", "Delete")]
         public async Task<CategoryRestaurantViewModel> Delete(Guid id)
         {
             return _mapper.Map<CategoryRestaurantViewModel>(await _categoryRestaurantService.Delete(id));

@@ -4,6 +4,7 @@ using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
+using IHunger.WebAPI.Extensions;
 using IHunger.WebAPI.ViewModels.CategoryProduct;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -33,6 +34,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
+        [ClaimsAuthorize("CategoryProduct", "Create")]
         public async Task<ActionResult<CategoryProductViewModel>> Create(CategoryProductCreatedViewModel categoryProductViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -45,18 +47,21 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
+        [ClaimsAuthorize("CategoryProduct", "Get")]
         public async Task<IEnumerable<CategoryProductViewModel>> GetAllWithFilter([FromQuery] CategoryProductFilter categoryProductFilter)
         {
             return _mapper.Map<IEnumerable<CategoryProductViewModel>>(await _categoryProductService.GetAllWithFilter(categoryProductFilter));
         }
 
         [HttpGet("{id}")]
+        [ClaimsAuthorize("CategoryProduct", "Get")]
         public async Task<CategoryProductViewModel> GetById(Guid id)
         {
             return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.GetById(id));
         }
 
         [HttpPut("{id}")]
+        [ClaimsAuthorize("CategoryProduct", "Update")]
         public async Task<ActionResult<CategoryProductViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryProductViewModel categoryProductViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -70,6 +75,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ClaimsAuthorize("CategoryProduct", "Delete")]
         public async Task<CategoryProductViewModel> Delete(Guid id)
         {
             return _mapper.Map<CategoryProductViewModel>(await _categoryProductService.Delete(id));
