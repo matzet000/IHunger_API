@@ -1,5 +1,6 @@
 ﻿using IHunger.WebAPI.ViewModels.Address;
 using IHunger.WebAPI.ViewModels.CategoryRestaurant;
+using IHunger.WebAPI.ViewModels.Comment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace IHunger.WebAPI.ViewModels.Restaurant
 
         public CategoryRestaurantViewModel CategoryRestaurant { get; set; }
         public AddressRestaurantViewModel AddressRestaurant { get; set; }
+
+        public List<CommentViewModel> Comments { get; set; }
     }
 }

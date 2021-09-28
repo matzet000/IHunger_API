@@ -54,7 +54,9 @@ namespace IHunger.WebAPI.V1.Controllers
         [HttpGet("{id}")]
         public async Task<ProductViewModel> GetById(Guid id)
         {
-            return _mapper.Map<ProductViewModel>(await _productService.GetById(id));
+            var entity = await _productService.GetById(id);
+
+            return _mapper.Map<ProductViewModel>(entity);
         }
 
         [HttpDelete("{id}")]

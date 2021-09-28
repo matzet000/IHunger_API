@@ -13,13 +13,13 @@ namespace IHunger.Domain.Models.Validations
                .NotEmpty().WithMessage("The {PropertyName} needs to be provided");
 
             RuleFor(p => p.Kosher)
-               .NotEmpty().WithMessage("The {PropertyName} needs to be provided");
+               .NotNull().WithMessage("The {PropertyName} needs to be provided");
 
             RuleFor(p => p.Vegan)
-              .NotEmpty().WithMessage("The {PropertyName} needs to be provided");
+              .NotNull().WithMessage("The {PropertyName} needs to be provided");
 
             RuleFor(p => p.Vegetarian)
-              .NotEmpty().WithMessage("The {PropertyName} needs to be provided");
+              .NotNull().WithMessage("The {PropertyName} needs to be provided");
 
             RuleFor(a => a.Name)
                 .NotEmpty().WithMessage("The {PropertyName} needs to be provided")

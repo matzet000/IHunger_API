@@ -29,22 +29,36 @@ namespace IHunger.WebAPI.Configuration
             CreateMap<AddressRestaurantCreatedViewModel, AddressRestaurant>();
             CreateMap<AddressRestaurantViewModel, AddressRestaurant>();
 
-            CreateMap<Restaurant, RestaurantViewModel>();
+            CreateMap<Restaurant, RestaurantViewModel>()
+                .ForMember(dest => dest.AddressRestaurant, opt => opt.MapFrom(src => src.AddressRestaurant))
+                .ForMember(dest => dest.CategoryRestaurant, opt => opt.MapFrom(src => src.CategoryRestaurant))
+                .ForMember(dest => dest.Comments, opt => opt.MapFrom(src => src.Comments))
+                .ReverseMap();
+
             CreateMap<RestaurantCreatedViewModel, Restaurant>();
+
             CreateMap<RestaurantViewModel, Restaurant>()
-                .ForMember(dest => dest.AddressRestaurant, opt => opt.MapFrom(src => src.AddressRestaurant));
+                .ForMember(dest => dest.AddressRestaurant, opt => opt.MapFrom(src => src.AddressRestaurant))
+                .ForMember(dest => dest.CategoryRestaurant, opt => opt.MapFrom(src => src.CategoryRestaurant));
 
-            CreateMap<Comment, CommentViewModel>();
+            CreateMap<RestaurantCreatedViewModel, Restaurant>()
+                .ForMember(dest => dest.AddressRestaurant, opt => opt.MapFrom(src => src.Address));
+
+            CreateMap<Comment, CommentViewModel>()
+                .ReverseMap();
+            
             CreateMap<CommentCreatedViewModel, Comment>()
-                .ForMember(dest => dest.IdRestaurant, opt => opt.MapFrom(src => src.IdRestaurant));
-            CreateMap<CommentViewModel, Comment>();
+                .ForMember(dest => dest.Text, opt => opt.MapFrom(src => src.Text))
+                .ForMember(dest => dest.Starts, opt => opt.MapFrom(src => src.Starts));
 
-            CreateMap<Product, ProductViewModel>();
+            CreateMap<Product, ProductViewModel>()
+                .ForMember(dest => dest.CategoryProduct, opt => opt.MapFrom(src => src.CategoryProduct))
+                .ForMember(dest => dest.Restaurant, opt => opt.MapFrom(src => src.Restaurant))
+                .ReverseMap();
+
             CreateMap<ProductCreatedViewModel, Product>()
                 .ForMember(dest => dest.IdRestaurant, opt => opt.MapFrom(src => src.IdRestaurant))
                 .ForMember(dest => dest.IdCategoryProduct, opt => opt.MapFrom(src => src.IdCategoryProduct));
-            CreateMap<ProductViewModel, Product>()
-                .ForMember(dest => dest.CategoryProduct, opt => opt.MapFrom(src => src.CategoryProduct));
         }
     }
 }

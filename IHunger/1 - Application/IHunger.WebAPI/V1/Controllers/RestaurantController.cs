@@ -84,7 +84,10 @@ namespace IHunger.WebAPI.V1.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var entity = await _commentService.Create(idRestaurant, _mapper.Map<Comment>(viewModel));
+            var comment = _mapper.Map<Comment>(viewModel);
+            comment.IdRestaurant = idRestaurant;
+
+            var entity = await _commentService.Create(idRestaurant, comment);
 
             var resp = _mapper.Map<CommentViewModel>(entity);
 
