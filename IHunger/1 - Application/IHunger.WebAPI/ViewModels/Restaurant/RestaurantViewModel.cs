@@ -17,6 +17,6 @@ namespace IHunger.WebAPI.ViewModels.Restaurant
         public CategoryRestaurantViewModel CategoryRestaurant { get; set; }
         public AddressRestaurantViewModel AddressRestaurant { get; set; }
 
-        public List<CommentViewModel> Comments { get; set; }
+        public IEnumerable<CommentViewModel> Comments { get; set; }
     }
 }

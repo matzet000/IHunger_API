@@ -95,9 +95,10 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet("{idRestaurant}/comments")]
-        public async Task<ActionResult<CommentViewModel>> GetAllComment([FromRoute] Guid idRestaurant)
+        public async Task<ActionResult<IEnumerable<CommentViewModel>>> GetAllComment([FromRoute] Guid idRestaurant)
         {
-            return _mapper.Map<CommentViewModel>(await _commentService.GetAll(idRestaurant));
+            var list = await _commentService.GetAll(idRestaurant);
+            return _mapper.Map<List<CommentViewModel>>(list);
         }
 
         [HttpGet("{idRestaurant}/comments/{idComment}")]
