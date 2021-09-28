@@ -37,21 +37,21 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<RestaurantViewModel>> Create(RestaurantCreatedViewModel restaurantViewModel)
+        public async Task<ActionResult<RestaurantViewModel>> Create(RestaurantCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var restaurant = await _restaurantService.Create(_mapper.Map<Restaurant>(restaurantViewModel));
+            var entity = await _restaurantService.Create(_mapper.Map<Restaurant>(viewModel));
 
-            var resp = _mapper.Map<RestaurantViewModel>(restaurant);
+            var resp = _mapper.Map<RestaurantViewModel>(entity);
 
             return CustomResponse(resp);
         }
 
         [HttpGet]
-        public async Task<IEnumerable<RestaurantViewModel>> GetAllWithFilter([FromQuery] RestaurantFilter restaurantFilter)
+        public async Task<IEnumerable<RestaurantViewModel>> GetAllWithFilter([FromQuery] RestaurantFilter filter)
         {
-            return _mapper.Map<IEnumerable<RestaurantViewModel>>(await _restaurantService.GetAllWithFilter(restaurantFilter));
+            return _mapper.Map<IEnumerable<RestaurantViewModel>>(await _restaurantService.GetAllWithFilter(filter));
         }
 
         [HttpGet("{id}")]
@@ -61,14 +61,14 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<RestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] RestaurantViewModel restaurantViewModel)
+        public async Task<ActionResult<RestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] RestaurantViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
-            if (id != restaurantViewModel.Id) return NotFound();
+            if (id != viewModel.Id) return NotFound();
 
-            var restaurant = await _restaurantService.Update(_mapper.Map<Restaurant>(restaurantViewModel));
+            var entity = await _restaurantService.Update(_mapper.Map<Restaurant>(viewModel));
 
-            var resp = _mapper.Map<RestaurantViewModel>(restaurant);
+            var resp = _mapper.Map<RestaurantViewModel>(entity);
 
             return CustomResponse(resp);
         }
@@ -80,13 +80,13 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost("{idRestaurant}/comments")]
-        public async Task<ActionResult<CommentViewModel>> CreateComment([FromRoute] Guid idRestaurant, [FromBody] CommentCreatedViewModel commentCreatedViewModel)
+        public async Task<ActionResult<CommentViewModel>> CreateComment([FromRoute] Guid idRestaurant, [FromBody] CommentCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var comment = await _commentService.Create(idRestaurant, _mapper.Map<Comment>(commentCreatedViewModel));
+            var entity = await _commentService.Create(idRestaurant, _mapper.Map<Comment>(viewModel));
 
-            var resp = _mapper.Map<CommentViewModel>(comment);
+            var resp = _mapper.Map<CommentViewModel>(entity);
 
             return CustomResponse(resp);
         }
@@ -104,13 +104,13 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPut("{idRestaurant}/comments/{idComment}")]
-        public async Task<ActionResult<CommentViewModel>> UpdateComment([FromRoute] Guid idRestaurant, [FromRoute] Guid idComment, [FromBody] CommentViewModel commentViewModel)
+        public async Task<ActionResult<CommentViewModel>> UpdateComment([FromRoute] Guid idRestaurant, [FromRoute] Guid idComment, [FromBody] CommentViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var comment = await _commentService.Update(idRestaurant, idComment, _mapper.Map<Comment>(commentViewModel));
+            var entity = await _commentService.Update(idRestaurant, idComment, _mapper.Map<Comment>(viewModel));
 
-            var resp = _mapper.Map<CommentViewModel>(comment);
+            var resp = _mapper.Map<CommentViewModel>(entity);
 
             return CustomResponse(resp);
         }

@@ -35,11 +35,11 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [HttpPost]
         [ClaimsAuthorize("CategoryProduct", "Create")]
-        public async Task<ActionResult<CategoryProductViewModel>> Create(CategoryProductCreatedViewModel categoryProductViewModel)
+        public async Task<ActionResult<CategoryProductViewModel>> Create(CategoryProductCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var categoryProduct = await _categoryProductService.Create(_mapper.Map<CategoryProduct>(categoryProductViewModel));
+            var categoryProduct = await _categoryProductService.Create(_mapper.Map<CategoryProduct>(viewModel));
 
             var resp = _mapper.Map<CategoryProductViewModel>(categoryProduct);
 
@@ -48,9 +48,9 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [HttpGet]
         [ClaimsAuthorize("CategoryProduct", "Get")]
-        public async Task<IEnumerable<CategoryProductViewModel>> GetAllWithFilter([FromQuery] CategoryProductFilter categoryProductFilter)
+        public async Task<IEnumerable<CategoryProductViewModel>> GetAllWithFilter([FromQuery] CategoryProductFilter filter)
         {
-            return _mapper.Map<IEnumerable<CategoryProductViewModel>>(await _categoryProductService.GetAllWithFilter(categoryProductFilter));
+            return _mapper.Map<IEnumerable<CategoryProductViewModel>>(await _categoryProductService.GetAllWithFilter(filter));
         }
 
         [HttpGet("{id}")]
@@ -62,12 +62,12 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [HttpPut("{id}")]
         [ClaimsAuthorize("CategoryProduct", "Update")]
-        public async Task<ActionResult<CategoryProductViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryProductViewModel categoryProductViewModel)
+        public async Task<ActionResult<CategoryProductViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryProductViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
-            if (id != categoryProductViewModel.Id) return NotFound();
+            if (id != viewModel.Id) return NotFound();
 
-            var categoryProduct = await _categoryProductService.Update(_mapper.Map<CategoryProduct>(categoryProductViewModel));
+            var categoryProduct = await _categoryProductService.Update(_mapper.Map<CategoryProduct>(viewModel));
 
             var resp = _mapper.Map<CategoryProductViewModel>(categoryProduct);
 

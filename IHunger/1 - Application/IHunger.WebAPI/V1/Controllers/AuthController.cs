@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}")]
+    [Route("api/v{version:apiVersion}/auth")]
     public class AuthController : MainController
     {
         private readonly IAuthService _authService;
@@ -24,24 +24,24 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [AllowAnonymous]
         [HttpPost("register")]
-        public async Task<ActionResult> Register(RegisterUserViewModel registerUser)
+        public async Task<ActionResult> Register(RegisterUserViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var user = registerUser.ToDomain();
+            var user = viewModel.ToDomain();
 
-            var resp = await _authService.Register(user, registerUser.Password);
+            var resp = await _authService.Register(user, viewModel.Password);
 
             return CustomResponse(resp);
         }
 
         [AllowAnonymous]
         [HttpPost("login")]
-        public async Task<ActionResult> Login(LoginUserViewModel loginUser)
+        public async Task<ActionResult> Login(LoginUserViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var result = await _authService.Login(loginUser.Email, loginUser.Password);
+            var result = await _authService.Login(viewModel.Email, viewModel.Password);
 
             return CustomResponse(result);
         }

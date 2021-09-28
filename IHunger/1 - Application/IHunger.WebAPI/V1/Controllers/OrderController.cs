@@ -13,7 +13,7 @@ namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Route("api/v{version:apiVersion}")]
+    [Route("api/v{version:apiVersion}/orders")]
     public class OrderController : MainController
     {
         private readonly IOrderService _orderService;

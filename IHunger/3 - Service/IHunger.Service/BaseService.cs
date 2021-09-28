@@ -32,9 +32,9 @@ namespace IHunger.Service
             _notifier.Handle(new Domain.Notifications.Notification(mensagem));
         }
 
-        protected bool Validation<TV, TE>(TV validacao, TE entidade) where TV : AbstractValidator<TE> where TE : Entity
+        protected bool Validate<TV, TE>(TV validation, TE entity) where TV : AbstractValidator<TE> where TE : Entity
         {
-            var validator = validacao.Validate(entidade);
+            var validator = validation.Validate(entity);
 
             if (validator.IsValid) return true;
 

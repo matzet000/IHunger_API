@@ -13,7 +13,7 @@ namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Route("api/v{version:apiVersion}")]
+    [Route("api/v{version:apiVersion}/profile")]
     public class ProfileController : MainController
     {
         private readonly IUserService _userService;

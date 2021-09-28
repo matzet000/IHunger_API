@@ -35,11 +35,11 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [HttpPost]
         [ClaimsAuthorize("CategoryRestaurant", "Create")]
-        public async Task<ActionResult<CategoryRestaurantViewModel>> Create(CategoryRestaurantCreatedViewModel categoryRestaurantViewModel)
+        public async Task<ActionResult<CategoryRestaurantViewModel>> Create(CategoryRestaurantCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var categoryRestaurant = await _categoryRestaurantService.Create(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
+            var categoryRestaurant = await _categoryRestaurantService.Create(_mapper.Map<CategoryRestaurant>(viewModel));
 
             var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryRestaurant);
 
@@ -48,9 +48,9 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [HttpGet]
         [ClaimsAuthorize("CategoryRestaurant", "Get")]
-        public async Task<IEnumerable<CategoryRestaurantViewModel>> GetAllWithFilter([FromQuery] CategoryRestaurantFilter categoryRestaurantFilter)
+        public async Task<IEnumerable<CategoryRestaurantViewModel>> GetAllWithFilter([FromQuery] CategoryRestaurantFilter filter)
         {
-            return _mapper.Map<IEnumerable<CategoryRestaurantViewModel>>(await _categoryRestaurantService.GetAllWithFilter(categoryRestaurantFilter));
+            return _mapper.Map<IEnumerable<CategoryRestaurantViewModel>>(await _categoryRestaurantService.GetAllWithFilter(filter));
         }
 
         [HttpGet("{id}")]
@@ -62,12 +62,12 @@ namespace IHunger.WebAPI.V1.Controllers
 
         [HttpPut("{id}")]
         [ClaimsAuthorize("CategoryRestaurant", "Update")]
-        public async Task<ActionResult<CategoryRestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryRestaurantViewModel categoryRestaurantViewModel)
+        public async Task<ActionResult<CategoryRestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] CategoryRestaurantViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
-            if (id != categoryRestaurantViewModel.Id) return NotFound();
+            if (id != viewModel.Id) return NotFound();
 
-            var categoryRestaurant = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(categoryRestaurantViewModel));
+            var categoryRestaurant = await _categoryRestaurantService.Update(_mapper.Map<CategoryRestaurant>(viewModel));
 
             var resp = _mapper.Map<CategoryRestaurantViewModel>(categoryRestaurant);
 

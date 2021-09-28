@@ -25,8 +25,8 @@ namespace IHunger.Service
 
         public async Task<Restaurant> Create(Restaurant restaurant)
         {
-            if (!Validation(new RestaurantValidation(), restaurant)) return null;
-            if (!Validation(new AddressRestaurantValidation(), restaurant.AddressRestaurant)) return null;
+            if (!Validate(new RestaurantValidation(), restaurant)) return null;
+            if (!Validate(new AddressRestaurantValidation(), restaurant.AddressRestaurant)) return null;
 
             var restaurantBD = await _unitOfWork
                 .RepositoryFactory
@@ -186,6 +186,8 @@ namespace IHunger.Service
 
         public async Task<Restaurant> Update(Restaurant restaurant)
         {
+            if (!Validate(new RestaurantValidation(), restaurant)) return null;
+
             var restaurantDB = await _unitOfWork
                 .RepositoryFactory
                 .RestaurantRepository
@@ -199,6 +201,8 @@ namespace IHunger.Service
 
             if (restaurant.CategoryRestaurant != null)
             {
+                if (!Validate(new AddressRestaurantValidation(), restaurant.AddressRestaurant)) return null;
+
                 var categoryRestaurant = await _unitOfWork
                 .RepositoryFactory
                 .CategoryRestaurantRepository

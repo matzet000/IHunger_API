@@ -36,7 +36,7 @@ namespace IHunger.Infra.Data.Repository
         {
             var query = DbSet.AsQueryable();
 
-            query = query.Include(x => x.AddressRestaurant).Include(x => x.CategoryRestaurant);
+            query = query.Include(x => x.AddressRestaurant).Include(x => x.CategoryRestaurant).Include(x => x.Comments);
             if (predicate != null)
             {
                 query = query.Where(predicate);

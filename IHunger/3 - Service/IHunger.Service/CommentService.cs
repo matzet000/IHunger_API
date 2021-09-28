@@ -21,7 +21,7 @@ namespace IHunger.Service
 
         public async Task<Comment> Create(Guid idRestaurant, Comment comment)
         {
-            if (!Validation(new CommentValidation(), comment)) return null;
+            if (!Validate(new CommentValidation(), comment)) return null;
 
             var restaurantBD = await _unitOfWork
                 .RepositoryFactory
@@ -66,6 +66,8 @@ namespace IHunger.Service
 
         public async Task<Comment> Update(Guid idRestaurant, Guid idComment, Comment comment)
         {
+            if (!Validate(new CommentValidation(), comment)) return null;
+
             var commentDb = await _unitOfWork
                 .RepositoryFactory
                 .CommentRepository

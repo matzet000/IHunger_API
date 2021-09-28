@@ -13,7 +13,7 @@ namespace IHunger.WebAPI.V1.Controllers
 {
     [ApiVersion("1.0")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-    [Route("api/v{version:apiVersion}")]
+    [Route("api/v{version:apiVersion}/coupons")]
     public class CouponController : MainController
     {
         private readonly ICouponService _couponService;

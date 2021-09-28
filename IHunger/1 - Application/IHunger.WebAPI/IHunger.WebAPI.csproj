@@ -31,7 +31,6 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="V1\Controllers\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>

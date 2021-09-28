@@ -22,7 +22,7 @@ namespace IHunger.Service
 
         public async Task<CategoryProduct> Create(CategoryProduct categoryProduct)
         {
-            if (!Validation(new CategoryProductValidation(), categoryProduct)) return null;
+            if (!Validate(new CategoryProductValidation(), categoryProduct)) return null;
 
             var categoryProductBD =  await _unitOfWork
                 .RepositoryFactory
@@ -155,6 +155,8 @@ namespace IHunger.Service
 
         public async Task<CategoryProduct> Update(CategoryProduct categoryProduct)
         {
+            if (!Validate(new CategoryProductValidation(), categoryProduct)) return null;
+
             var categoryProductDb = await _unitOfWork
                 .RepositoryFactory
                 .CategoryProductRepository
