@@ -11,6 +11,9 @@ namespace IHunger.Infra.CrossCutting.ViewModels.User
     {
         public string Id { get; set; }
         public string Email { get; set; }
+        public ProfileViewModel Profile { get; set; }
+        public AddressViewModel Address { get; set; }
+
         public IEnumerable<ClaimViewModel> Claims { get; set; }
 
         public UserTokenViewModel()

@@ -209,7 +209,7 @@ namespace IHunger.Service
 
         public async Task<LoginResponseViewModel> GetJwt(string email)
         {
-           var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByEmailAsync(email);
             var claims = await _userManager.GetClaimsAsync(user);
             var userRoles = await _userManager.GetRolesAsync(user);
 
@@ -239,11 +239,49 @@ namespace IHunger.Service
 
             var encodedToken = tokenHandler.WriteToken(token);
 
+            var userToken = new UserTokenViewModel(user.Id.ToString(), user.Email, claims);
+
+            if(user.ProfileUser != null)
+            {
+                userToken.Profile = new ProfileViewModel();
+                userToken.Profile.BirthDate = user.ProfileUser.BirthDate;
+                userToken.Profile.Name = user.ProfileUser.Name;
+                userToken.Profile.LastName = user.ProfileUser.LastName;
+
+                switch (user.ProfileUser.Type)
+                {
+                    case 1:
+                        userToken.Profile.Type = TypeProfile.Admin.ToString();
+                        break;
+                    case 2:
+                        userToken.Profile.Type = TypeProfile.Client.ToString();
+
+                        break;
+                    case 3:
+                        userToken.Profile.Type = TypeProfile.Restaurant.ToString();
+                        break;
+                    default:
+                        throw new Exception("Access denied");
+                }
+
+                if(user.ProfileUser.AddressUser != null)
+                {
+                    userToken.Address = new AddressViewModel();
+                    userToken.Address.Street = user.ProfileUser.AddressUser.Street;
+                    userToken.Address.District = user.ProfileUser.AddressUser.District;
+                    userToken.Address.County = user.ProfileUser.AddressUser.County;
+                    userToken.Address.City = user.ProfileUser.AddressUser.City;
+                    userToken.Address.ZipCode = user.ProfileUser.AddressUser.ZipCode;
+                    userToken.Address.Latitude = user.ProfileUser.AddressUser.Latitude;
+                    userToken.Address.Longitude = user.ProfileUser.AddressUser.Longitude;
+                }    
+            }
+            
             var response = new LoginResponseViewModel
             {
                 AccessToken = encodedToken,
                 ExpiresIn = TimeSpan.FromHours(_appSettings.ExpirationHours).TotalSeconds,
-                UserToken = new UserTokenViewModel(user.Id.ToString(), user.Email, claims)
+                UserToken = userToken
             };
 
             return response;
