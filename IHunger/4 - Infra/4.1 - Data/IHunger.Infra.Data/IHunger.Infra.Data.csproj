@@ -30,4 +30,7 @@
     <ProjectReference Include="..\..\4.2 - CrossCutting\IHunger.Infra.CrossCutting\IHunger.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
 </Project>
