@@ -22,11 +22,11 @@ namespace IHunger.Service
         private readonly AppSettings _appSettings;
 
         public AuthService(
-            INotifier notifier, 
+            INotifier notifier,
             IUnitOfWork unitOfWork,
             SignInManager<User> signInManager,
             UserManager<User> userManager,
-            IOptions<AppSettings> appSettings) : 
+            IOptions<AppSettings> appSettings) :
             base(notifier, unitOfWork)
         {
             _signInManager = signInManager;
@@ -71,6 +71,175 @@ namespace IHunger.Service
             return null;
         }
 
+        private async Task<string> CreateSecurityToken(string email)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return null;
+            }
+
+            var token = await _userManager.CreateSecurityTokenAsync(user);
+
+            if (token != null)
+            {
+                return token.ToString();
+            }
+
+            return null;
+        }
+
+        private async Task<string> CreateEmailConfirmationToken(string email)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return null;
+            }
+
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                NotifyError("Error generate token");
+                return null;
+            }
+
+            return token;
+        }
+
+        private async Task<string> CreateEmailChangeToken(string email, string newEmail)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return null;
+            }
+
+            var token = await _userManager.GenerateChangeEmailTokenAsync(user, newEmail);
+
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                NotifyError("Error generate token");
+                return null;
+            }
+
+            return token;
+        }
+
+        private async Task<bool> ConfirmEmail(string email, string token)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return false;
+            }
+
+            var identityResp = await _userManager.ConfirmEmailAsync(user, token);
+
+            if (identityResp.Succeeded)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private async Task<string> CreatePasswordResetToken(string email)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return null;
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                NotifyError("Error generate token");
+                return null;
+            }
+
+            return token;
+        }
+
+        private async Task<bool> RecoverPassword(string email, string password, string token)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return false;
+            }
+
+            var identityResp = await _userManager.ChangePasswordAsync(user, password, token);
+
+
+            if (identityResp.Succeeded)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private async Task<bool> ChangeEmail(string oldEmail, string newEmail, string token)
+        {
+            var user = await GetUser(oldEmail);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return false;
+            }
+
+            var identityResp = await _userManager.ChangeEmailAsync(user, newEmail, token);
+
+            if (identityResp.Succeeded)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private async Task<bool> ChangePassword(string email, string password, string newPassword)
+        {
+            var user = await GetUser(email);
+
+            if (user == null)
+            {
+                NotifyError("Incorrect username or password");
+                return false;
+            }
+
+            var identityResp = await _userManager.ChangePasswordAsync(user, password, newPassword);
+
+            if (identityResp.Succeeded)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private async Task<User> GetUser(string email)
+        {
+            return await _userManager.FindByEmailAsync(email);
+        }
+
         private async Task AddClaims(User user)
         {
             switch (user.ProfileUser.Type)
@@ -78,10 +247,10 @@ namespace IHunger.Service
                 case (int) TypeProfile.Admin:
                     await AddClaimsAdmin(user);
                     break;
-                case (int)TypeProfile.Client:
+                case (int) TypeProfile.Client:
                     await AddClaimsClient(user);
                     break;
-                case (int)TypeProfile.Restaurant:
+                case (int) TypeProfile.Restaurant:
                     await AddClaimsRestaurant(user);
                     break;
             }
