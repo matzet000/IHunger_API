@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31605.320
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{B9B25D92-D537-4855-BF58-50100F2ED347}"
 EndProject
@@ -17,13 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 -
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.WebAPI", "1 - Application\IHunger.WebAPI\IHunger.WebAPI.csproj", "{5765744A-4FDB-4D1F-AC9D-AA56400E6000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Infra.CrossCutting", "4 - Infra\4.2 - CrossCutting\IHunger.Infra.CrossCutting\IHunger.Infra.CrossCutting.csproj", "{A8459940-3FF2-4E14-A2EA-A078D711E67F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Infra.CrossCutting", "4 - Infra\4.2 - CrossCutting\IHunger.Infra.CrossCutting\IHunger.Infra.CrossCutting.csproj", "{A8459940-3FF2-4E14-A2EA-A078D711E67F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Infra.Data", "4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj", "{E245C161-9C69-4D65-A160-D06B1B2EAB11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Infra.Data", "4 - Infra\4.1 - Data\IHunger.Infra.Data\IHunger.Infra.Data.csproj", "{E245C161-9C69-4D65-A160-D06B1B2EAB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Service", "3 - Service\IHunger.Service\IHunger.Service.csproj", "{36102460-C95F-4201-B574-848EF9833A77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Service", "3 - Service\IHunger.Service\IHunger.Service.csproj", "{36102460-C95F-4201-B574-848EF9833A77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHunger.Domain", "2 - Domain\IHunger.Domain\IHunger.Domain.csproj", "{D4DB4AB0-FBB4-440A-AF7D-93B2089DD896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IHunger.Domain", "2 - Domain\IHunger.Domain\IHunger.Domain.csproj", "{D4DB4AB0-FBB4-440A-AF7D-93B2089DD896}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

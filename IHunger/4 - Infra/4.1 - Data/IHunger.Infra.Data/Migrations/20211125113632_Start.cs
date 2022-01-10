@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
+#nullable disable
+
 namespace IHunger.Infra.Data.Migrations
 {
-    public partial class Create : Migration
+    public partial class Start : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,8 +19,8 @@ namespace IHunger.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Street = table.Column<string>(type: "varchar(80)", nullable: false),
                     District = table.Column<string>(type: "varchar(80)", nullable: false),
                     City = table.Column<string>(type: "varchar(80)", nullable: false),
@@ -38,8 +40,8 @@ namespace IHunger.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Street = table.Column<string>(type: "varchar(80)", nullable: false),
                     District = table.Column<string>(type: "varchar(80)", nullable: false),
                     City = table.Column<string>(type: "varchar(80)", nullable: false),
@@ -76,8 +78,8 @@ namespace IHunger.Infra.Data.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "varchar(50)", nullable: false),
                     Description = table.Column<string>(type: "varchar(200)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -92,8 +94,8 @@ namespace IHunger.Infra.Data.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "varchar(50)", nullable: false),
                     Description = table.Column<string>(type: "varchar(200)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -108,9 +110,9 @@ namespace IHunger.Infra.Data.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Code = table.Column<string>(type: "varchar(50)", nullable: false),
                     Value = table.Column<int>(type: "integer", nullable: false),
-                    ExpireAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    ExpireAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,8 +127,8 @@ namespace IHunger.Infra.Data.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "varchar(200)", nullable: false),
                     Number = table.Column<int>(type: "integer", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -141,11 +143,11 @@ namespace IHunger.Infra.Data.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "varchar(80)", nullable: false),
                     LastName = table.Column<string>(type: "varchar(80)", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     Type = table.Column<int>(type: "integer", nullable: false),
                     IdAddressUser = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -155,8 +157,7 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdAddressUser,
                         principalSchema: "public",
                         principalTable: "AddressUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -193,8 +194,8 @@ namespace IHunger.Infra.Data.Migrations
                     Image = table.Column<string>(type: "varchar(100)", nullable: false),
                     IdCategoryRestaurant = table.Column<Guid>(type: "uuid", nullable: false),
                     IdAddressRestaurant = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -204,15 +205,13 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdAddressRestaurant,
                         principalSchema: "public",
                         principalTable: "AddressRestaurants",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Restaurant_CategoryRestaurants_IdCategoryRestaurant",
                         column: x => x.IdCategoryRestaurant,
                         principalSchema: "public",
                         principalTable: "CategoryRestaurants",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -245,8 +244,7 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdProfileUser,
                         principalSchema: "public",
                         principalTable: "ProfileUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -259,8 +257,8 @@ namespace IHunger.Infra.Data.Migrations
                     OrderStatus = table.Column<int>(type: "integer", nullable: false),
                     IdCoupon = table.Column<Guid>(type: "uuid", nullable: true),
                     IdProfileUser = table.Column<Guid>(type: "uuid", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -270,15 +268,13 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdCoupon,
                         principalSchema: "public",
                         principalTable: "Coupons",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Orders_ProfileUsers_IdProfileUser",
                         column: x => x.IdProfileUser,
                         principalSchema: "public",
                         principalTable: "ProfileUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -290,8 +286,8 @@ namespace IHunger.Infra.Data.Migrations
                     Text = table.Column<string>(type: "varchar(200)", nullable: false),
                     Starts = table.Column<decimal>(type: "DECIMAL", nullable: false),
                     IdRestaurant = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -301,8 +297,7 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdRestaurant,
                         principalSchema: "public",
                         principalTable: "Restaurant",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -320,8 +315,8 @@ namespace IHunger.Infra.Data.Migrations
                     Image = table.Column<string>(type: "varchar(100)", nullable: false),
                     IdCategoryProduct = table.Column<Guid>(type: "uuid", nullable: false),
                     IdRestaurant = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -331,15 +326,13 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdCategoryProduct,
                         principalSchema: "public",
                         principalTable: "CategoryProducts",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Products_Restaurant_IdRestaurant",
                         column: x => x.IdRestaurant,
                         principalSchema: "public",
                         principalTable: "Restaurant",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -446,8 +439,8 @@ namespace IHunger.Infra.Data.Migrations
                     Quantity = table.Column<int>(type: "integer", nullable: false),
                     IdProduct = table.Column<Guid>(type: "uuid", nullable: false),
                     IdOrder = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -457,15 +450,13 @@ namespace IHunger.Infra.Data.Migrations
                         column: x => x.IdOrder,
                         principalSchema: "public",
                         principalTable: "Orders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Itens_Products_IdProduct",
                         column: x => x.IdProduct,
                         principalSchema: "public",
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NodaTime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace IHunger.Infra.Data.Context
 {
     public class DataIdentityDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
-        public DataIdentityDbContext(DbContextOptions<DataIdentityDbContext> options) : base(options) { }
+        public DataIdentityDbContext(DbContextOptions<DataIdentityDbContext> options) : base(options)
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
@@ -28,12 +33,13 @@ namespace IHunger.Infra.Data.Context
         public DbSet<AddressUser> AddressUsers { get; set; }
         public DbSet<ProfileUser> ProfileUsers { get; set; }
 
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseLazyLoadingProxies();
+            optionsBuilder.LogTo(Console.WriteLine);
+            //optionsBuilder.UseLazyLoadingProxies();
         }
-        
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,7 +49,14 @@ namespace IHunger.Infra.Data.Context
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
             base.OnModelCreating(modelBuilder);
-            
+
+        }
+
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            base.ConfigureConventions(configurationBuilder);
+
+            configurationBuilder.Properties<ZonedDateTime>(x => x.HaveConversion<ZonedDateTimeConverter>());
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
@@ -64,6 +77,16 @@ namespace IHunger.Infra.Data.Context
             }
 
             return base.SaveChangesAsync(cancellationToken);
+        }
+
+
+    }
+
+    internal class ZonedDateTimeConverter : ValueConverter<ZonedDateTime, LocalDateTime>
+    {
+        public ZonedDateTimeConverter() :
+           base(v => v.WithZone(DateTimeZone.Utc).LocalDateTime, v => v.InUtc())
+        {
         }
     }
 }

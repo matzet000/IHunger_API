@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
+#nullable disable
+
 namespace IHunger.Infra.Data.Migrations
 {
     [DbContext(typeof(DataIdentityDbContext))]
@@ -16,9 +18,10 @@ namespace IHunger.Infra.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("public")
-                .HasAnnotation("Relational:MaxIdentifierLength", 63)
-                .HasAnnotation("ProductVersion", "5.0.9")
-                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("IHunger.Domain.Models.AddressRestaurant", b =>
                 {
@@ -35,7 +38,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(80)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("District")
                         .IsRequired()
@@ -52,7 +55,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(80)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
@@ -60,7 +63,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AddressRestaurants");
+                    b.ToTable("AddressRestaurants", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.AddressUser", b =>
@@ -78,7 +81,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(80)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("District")
                         .IsRequired()
@@ -95,7 +98,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(80)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
@@ -103,7 +106,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AddressUsers");
+                    b.ToTable("AddressUsers", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.CategoryProduct", b =>
@@ -113,7 +116,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -124,11 +127,11 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.ToTable("CategoryProducts");
+                    b.ToTable("CategoryProducts", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.CategoryRestaurant", b =>
@@ -138,7 +141,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -149,11 +152,11 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.ToTable("CategoryRestaurants");
+                    b.ToTable("CategoryRestaurants", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Comment", b =>
@@ -163,7 +166,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("IdRestaurant")
                         .HasColumnType("uuid");
@@ -176,13 +179,13 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
                     b.HasIndex("IdRestaurant");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comment", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Coupon", b =>
@@ -196,20 +199,20 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime>("ExpireAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("Value")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Coupons");
+                    b.ToTable("Coupons", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Item", b =>
@@ -219,7 +222,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("IdOrder")
                         .HasColumnType("uuid");
@@ -234,7 +237,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -242,7 +245,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("IdProduct");
 
-                    b.ToTable("Itens");
+                    b.ToTable("Itens", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Order", b =>
@@ -252,7 +255,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid?>("IdCoupon")
                         .HasColumnType("uuid");
@@ -267,7 +270,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("DECIMAL");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -275,7 +278,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("IdProfileUser");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.OrderStatus", b =>
@@ -285,7 +288,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -295,11 +298,11 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrdersStatus");
+                    b.ToTable("OrdersStatus", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Product", b =>
@@ -309,7 +312,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -336,7 +339,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("DECIMAL");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("Vegan")
                         .HasColumnType("boolean");
@@ -350,7 +353,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("IdRestaurant");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.ProfileUser", b =>
@@ -360,10 +363,10 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid?>("IdAddressUser")
                         .IsRequired()
@@ -381,13 +384,13 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
                     b.HasIndex("IdAddressUser");
 
-                    b.ToTable("ProfileUsers");
+                    b.ToTable("ProfileUsers", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Restaurant", b =>
@@ -397,7 +400,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -418,7 +421,7 @@ namespace IHunger.Infra.Data.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -426,7 +429,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("IdCategoryRestaurant");
 
-                    b.ToTable("Restaurant");
+                    b.ToTable("Restaurant", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.User", b =>
@@ -496,7 +499,7 @@ namespace IHunger.Infra.Data.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex");
 
-                    b.ToTable("AspNetUsers");
+                    b.ToTable("AspNetUsers", "public");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
@@ -523,15 +526,16 @@ namespace IHunger.Infra.Data.Migrations
                         .IsUnique()
                         .HasDatabaseName("RoleNameIndex");
 
-                    b.ToTable("AspNetRoles");
+                    b.ToTable("AspNetRoles", "public");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("text");
@@ -546,15 +550,16 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims");
+                    b.ToTable("AspNetRoleClaims", "public");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("text");
@@ -569,7 +574,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims");
+                    b.ToTable("AspNetUserClaims", "public");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
@@ -592,7 +597,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins");
+                    b.ToTable("AspNetUserLogins", "public");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
@@ -607,7 +612,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles");
+                    b.ToTable("AspNetUserRoles", "public");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
@@ -628,7 +633,7 @@ namespace IHunger.Infra.Data.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens");
+                    b.ToTable("AspNetUserTokens", "public");
                 });
 
             modelBuilder.Entity("IHunger.Domain.Models.Comment", b =>
