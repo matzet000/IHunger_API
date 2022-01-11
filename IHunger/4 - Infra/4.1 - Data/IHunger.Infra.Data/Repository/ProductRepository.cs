@@ -27,6 +27,24 @@ namespace IHunger.Infra.Data.Repository
                 .FirstOrDefaultAsync();
         }
 
+        public async Task<List<Product>> GetByRestaurant(Guid id)
+        {
+            return await DbSet
+                .Include(x => x.Restaurant)
+                .Include(x => x.CategoryProduct)
+                .Where(x => x.IdRestaurant == id)
+                .ToListAsync();
+        }
+
+        public async Task<Product> GetByRestaurantByIdProduct(Guid idRestaurant, Guid idProduct)
+        {
+            return await DbSet
+                .Include(x => x.Restaurant)
+                .Include(x => x.CategoryProduct)
+                .Where(x => x.IdRestaurant == idRestaurant && x.Id == idProduct)
+                .FirstOrDefaultAsync();
+        }
+
         public override async Task<List<Product>> Search(
             Expression<Func<Product, bool>> predicate = null,
             Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null,

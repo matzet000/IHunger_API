@@ -5,6 +5,7 @@ using IHunger.Domain.Models;
 using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
 using IHunger.WebAPI.ViewModels.Comment;
+using IHunger.WebAPI.ViewModels.Product;
 using IHunger.WebAPI.ViewModels.Restaurant;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -22,17 +23,20 @@ namespace IHunger.WebAPI.V1.Controllers
     {
         private readonly IRestaurantService _restaurantService;
         private readonly ICommentService _commentService;
+        private readonly IProductService _productService;
         private readonly IMapper _mapper;
 
         public RestaurantController(
             IRestaurantService restaurantService,
             ICommentService commentService,
+            IProductService productService,
             IMapper mapper,
             INotifier notifier, 
             IUser appUser) : base(notifier, appUser)
         {
             _restaurantService = restaurantService;
             _commentService = commentService;
+            _productService = productService;
             _mapper = mapper;
         }
 
@@ -123,6 +127,18 @@ namespace IHunger.WebAPI.V1.Controllers
         public async Task<ActionResult<CommentViewModel>> DeleteComment([FromRoute] Guid idRestaurant, [FromRoute] Guid idComment)
         {
             return _mapper.Map<CommentViewModel>(await _commentService.Delete(idRestaurant, idComment));
+        }
+
+        [HttpGet("{idRestaurant}/products")]
+        public async Task<ActionResult<List<ProductViewModel>>> GetAllProducts([FromRoute] Guid idRestaurant)
+        {
+            return _mapper.Map<List<ProductViewModel>>(await _productService.GetByRestaurant(idRestaurant));
+        }
+
+        [HttpGet("{idRestaurant}/products/{idProduct}")]
+        public async Task<ActionResult<ProductViewModel>> GetProduct([FromRoute] Guid idRestaurant, [FromRoute] Guid idProduct)
+        {
+            return _mapper.Map<ProductViewModel>(await _productService.GetByRestaurantByIdProduct(idRestaurant, idProduct));
         }
     }
 }

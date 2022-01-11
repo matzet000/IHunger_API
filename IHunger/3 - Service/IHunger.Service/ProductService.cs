@@ -319,5 +319,43 @@ namespace IHunger.Service
             NotifyError("Error deleting entity");
             return await Task.FromResult<Product>(null);
         }
+
+        public async Task<List<Product>> GetByRestaurant(Guid id)
+        {
+            var restaurant = await _unitOfWork
+                .RepositoryFactory
+                .RestaurantRepository
+                .GetById(id);
+
+            if(restaurant == null)
+            {
+                NotifyError("Not fround Restaurant");
+                return await Task.FromResult<List<Product>>(null);
+            }
+
+            return await _unitOfWork
+                 .RepositoryFactory
+                 .ProductRepository
+                 .GetByRestaurant(id);
+        }
+
+        public async Task<Product> GetByRestaurantByIdProduct(Guid idRestaurant, Guid idProduct)
+        {
+            var restaurant = await _unitOfWork
+                .RepositoryFactory
+                .RestaurantRepository
+                .GetById(idRestaurant);
+
+            if (restaurant == null)
+            {
+                NotifyError("Not fround Restaurant");
+                return await Task.FromResult<Product>(null);
+            }
+
+            return await _unitOfWork
+                 .RepositoryFactory
+                 .ProductRepository
+                 .GetByRestaurantByIdProduct(idRestaurant, idProduct);
+        }
     }
 }

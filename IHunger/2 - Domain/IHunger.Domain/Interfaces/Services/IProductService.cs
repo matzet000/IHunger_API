@@ -12,6 +12,8 @@ namespace IHunger.Domain.Interfaces.Services
         Task<Product> Create(Product product);
         Task<List<Product>> GetAllWithFilter(ProductFilter productFilter);
         Task<Product> GetById(Guid id);
+        Task<Product> GetByRestaurantByIdProduct(Guid idRestaurant, Guid idProduct);
+        Task<List<Product>> GetByRestaurant(Guid id);
         Task<Product> Update(Product product);
         Task<Product> Delete(Guid id);
     }
