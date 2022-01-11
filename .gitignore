@@ -244,7 +244,8 @@ paket-files/
 .idea/
 *.sln.iml
 .vs/
-.vs/*
+**/.vs/
+**/Log
 
 *.json
 !appsettings.json
