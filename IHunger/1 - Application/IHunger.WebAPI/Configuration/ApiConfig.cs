@@ -60,12 +60,14 @@ namespace IHunger.WebAPI.Configuration
 
             services.AddControllers()
                 .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
+           
             return services;
         }
 
         public static IApplicationBuilder UseApiConfig(this IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
+            //app.UseHttpLogging();
+
             if (env.IsDevelopment())
             {
                 app.UseCors("Development");

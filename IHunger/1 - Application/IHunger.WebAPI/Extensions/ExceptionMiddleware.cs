@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace IHunger.WebAPI.Extensions
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;
+        readonly ILogger<ExceptionMiddleware> _log;
 
-        public ExceptionMiddleware(RequestDelegate next)
+        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> log)
         {
+            _log = log;
             _next = next;
         }
 
@@ -24,6 +27,7 @@ namespace IHunger.WebAPI.Extensions
             }
             catch (Exception ex)
             {
+                _log.LogError(ex.Message);
                 HandleExceptionAsync(httpContext, ex);
             }
         }

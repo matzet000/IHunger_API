@@ -36,6 +36,7 @@ namespace IHunger.WebAPI
             }
 
             Configuration = builder.Build();
+
         }
 
         public void ConfigureServices(IServiceCollection services)
