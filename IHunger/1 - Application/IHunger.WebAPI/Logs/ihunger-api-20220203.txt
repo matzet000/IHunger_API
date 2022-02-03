@@ -929,3 +929,804 @@ VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);" (0723d8ff)
 2022-02-03T10:05:00.5985258+02:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)" in 464.1029ms (afa2e885)
 2022-02-03T10:05:00.5985907+02:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
 2022-02-03T10:05:00.5989330+02:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/restaurants application/json 350 - 200 575 application/json;+charset=utf-8 479.1580ms (791a596a)
+2022-02-03T10:30:16.5862725+02:00  [INF] User profile is available. Using '"C:\Users\mathe\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-02-03T10:30:18.1559254+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-02-03T10:30:18.1788068+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-02-03T10:30:18.1862168+02:00  [INF] Content root path: "C:\Users\mathe\OneDrive\TI\git\IHunger_API\IHunger\1 - Application\IHunger.WebAPI" (b5d60022)
+2022-02-03T10:30:18.2597933+02:00 80000056-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - - (ca22a1cb)
+2022-02-03T10:30:19.1789705+02:00 80000056-0000-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 895.7036ms (791a596a)
+2022-02-03T10:30:19.2962381+02:00 80000058-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-02-03T10:30:19.3140220+02:00 80000058-0000-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11948 application/javascript;+charset=utf-8 6.0961ms (791a596a)
+2022-02-03T10:30:20.5302796+02:00 8000005a-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - (ca22a1cb)
+2022-02-03T10:30:21.3345404+02:00 8000005a-0000-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 804.3754ms (791a596a)
+2022-02-03T10:52:44.3183039+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/auth/register application/json 433 (ca22a1cb)
+2022-02-03T10:52:44.4528692+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Register (IHunger.WebAPI)"' (500cc934)
+2022-02-03T10:52:44.5227204+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Register\", controller = \"Auth\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(IHunger.WebAPI.ViewModels.User.RegisterUserViewModel)" on controller "IHunger.WebAPI.V1.Controllers.AuthController" ("IHunger.WebAPI"). (122b2fdf)
+2022-02-03T10:52:48.0710496+02:00 80000029-0002-fc00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. (4007092b)
+2022-02-03T10:52:48.7269730+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-02-03T10:52:50.8645679+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("206"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:51.0046098+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("28"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:51.9160499+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("29"ms) [Parameters=["@p0='5d9d668a-c822-4de1-81ea-c9d3cf7d58cc', @p1='Rio de Janeiro' (Nullable = false), @p2='Brazil' (Nullable = false), @p3='2022-02-03T10:52:51.6040239+02:00' (DbType = DateTime), @p4='Meier' (Nullable = false), @p5='0', @p6='0', @p7='Rua doutor pache de faria' (Nullable = false), @p8='2022-02-03T10:52:51.6086006+02:00' (DbType = DateTime), @p9='20710020' (Nullable = false)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AddressUsers\" (\"Id\", \"City\", \"County\", \"CreatedAt\", \"District\", \"Latitude\", \"Longitude\", \"Street\", \"UpdatedAt\", \"ZipCode\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2022-02-03T10:52:51.9494664+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@p10='a477554a-b624-440f-bc31-42fa846deb49', @p11='2000-02-03T07:51:45.6200000Z' (Nullable = true) (DbType = DateTime), @p12='2022-02-03T10:52:51.5889121+02:00' (DbType = DateTime), @p13='5d9d668a-c822-4de1-81ea-c9d3cf7d58cc', @p14='Client' (Nullable = false), @p15='Client' (Nullable = false), @p16='2', @p17='2022-02-03T10:52:51.6030285+02:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"ProfileUsers\" (\"Id\", \"BirthDate\", \"CreatedAt\", \"IdAddressUser\", \"LastName\", \"Name\", \"Type\", \"UpdatedAt\")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);" (0723d8ff)
+2022-02-03T10:52:51.9726169+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p19='0', @p20='8ca16660-6b50-455c-aa5d-842feedfc5cc', @p21='client@client.com', @p22='True', @p23='a477554a-b624-440f-bc31-42fa846deb49', @p24='True', @p25=NULL (DbType = DateTimeOffset), @p26='CLIENT@CLIENT.COM', @p27='CLIENT@CLIENT.COM', @p28='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p29=NULL, @p30='False', @p31='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p32='False', @p33='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUsers\" (\"Id\", \"AccessFailedCount\", \"ConcurrencyStamp\", \"Email\", \"EmailConfirmed\", \"IdProfileUser\", \"LockoutEnabled\", \"LockoutEnd\", \"NormalizedEmail\", \"NormalizedUserName\", \"PasswordHash\", \"PhoneNumber\", \"PhoneNumberConfirmed\", \"SecurityStamp\", \"TwoFactorEnabled\", \"UserName\")
+VALUES (@p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33);" (0723d8ff)
+2022-02-03T10:52:52.1201225+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:52.1540189+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:52.2436901+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@p0='Type', @p1='Client', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='be2e016b-2b5c-4e07-a789-99cb0a250fda', @p19='8ca16660-6b50-455c-aa5d-842feedfc5cc', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:52.3362669+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:52.3518252+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:52.3721439+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='CategoryProduct', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='339d171e-8dc9-4cd4-9762-c3c25f2a671c', @p19='be2e016b-2b5c-4e07-a789-99cb0a250fda', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:52.4015474+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:52.4456300+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("23"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:52.5015829+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='CategoryRestaurant', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='2431d8d0-ef34-45f6-8850-3ff668e1e48c', @p19='339d171e-8dc9-4cd4-9762-c3c25f2a671c', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:52.6265153+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:52.6790217+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:52.7400375+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='Coupon', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='991827e9-353f-439a-a50b-aa56053ae084', @p19='2431d8d0-ef34-45f6-8850-3ff668e1e48c', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:52.7909219+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:52.8301735+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:52.8864565+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@p0='Product', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='698a2975-5561-4542-b190-27d1abe83f83', @p19='991827e9-353f-439a-a50b-aa56053ae084', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:52.9296508+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:52.9757956+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.0061256+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("21"ms) [Parameters=["@p0='OrderStatus', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='8d686c4e-06ab-408a-9585-865fa24c243c', @p19='698a2975-5561-4542-b190-27d1abe83f83', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.0404864+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.0746942+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.1047577+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='Restaurant', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='73dacd81-41d5-46ac-a2bd-14772683e583', @p19='8d686c4e-06ab-408a-9585-865fa24c243c', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.1542591+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("24"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.1890503+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.2073120+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='Item', @p1='Create', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='4397e9f3-6942-4719-9b9b-856f99349ac3', @p19='73dacd81-41d5-46ac-a2bd-14772683e583', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.2405500+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.2582894+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.3192179+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@p0='Item', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='0571f1a1-0792-4c75-a0eb-0765c02861f0', @p19='4397e9f3-6942-4719-9b9b-856f99349ac3', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.3409938+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.3598661+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.4182353+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='Item', @p1='Update', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='7ec87270-8bc3-4dba-b076-3c37a57e2bbc', @p19='0571f1a1-0792-4c75-a0eb-0765c02861f0', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.4558701+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.4786768+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.5008734+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='Item', @p1='Delete', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='d7dcc5fb-45d8-43fd-854c-5a94cadc9279', @p19='7ec87270-8bc3-4dba-b076-3c37a57e2bbc', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.5522910+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.5796634+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.6367094+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='Order', @p1='Create', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='3042ff59-3b0c-4c4e-a778-32c2e3e51add', @p19='d7dcc5fb-45d8-43fd-854c-5a94cadc9279', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.6724923+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.7083589+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.7611173+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='Order', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='8a49ee19-0ef1-452a-830e-22fc51958995', @p19='3042ff59-3b0c-4c4e-a778-32c2e3e51add', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.8146164+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.8799023+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:53.9381729+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='Order', @p1='Update', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='9c6df7b2-ecca-4d51-90f0-5e5cf0cf57e1', @p19='8a49ee19-0ef1-452a-830e-22fc51958995', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:53.9720304+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:53.9988004+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:54.0353036+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='Order', @p1='Delete', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='e1c8c3d3-0a36-46b5-95cb-934b9baf28f7', @p19='9c6df7b2-ecca-4d51-90f0-5e5cf0cf57e1', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:54.0989156+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:54.1352734+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:54.1961347+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='Profile', @p1='Get', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='25f81a90-2565-49ac-a133-849f8b355367', @p19='e1c8c3d3-0a36-46b5-95cb-934b9baf28f7', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:54.2856671+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedUserName_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:52:54.3005792+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:54.3469506+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='Profile', @p1='Update', @p2='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p18='12a1e1c7-1028-45f5-a2f8-827325064c1a', @p3='0', @p4='ca2622b2-6670-4316-90e2-4a7179d0e72f', @p19='25f81a90-2565-49ac-a133-849f8b355367', @p5='client@client.com', @p6='True', @p7='a477554a-b624-440f-bc31-42fa846deb49', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='CLIENT@CLIENT.COM', @p11='CLIENT@CLIENT.COM', @p12='AQAAAAEAACcQAAAAEPVyPARLNXVE21elmrTAnJHmO4OTk4gsZjJn43QjIG3EFkMq3Re/EUAwSAU8x9Y8wg==', @p13=NULL, @p14='False', @p15='3EP2TXYTFWE4PNKRTTQQQXVT5GYZ3EKJ', @p16='False', @p17='client@client.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:52:54.5303200+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__user_Id_0='12a1e1c7-1028-45f5-a2f8-827325064c1a'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-02-03T10:52:54.6800093+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@__userId_0='12a1e1c7-1028-45f5-a2f8-827325064c1a'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-02-03T10:52:54.7340157+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2022-02-03T10:52:54.8137324+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedEmail_0='CLIENT@CLIENT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:52:54.8346166+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__user_Id_0='12a1e1c7-1028-45f5-a2f8-827325064c1a'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-02-03T10:52:54.8526908+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='12a1e1c7-1028-45f5-a2f8-827325064c1a'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-02-03T10:52:55.1888303+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-02-03T10:52:55.3292209+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.AuthController.Register (IHunger.WebAPI)" in 10791.6667ms (afa2e885)
+2022-02-03T10:52:55.3301434+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Register (IHunger.WebAPI)"' (99874f2b)
+2022-02-03T10:52:55.3436261+02:00 80000029-0002-fc00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/auth/register application/json 433 - 200 1955 application/json;+charset=utf-8 11025.4341ms (791a596a)
+2022-02-03T10:53:19.1686911+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/auth/register application/json 449 (ca22a1cb)
+2022-02-03T10:53:19.1747237+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Register (IHunger.WebAPI)"' (500cc934)
+2022-02-03T10:53:19.1754569+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Register\", controller = \"Auth\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(IHunger.WebAPI.ViewModels.User.RegisterUserViewModel)" on controller "IHunger.WebAPI.V1.Controllers.AuthController" ("IHunger.WebAPI"). (122b2fdf)
+2022-02-03T10:53:19.4006859+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-02-03T10:53:19.4365913+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("22"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:19.4755842+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("27"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:19.5432665+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@p0='1bc3d5e3-e050-42b0-bb66-60fa11970c6f', @p1='Rio de Janeiro' (Nullable = false), @p2='Brazil' (Nullable = false), @p3='2022-02-03T10:53:19.4807995+02:00' (DbType = DateTime), @p4='Meier' (Nullable = false), @p5='0', @p6='0', @p7='Rua doutor pache de faria' (Nullable = false), @p8='2022-02-03T10:53:19.4808081+02:00' (DbType = DateTime), @p9='20710020' (Nullable = false)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AddressUsers\" (\"Id\", \"City\", \"County\", \"CreatedAt\", \"District\", \"Latitude\", \"Longitude\", \"Street\", \"UpdatedAt\", \"ZipCode\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2022-02-03T10:53:19.5887046+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@p10='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p11='2000-02-03T07:51:45.6200000Z' (Nullable = true) (DbType = DateTime), @p12='2022-02-03T10:53:19.4807323+02:00' (DbType = DateTime), @p13='1bc3d5e3-e050-42b0-bb66-60fa11970c6f', @p14='Restaurant' (Nullable = false), @p15='Restaurant' (Nullable = false), @p16='3', @p17='2022-02-03T10:53:19.4807910+02:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"ProfileUsers\" (\"Id\", \"BirthDate\", \"CreatedAt\", \"IdAddressUser\", \"LastName\", \"Name\", \"Type\", \"UpdatedAt\")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);" (0723d8ff)
+2022-02-03T10:53:19.6108333+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p19='0', @p20='52b44f64-d3d2-429a-9972-cceccbf5894a', @p21='restaurant@restaurant.com', @p22='True', @p23='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p24='True', @p25=NULL (DbType = DateTimeOffset), @p26='RESTAURANT@RESTAURANT.COM', @p27='RESTAURANT@RESTAURANT.COM', @p28='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p29=NULL, @p30='False', @p31='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p32='False', @p33='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUsers\" (\"Id\", \"AccessFailedCount\", \"ConcurrencyStamp\", \"Email\", \"EmailConfirmed\", \"IdProfileUser\", \"LockoutEnabled\", \"LockoutEnd\", \"NormalizedEmail\", \"NormalizedUserName\", \"PasswordHash\", \"PhoneNumber\", \"PhoneNumberConfirmed\", \"SecurityStamp\", \"TwoFactorEnabled\", \"UserName\")
+VALUES (@p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33);" (0723d8ff)
+2022-02-03T10:53:19.6860835+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:19.7015207+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:19.7706946+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='Type', @p1='Restaurant', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='78a8abb2-14e3-4fe4-92c3-a7b45b46293a', @p19='52b44f64-d3d2-429a-9972-cceccbf5894a', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:19.8044893+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:19.8381313+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:19.8968055+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@p0='Product', @p1='Create', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='bcaf006a-83eb-424b-b4d9-79f38aaf2276', @p19='78a8abb2-14e3-4fe4-92c3-a7b45b46293a', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:19.9307396+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.0162282+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:20.0765867+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='Product', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='c87a265f-e717-4654-a3b4-a4489d41c5e9', @p19='bcaf006a-83eb-424b-b4d9-79f38aaf2276', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:20.1597053+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.1985876+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:20.2510943+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='Product', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='d37e88af-acf2-46c9-94b1-47aa913fbf0e', @p19='c87a265f-e717-4654-a3b4-a4489d41c5e9', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:20.3364261+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.3971137+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:20.4552117+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@p0='Product', @p1='Delete', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='05900ad4-0f94-4a40-8a18-f98390aeec53', @p19='d37e88af-acf2-46c9-94b1-47aa913fbf0e', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:20.5197155+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.5747698+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("27"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:20.6030951+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='Coupon', @p1='Create', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='e1e35ebb-5a26-4dea-9c06-5d8df44db58b', @p19='05900ad4-0f94-4a40-8a18-f98390aeec53', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:20.6721314+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.7231037+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:20.7851193+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("35"ms) [Parameters=["@p0='Coupon', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='a996d859-cd63-41f9-9871-068acfc08f98', @p19='e1e35ebb-5a26-4dea-9c06-5d8df44db58b', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:20.8175157+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.8466054+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:20.8889283+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("20"ms) [Parameters=["@p0='Coupon', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='4ecffaf0-c842-4953-9b87-eace374cd2e6', @p19='a996d859-cd63-41f9-9871-068acfc08f98', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:20.9672624+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:20.9983332+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("22"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:21.0254899+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='Restaurant', @p1='Create', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='fff087c4-6281-4254-b15e-ddb841d77dc4', @p19='4ecffaf0-c842-4953-9b87-eace374cd2e6', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:21.0860207+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:21.1134198+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:21.1882638+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("24"ms) [Parameters=["@p0='Restaurant', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='b03b55f5-d2d2-4211-926e-c20952fe8858', @p19='fff087c4-6281-4254-b15e-ddb841d77dc4', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:21.2648701+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:21.3124775+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:21.3820918+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='Restaurant', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='f48011ab-e3c7-4f0d-8e8b-7f9fa1a440fc', @p19='b03b55f5-d2d2-4211-926e-c20952fe8858', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:21.4632911+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:21.4827315+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:21.5180287+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='Profile', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='e8de5329-b2b1-4f5e-812d-103da97bdf85', @p19='f48011ab-e3c7-4f0d-8e8b-7f9fa1a440fc', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:21.5787920+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:21.6065130+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:21.6717280+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@p0='Profile', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='897f239d-a64e-4641-87fc-11b250b7ccd0', @p19='e8de5329-b2b1-4f5e-812d-103da97bdf85', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:21.7734783+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:21.8871864+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:22.0277563+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("63"ms) [Parameters=["@p0='OrderStatus', @p1='Create', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='986dc00a-a2cf-499a-947b-e672a75f7042', @p19='897f239d-a64e-4641-87fc-11b250b7ccd0', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:22.1626957+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:22.1829908+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:22.2557474+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@p0='OrderStatus', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='e147c483-27c1-418a-a405-63a6d69f1766', @p19='986dc00a-a2cf-499a-947b-e672a75f7042', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:22.3189084+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:22.3570720+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:22.4383858+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@p0='OrderStatus', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='515ef8c0-e396-4cae-9839-6d7d9bd23941', @p19='e147c483-27c1-418a-a405-63a6d69f1766', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:22.4984809+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:22.5281970+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:22.5839535+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='OrderStatus', @p1='Delete', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='75aee6e5-9c7f-4998-b932-99193e24d9d3', @p19='515ef8c0-e396-4cae-9839-6d7d9bd23941', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:22.6669789+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:22.7199510+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:22.8342509+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("21"ms) [Parameters=["@p0='Order', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='6b98823c-7e6d-4566-a59f-1df1ffae187a', @p19='75aee6e5-9c7f-4998-b932-99193e24d9d3', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:22.9101714+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:22.9436147+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:23.0001292+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@p0='Order', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='9b99ec6d-a858-4c43-ac23-a21d9937b323', @p19='6b98823c-7e6d-4566-a59f-1df1ffae187a', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:23.1290908+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:23.2623570+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("62"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:23.4186101+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='Order', @p1='Delete', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='5d0bf0e2-27da-4acd-9143-8b786e99cbb5', @p19='9b99ec6d-a858-4c43-ac23-a21d9937b323', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:23.5197505+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("20"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:23.5662664+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:23.6550088+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("30"ms) [Parameters=["@p0='CategoryRestaurant', @p1='Create', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='97d705e1-5ce0-4a07-ac78-585dec1b2dcd', @p19='5d0bf0e2-27da-4acd-9143-8b786e99cbb5', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:23.7302026+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:23.7808455+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:23.7951919+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='CategoryRestaurant', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='df4c2493-01b7-4d9b-8f8a-b613601b0db5', @p19='97d705e1-5ce0-4a07-ac78-585dec1b2dcd', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:23.8771002+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("31"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:23.9171064+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("23"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:23.9807400+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("52"ms) [Parameters=["@p0='CategoryRestaurant', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='c1d9d62d-475b-41bb-9181-f9b8b4a16ef1', @p19='df4c2493-01b7-4d9b-8f8a-b613601b0db5', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:24.0325081+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:24.0795528+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("38"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:24.1268325+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='CategoryProduct', @p1='Create', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='d4d473b2-4bc2-46d5-9cb8-30aee24c80f9', @p19='c1d9d62d-475b-41bb-9181-f9b8b4a16ef1', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:24.1532430+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:24.1793183+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:24.2108934+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("23"ms) [Parameters=["@p0='CategoryProduct', @p1='Get', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='d8fcaff7-105f-4599-8a14-c285531d59aa', @p19='d4d473b2-4bc2-46d5-9cb8-30aee24c80f9', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:24.2522853+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("29"ms) [Parameters=["@__normalizedUserName_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-02-03T10:53:24.2843689+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:24.3023943+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='CategoryProduct', @p1='Update', @p2='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p18='fa300be8-10f1-4747-bd39-7d6f3d464c6d', @p3='0', @p4='44585fc6-24d1-47f5-8b2f-b2e6d8b55fd7', @p19='d8fcaff7-105f-4599-8a14-c285531d59aa', @p5='restaurant@restaurant.com', @p6='True', @p7='f775a957-9851-49a6-95c6-e6b05bbe1f18', @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='RESTAURANT@RESTAURANT.COM', @p11='RESTAURANT@RESTAURANT.COM', @p12='AQAAAAEAACcQAAAAELXsUnqNtv+bkRjPyRXoA6PmP/9ILCZCIvWo3ZMEjLP5M5/BHjUkmLdMNam3D0k/zg==', @p13=NULL, @p14='False', @p15='QKLP5VHCVYDEP5I2AIMBM44MTYUGGLTG', @p16='False', @p17='restaurant@restaurant.com'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AspNetUserClaims\" (\"ClaimType\", \"ClaimValue\", \"UserId\")
+VALUES (@p0, @p1, @p2)
+RETURNING \"Id\";
+UPDATE public.\"AspNetUsers\" SET \"AccessFailedCount\" = @p3, \"ConcurrencyStamp\" = @p4, \"Email\" = @p5, \"EmailConfirmed\" = @p6, \"IdProfileUser\" = @p7, \"LockoutEnabled\" = @p8, \"LockoutEnd\" = @p9, \"NormalizedEmail\" = @p10, \"NormalizedUserName\" = @p11, \"PasswordHash\" = @p12, \"PhoneNumber\" = @p13, \"PhoneNumberConfirmed\" = @p14, \"SecurityStamp\" = @p15, \"TwoFactorEnabled\" = @p16, \"UserName\" = @p17
+WHERE \"Id\" = @p18 AND \"ConcurrencyStamp\" = @p19;" (0723d8ff)
+2022-02-03T10:53:24.3544271+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='fa300be8-10f1-4747-bd39-7d6f3d464c6d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-02-03T10:53:24.3692414+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='fa300be8-10f1-4747-bd39-7d6f3d464c6d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-02-03T10:53:24.3748295+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2022-02-03T10:53:24.4020583+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("20"ms) [Parameters=["@__normalizedEmail_0='RESTAURANT@RESTAURANT.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-02-03T10:53:24.4440214+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='fa300be8-10f1-4747-bd39-7d6f3d464c6d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-02-03T10:53:24.4767409+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@__userId_0='fa300be8-10f1-4747-bd39-7d6f3d464c6d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-02-03T10:53:24.4828492+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-02-03T10:53:24.4918532+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.AuthController.Register (IHunger.WebAPI)" in 5316.1224ms (afa2e885)
+2022-02-03T10:53:24.4919231+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Register (IHunger.WebAPI)"' (99874f2b)
+2022-02-03T10:53:24.4926363+02:00 8000000d-0002-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/auth/register application/json 449 - 200 2514 application/json;+charset=utf-8 5325.1533ms (791a596a)

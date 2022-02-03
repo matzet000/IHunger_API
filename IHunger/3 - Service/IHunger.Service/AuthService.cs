@@ -2,6 +2,7 @@
 using IHunger.Domain.Interfaces;
 using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
+using IHunger.Domain.Models.Validations;
 using IHunger.Infra.CrossCutting.Extensions;
 using IHunger.Infra.CrossCutting.ViewModels.User;
 using Microsoft.AspNetCore.Identity;
@@ -36,6 +37,9 @@ namespace IHunger.Service
 
         public async Task<LoginResponseViewModel> Register(User user, string password)
         {
+            if (!Validate(new ProfileUserValidation(), user.ProfileUser)) return null;
+            if (!Validate(new AddressUserValidation(), user.ProfileUser.AddressUser)) return null;
+
             var resultCreateUser = await _userManager.CreateAsync(user, password);
 
             if (resultCreateUser.Succeeded)
