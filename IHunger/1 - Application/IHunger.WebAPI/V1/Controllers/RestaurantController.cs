@@ -4,6 +4,7 @@ using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
+using IHunger.WebAPI.Extensions;
 using IHunger.WebAPI.ViewModels.Comment;
 using IHunger.WebAPI.ViewModels.Product;
 using IHunger.WebAPI.ViewModels.Restaurant;
@@ -41,6 +42,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
+        [ClaimsAuthorize("Restaurant", "Create")]
         public async Task<ActionResult<RestaurantViewModel>> Create(RestaurantCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -53,18 +55,21 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<IEnumerable<RestaurantViewModel>> GetAllWithFilter([FromQuery] RestaurantFilter filter)
         {
             return _mapper.Map<IEnumerable<RestaurantViewModel>>(await _restaurantService.GetAllWithFilter(filter));
         }
 
         [HttpGet("{id}")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<RestaurantViewModel> GetById(Guid id)
         {
             return _mapper.Map<RestaurantViewModel>(await _restaurantService.GetById(id));
         }
 
         [HttpPut("{id}")]
+        [ClaimsAuthorize("Restaurant", "Update")]
         public async Task<ActionResult<RestaurantViewModel>> Update([FromRoute] Guid id, [FromBody] RestaurantViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -78,12 +83,14 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ClaimsAuthorize("Restaurant", "Delete")]
         public async Task<RestaurantViewModel> Delete(Guid id)
         {
             return _mapper.Map<RestaurantViewModel>(await _restaurantService.Delete(id));
         }
 
         [HttpPost("{idRestaurant}/comments")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<CommentViewModel>> CreateComment([FromRoute] Guid idRestaurant, [FromBody] CommentCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -99,6 +106,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet("{idRestaurant}/comments")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<IEnumerable<CommentViewModel>>> GetAllComment([FromRoute] Guid idRestaurant)
         {
             var list = await _commentService.GetAll(idRestaurant);
@@ -106,12 +114,14 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet("{idRestaurant}/comments/{idComment}")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<CommentViewModel>> GetComment([FromRoute] Guid idRestaurant, [FromRoute] Guid idComment)
         {
             return _mapper.Map<CommentViewModel>(await _commentService.GetById(idRestaurant, idComment));
         }
 
         [HttpPut("{idRestaurant}/comments/{idComment}")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<CommentViewModel>> UpdateComment([FromRoute] Guid idRestaurant, [FromRoute] Guid idComment, [FromBody] CommentViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -124,18 +134,21 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpDelete("{idRestaurant}/comments/{idComment}")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<CommentViewModel>> DeleteComment([FromRoute] Guid idRestaurant, [FromRoute] Guid idComment)
         {
             return _mapper.Map<CommentViewModel>(await _commentService.Delete(idRestaurant, idComment));
         }
 
         [HttpGet("{idRestaurant}/products")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<List<ProductViewModel>>> GetAllProducts([FromRoute] Guid idRestaurant)
         {
             return _mapper.Map<List<ProductViewModel>>(await _productService.GetByRestaurant(idRestaurant));
         }
 
         [HttpGet("{idRestaurant}/products/{idProduct}")]
+        [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<ProductViewModel>> GetProduct([FromRoute] Guid idRestaurant, [FromRoute] Guid idProduct)
         {
             return _mapper.Map<ProductViewModel>(await _productService.GetByRestaurantByIdProduct(idRestaurant, idProduct));

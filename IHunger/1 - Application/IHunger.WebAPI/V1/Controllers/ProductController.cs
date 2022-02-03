@@ -4,6 +4,7 @@ using IHunger.Domain.Interfaces.Services;
 using IHunger.Domain.Models;
 using IHunger.Infra.CrossCutting.Filters;
 using IHunger.WebAPI.Controllers;
+using IHunger.WebAPI.Extensions;
 using IHunger.WebAPI.ViewModels.Product;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -34,6 +35,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpPost]
+        [ClaimsAuthorize("Product", "Create")]
         public async Task<ActionResult<ProductViewModel>> Create(ProductCreatedViewModel viewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
@@ -46,12 +48,14 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpGet]
+        [ClaimsAuthorize("Product", "Get")]
         public async Task<IEnumerable<ProductViewModel>> GetAllWithFilter([FromQuery] ProductFilter filter)
         {
             return _mapper.Map<IEnumerable<ProductViewModel>>(await _productService.GetAllWithFilter(filter));
         }
 
         [HttpGet("{id}")]
+        [ClaimsAuthorize("Product", "Get")]
         public async Task<ProductViewModel> GetById(Guid id)
         {
             var entity = await _productService.GetById(id);
@@ -60,6 +64,7 @@ namespace IHunger.WebAPI.V1.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ClaimsAuthorize("Product", "Delete")]
         public async Task<ProductViewModel> Delete(Guid id)
         {
             return _mapper.Map<ProductViewModel>(await _productService.Delete(id));
