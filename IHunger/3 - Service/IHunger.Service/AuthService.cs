@@ -414,14 +414,16 @@ namespace IHunger.Service
 
             var userToken = new UserTokenViewModel(user.Id.ToString(), user.Email, claims);
 
-            if(user.ProfileUser != null)
+            var profile = await _unitOfWork.RepositoryFactory.ProfileUserRepository.GetById(user.IdProfileUser);
+
+            if (profile != null)
             {
                 userToken.Profile = new ProfileViewModel();
-                userToken.Profile.BirthDate = user.ProfileUser.BirthDate;
-                userToken.Profile.Name = user.ProfileUser.Name;
-                userToken.Profile.LastName = user.ProfileUser.LastName;
+                userToken.Profile.BirthDate = profile.BirthDate;
+                userToken.Profile.Name = profile.Name;
+                userToken.Profile.LastName = profile.LastName;
 
-                switch (user.ProfileUser.Type)
+                switch (profile.Type)
                 {
                     case 1:
                         userToken.Profile.Type = TypeProfile.Admin.ToString();
@@ -437,16 +439,16 @@ namespace IHunger.Service
                         throw new Exception("Access denied");
                 }
 
-                if(user.ProfileUser.AddressUser != null)
+                if(profile.AddressUser != null)
                 {
                     userToken.Address = new AddressViewModel();
-                    userToken.Address.Street = user.ProfileUser.AddressUser.Street;
-                    userToken.Address.District = user.ProfileUser.AddressUser.District;
-                    userToken.Address.County = user.ProfileUser.AddressUser.County;
-                    userToken.Address.City = user.ProfileUser.AddressUser.City;
-                    userToken.Address.ZipCode = user.ProfileUser.AddressUser.ZipCode;
-                    userToken.Address.Latitude = user.ProfileUser.AddressUser.Latitude;
-                    userToken.Address.Longitude = user.ProfileUser.AddressUser.Longitude;
+                    userToken.Address.Street = profile.AddressUser.Street;
+                    userToken.Address.District = profile.AddressUser.District;
+                    userToken.Address.County = profile.AddressUser.County;
+                    userToken.Address.City = profile.AddressUser.City;
+                    userToken.Address.ZipCode = profile.AddressUser.ZipCode;
+                    userToken.Address.Latitude = profile.AddressUser.Latitude;
+                    userToken.Address.Longitude = profile.AddressUser.Longitude;
                 }    
             }
             

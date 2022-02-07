@@ -20,5 +20,7 @@ namespace IHunger.Domain.Interfaces
         IOrderStatusRepository OrderStatusRepository { get; }
         IProductRepository ProductRepository { get; }
         IRestaurantRepository RestaurantRepository { get; }
+        IProfileUserRepository ProfileUserRepository { get; }
+
     }
 }

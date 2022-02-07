@@ -82,5 +82,11 @@ namespace IHunger.Infra.Data
         {
             get => _restaurantRepository ?? (_restaurantRepository = new RestaurantRepository(_dbContext));
         }
+
+        private IProfileUserRepository _profileUserRepository;
+        public IProfileUserRepository ProfileUserRepository
+        {
+            get => _profileUserRepository ?? (_profileUserRepository = new ProfileUserRepository(_dbContext));
+        }
     }
 }
