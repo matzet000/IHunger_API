@@ -50,6 +50,7 @@ namespace IHunger.WebAPI
             services.AddSwaggerConfig();
 
             services.ResolveDependencies();
+
         }
 
         public void Configure(

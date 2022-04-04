@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
+using StackExchange.Profiling.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,13 @@ namespace IHunger.WebAPI.Configuration
     {
         public static IServiceCollection AddApiConfig(this IServiceCollection services)
         {
+            services.AddMemoryCache();
+            services.AddMiniProfiler(options => 
+            {
+                options.RouteBasePath = "/profiler";
+                options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.BottomLeft;
+                options.PopupShowTimeWithChildren = true;
+            }).AddEntityFramework();
             services.AddControllers();
 
             services.AddApiVersioning(options =>
@@ -36,7 +44,7 @@ namespace IHunger.WebAPI.Configuration
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
-            
+
             services.AddCors(options =>
             {
                 options.AddPolicy("Development",
@@ -59,13 +67,15 @@ namespace IHunger.WebAPI.Configuration
 
             services.AddControllers()
                 .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-           
+
             return services;
         }
 
         public static IApplicationBuilder UseApiConfig(this IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
-            //app.UseHttpLogging();
+            app.UseHttpLogging();
+
+            app.UseMiniProfiler();
 
             if (env.IsDevelopment())
             {
@@ -77,7 +87,7 @@ namespace IHunger.WebAPI.Configuration
                 app.UseCors("Production");
                 app.UseHsts();
             }
-            
+
             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();

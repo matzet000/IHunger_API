@@ -80,6 +80,11 @@ namespace IHunger.Infra.Data.Repository
                 query = query.Take(take.Value);
             }
 
+            if(take != null && take.HasValue && skip != null && skip.HasValue)
+            {
+                query = query.Skip(skip.Value).Take(take.Value);
+            }
+
             if (orderBy != null)
             {
                 return await orderBy(query).ToListAsync();
