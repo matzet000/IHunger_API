@@ -41,6 +41,7 @@ namespace IHunger.WebAPI.V1.Controllers
             _mapper = mapper;
         }
 
+        #region Restaurant
         [HttpPost]
         [ClaimsAuthorize("Restaurant", "Create")]
         public async Task<ActionResult<RestaurantViewModel>> Create(RestaurantCreatedViewModel viewModel)
@@ -89,6 +90,9 @@ namespace IHunger.WebAPI.V1.Controllers
             return _mapper.Map<RestaurantViewModel>(await _restaurantService.Delete(id));
         }
 
+        #endregion
+
+        #region Comments
         [HttpPost("{idRestaurant}/comments")]
         [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<CommentViewModel>> CreateComment([FromRoute] Guid idRestaurant, [FromBody] CommentCreatedViewModel viewModel)
@@ -104,7 +108,7 @@ namespace IHunger.WebAPI.V1.Controllers
 
             return CustomResponse(resp);
         }
-
+        
         [HttpGet("{idRestaurant}/comments")]
         [ClaimsAuthorize("Restaurant", "Get")]
         public async Task<ActionResult<IEnumerable<CommentViewModel>>> GetAllComment([FromRoute] Guid idRestaurant)
@@ -153,5 +157,8 @@ namespace IHunger.WebAPI.V1.Controllers
         {
             return _mapper.Map<ProductViewModel>(await _productService.GetByRestaurantByIdProduct(idRestaurant, idProduct));
         }
+
+        #endregion
+
     }
 }

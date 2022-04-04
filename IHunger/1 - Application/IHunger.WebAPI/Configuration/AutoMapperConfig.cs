@@ -4,6 +4,7 @@ using IHunger.WebAPI.ViewModels.Address;
 using IHunger.WebAPI.ViewModels.CategoryProduct;
 using IHunger.WebAPI.ViewModels.CategoryRestaurant;
 using IHunger.WebAPI.ViewModels.Comment;
+using IHunger.WebAPI.ViewModels.Coupon;
 using IHunger.WebAPI.ViewModels.Product;
 using IHunger.WebAPI.ViewModels.Restaurant;
 
@@ -59,6 +60,19 @@ namespace IHunger.WebAPI.Configuration
             CreateMap<ProductCreatedViewModel, Product>()
                 .ForMember(dest => dest.IdRestaurant, opt => opt.MapFrom(src => src.IdRestaurant))
                 .ForMember(dest => dest.IdCategoryProduct, opt => opt.MapFrom(src => src.IdCategoryProduct));
+
+            CreateMap<Coupon, CouponViewModel>()
+                .ReverseMap();
+
+            CreateMap<Coupon, CouponCreatedViewModel>()
+                .ReverseMap();
+
+            CreateMap<CouponCreatedViewModel, Coupon>()
+                .ReverseMap();
+
+            CreateMap<CouponViewModel, Coupon>().
+                ForMember(x => x.Orders, opt => opt.Ignore());
+
         }
     }
 }

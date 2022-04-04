@@ -71,7 +71,7 @@ namespace IHunger.Service
                     filter = PredicateBuilder.New<CategoryProduct>(true);
                 }
 
-                filter = filter.And(x => x.Name == categoryProductFilter.Name);
+                filter = filter.And(x => x.Name == categoryProductFilter.Name || x.Name.Contains(categoryProductFilter.Name));
             }
 
             if (!string.IsNullOrWhiteSpace(categoryProductFilter.Description))
@@ -81,7 +81,7 @@ namespace IHunger.Service
                     filter = PredicateBuilder.New<CategoryProduct>(true);
                 }
 
-                filter = filter.And(x => x.Description == categoryProductFilter.Description);
+                filter = filter.And(x => x.Description == categoryProductFilter.Description || x.Name.Contains(categoryProductFilter.Description));
             }
 
             if (!string.IsNullOrWhiteSpace(categoryProductFilter.Order))
@@ -98,6 +98,9 @@ namespace IHunger.Service
                         ordeBy = x => x.OrderBy(n => n.Description);
                         break;
                     case "CreatedAt":
+                        ordeBy = x => x.OrderBy(n => n.CreatedAt);
+                        break;
+                    case "UpdatedAt":
                         ordeBy = x => x.OrderBy(n => n.CreatedAt);
                         break;
                 }
@@ -127,7 +130,14 @@ namespace IHunger.Service
             {
                 if(categoryProductFilter.PageIndex > 1)
                 {
-                    skip = categoryProductFilter.PageIndex * 25;
+                    if(categoryProductFilter.PageSize > 0)
+                    {
+                        skip = categoryProductFilter.PageIndex * categoryProductFilter.PageSize;
+                    }
+                    else
+                    {
+                        skip = categoryProductFilter.PageIndex * 10;
+                    }
                 }
             }
 

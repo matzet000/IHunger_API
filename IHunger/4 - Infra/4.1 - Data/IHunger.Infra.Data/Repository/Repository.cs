@@ -37,6 +37,10 @@ namespace IHunger.Infra.Data.Repository
         {
             return await DbSet.ToListAsync();
         }
+        public async Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await DbSet.AsNoTracking().Where(predicate).ToListAsync();
+        }
 
         public virtual async Task<TEntity> GetById(Guid id)
         {

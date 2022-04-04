@@ -1,0 +1,967 @@
+2022-04-04T13:21:49.9279338-03:00  [INF] User profile is available. Using '"C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-04T13:21:56.1675829-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-04T13:21:56.1705242-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-04T13:21:56.1730572-03:00  [INF] Content root path: "D:\TI\git\IHunger_API\IHunger\1 - Application\IHunger.WebAPI" (b5d60022)
+2022-04-04T13:21:56.2064433-03:00 80000003-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger - - (ca22a1cb)
+2022-04-04T13:21:58.7936204-03:00 80000003-0008-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger - - - 301 - - 2590.4917ms (791a596a)
+2022-04-04T13:21:59.4202342-03:00 80000002-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - - (ca22a1cb)
+2022-04-04T13:21:59.6700668-03:00 80000002-000e-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 249.8368ms (791a596a)
+2022-04-04T13:21:59.7255832-03:00 80000002-000d-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/swagger-ui.css - - (ca22a1cb)
+2022-04-04T13:21:59.7255832-03:00 80000002-0009-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/swagger-ui-bundle.js - - (ca22a1cb)
+2022-04-04T13:21:59.7273186-03:00 80000002-000d-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/swagger-ui-standalone-preset.js - - (ca22a1cb)
+2022-04-04T13:21:59.7319912-03:00 80000002-000f-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-04T13:21:59.7394860-03:00 80000002-000f-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 7.0121ms (791a596a)
+2022-04-04T13:21:59.7843482-03:00 80000002-000d-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2022-04-04T13:21:59.7843482-03:00 80000002-0009-ff00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2022-04-04T13:21:59.7843620-03:00 80000002-000d-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2022-04-04T13:21:59.7972299-03:00 80000002-000d-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/swagger-ui.css - - - 200 143632 text/css 71.4860ms (791a596a)
+2022-04-04T13:21:59.8059665-03:00 80000002-000d-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 78.6099ms (791a596a)
+2022-04-04T13:21:59.8342621-03:00 80000002-0009-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 108.6722ms (791a596a)
+2022-04-04T13:22:00.2180562-03:00 80000005-000c-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-04T13:22:00.2678060-03:00 80000003-000c-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/favicon-32x32.png - - (ca22a1cb)
+2022-04-04T13:22:00.2688012-03:00 80000003-000c-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2022-04-04T13:22:00.2692335-03:00 80000003-000c-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/favicon-32x32.png - - - 200 628 image/png 1.1875ms (791a596a)
+2022-04-04T13:22:00.3608781-03:00 80000005-000c-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.8038ms (791a596a)
+2022-04-04T13:24:02.2693168-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/auth/login application/json-patch+json 59 (ca22a1cb)
+2022-04-04T13:24:02.2740802-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T13:24:02.3529932-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Login (IHunger.WebAPI)"' (500cc934)
+2022-04-04T13:24:02.3816436-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Auth\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(IHunger.WebAPI.ViewModels.User.LoginUserViewModel)" on controller "IHunger.WebAPI.V1.Controllers.AuthController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T13:24:03.7248542-03:00 80000002-000b-ff00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. (4007092b)
+2022-04-04T13:24:03.9528360-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T13:24:04.6108381-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("83"ms) [Parameters=["@__normalizedUserName_0='ADMIN@ADMIN.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-04-04T13:24:04.8205234-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("20"ms) [Parameters=["@__user_Id_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-04-04T13:24:04.8698912-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-04-04T13:24:04.8811678-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2022-04-04T13:24:04.8956210-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedEmail_0='ADMIN@ADMIN.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-04-04T13:24:04.9083315-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-04-04T13:24:04.9155635-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-04-04T13:24:05.0728849-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__id_0='f3a7ce7e-23c5-4160-8b16-a4f169f1927f'"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"BirthDate\", p.\"CreatedAt\", p.\"IdAddressUser\", p.\"LastName\", p.\"Name\", p.\"Type\", p.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\"
+FROM public.\"ProfileUsers\" AS p
+INNER JOIN public.\"AddressUsers\" AS a ON p.\"IdAddressUser\" = a.\"Id\"
+WHERE p.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T13:24:05.0843131-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T13:24:05.1451632-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.AuthController.Login (IHunger.WebAPI)" in 2758.6332ms (afa2e885)
+2022-04-04T13:24:05.1456344-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Login (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T13:24:05.1499548-03:00 80000002-000b-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/auth/login application/json-patch+json 59 - 200 3018 application/json;+charset=utf-8 2880.8116ms (791a596a)
+2022-04-04T13:24:30.1441340-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/category-products - - (ca22a1cb)
+2022-04-04T13:24:30.2179129-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryProductController.GetAllWithFilter (IHunger.WebAPI)"' (500cc934)
+2022-04-04T13:24:30.2271098-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllWithFilter\", controller = \"CategoryProduct\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.CategoryProduct.CategoryProductViewModel]] GetAllWithFilter(IHunger.Infra.CrossCutting.Filters.CategoryProductFilter)" on controller "IHunger.WebAPI.V1.Controllers.CategoryProductController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T13:24:30.4742412-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T13:24:30.4819539-03:00 80000006-000e-fd00-b63f-84710c7967bb [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. (5b3e5b60)
+2022-04-04T13:24:30.4967312-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__p_0='25'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryProducts\" AS c
+LIMIT @__p_0" (0723d8ff)
+2022-04-04T13:24:30.5352696-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.CategoryProduct.CategoryProductViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T13:24:30.5430911-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryProductController.GetAllWithFilter (IHunger.WebAPI)" in 315.8901ms (afa2e885)
+2022-04-04T13:24:30.5431380-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryProductController.GetAllWithFilter (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T13:24:30.5438681-03:00 80000006-000e-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/category-products - - - 200 3721 application/json;+charset=utf-8 399.7206ms (791a596a)
+2022-04-04T13:24:43.1148828-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/category-restaurants - - (ca22a1cb)
+2022-04-04T13:24:43.1159727-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.GetAllWithFilter (IHunger.WebAPI)"' (500cc934)
+2022-04-04T13:24:43.1197204-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllWithFilter\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] GetAllWithFilter(IHunger.Infra.CrossCutting.Filters.CategoryRestaurantFilter)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T13:24:43.1320665-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T13:24:43.1364986-03:00 80000008-000e-fd00-b63f-84710c7967bb [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. (5b3e5b60)
+2022-04-04T13:24:43.1534262-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__p_0='25'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+LIMIT @__p_0" (0723d8ff)
+2022-04-04T13:24:43.1571523-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T13:24:43.1587905-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.GetAllWithFilter (IHunger.WebAPI)" in 39.0037ms (afa2e885)
+2022-04-04T13:24:43.1588442-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.GetAllWithFilter (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T13:24:43.1590619-03:00 80000008-000e-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/category-restaurants - - - 200 2 application/json;+charset=utf-8 44.2113ms (791a596a)
+2022-04-04T14:10:19.2107117-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 58 (ca22a1cb)
+2022-04-04T14:10:19.2111401-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:10:19.2124457-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:10:19.2153078-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:10:19.2504492-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:10:19.3282778-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Asian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:10:19.4673081-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='d7185c84-1669-4d78-8449-45462dd73af4', @p1='2022-04-04T14:10:19.3729407-03:00' (DbType = DateTime), @p2='Asian Restaurant' (Nullable = false), @p3='Asian' (Nullable = false), @p4='2022-04-04T14:10:19.3765147-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:10:19.4952371-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:10:19.4966978-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 281.3253ms (afa2e885)
+2022-04-04T14:10:19.4967319-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:10:19.4969372-03:00 8000000b-0001-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 58 - 200 213 application/json;+charset=utf-8 286.3741ms (791a596a)
+2022-04-04T14:10:53.6388194-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 (ca22a1cb)
+2022-04-04T14:10:53.6389015-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:10:53.6393735-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:10:53.6396219-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:10:53.6427347-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:10:53.6496223-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__categoryRestaurant_Name_0='Italian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:10:53.6632623-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='77a3f4b4-0f7b-4c32-b5c2-bd2764c74768', @p1='2022-04-04T14:10:53.6525269-03:00' (DbType = DateTime), @p2='Italian Restaurant' (Nullable = false), @p3='Italian' (Nullable = false), @p4='2022-04-04T14:10:53.6525327-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:10:53.6736501-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:10:53.6742445-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 34.5703ms (afa2e885)
+2022-04-04T14:10:53.6742842-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:10:53.6744680-03:00 8000000a-0008-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 - 200 217 application/json;+charset=utf-8 35.8371ms (791a596a)
+2022-04-04T14:11:07.9119101-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 (ca22a1cb)
+2022-04-04T14:11:07.9120372-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:11:07.9124903-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:11:07.9125847-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:11:07.9135096-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:11:07.9197880-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__categoryRestaurant_Name_0='Brazilian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:11:07.9281536-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='db1e71d5-875b-4575-a662-daa2be93f71c', @p1='2022-04-04T14:11:07.9222517-03:00' (DbType = DateTime), @p2='Brazilian Restaurant' (Nullable = false), @p3='Brazilian' (Nullable = false), @p4='2022-04-04T14:11:07.9224494-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:11:07.9385684-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:11:07.9390880-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 26.464ms (afa2e885)
+2022-04-04T14:11:07.9391373-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:11:07.9393432-03:00 8000000c-0004-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 - 200 221 application/json;+charset=utf-8 27.4437ms (791a596a)
+2022-04-04T14:11:23.0463910-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 56 (ca22a1cb)
+2022-04-04T14:11:23.0464913-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:11:23.0470174-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:11:23.0471886-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:11:23.0483410-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:11:23.0630773-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__categoryRestaurant_Name_0='Arab'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:11:23.0728625-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='fbcc463c-fcbb-444d-b575-fafb4e362c6f', @p1='2022-04-04T14:11:23.0670441-03:00' (DbType = DateTime), @p2='Arab Restaurant' (Nullable = false), @p3='Arab' (Nullable = false), @p4='2022-04-04T14:11:23.0670517-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:11:23.0842303-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:11:23.0848426-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 37.5948ms (afa2e885)
+2022-04-04T14:11:23.0848993-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:11:23.0850980-03:00 80000006-0009-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 56 - 200 211 application/json;+charset=utf-8 38.7189ms (791a596a)
+2022-04-04T14:11:36.8747634-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 (ca22a1cb)
+2022-04-04T14:11:36.8749195-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:11:36.8759316-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:11:36.8760910-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:11:36.8782612-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:11:36.8899968-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__categoryRestaurant_Name_0='British'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:11:36.8993852-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='c6331fcb-5e31-4fa4-b25a-483faede084f', @p1='2022-04-04T14:11:36.8930288-03:00' (DbType = DateTime), @p2='British Restaurant' (Nullable = false), @p3='British' (Nullable = false), @p4='2022-04-04T14:11:36.8930656-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:11:36.9025779-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:11:36.9035230-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 27.3507ms (afa2e885)
+2022-04-04T14:11:36.9035655-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:11:36.9039220-03:00 80000008-0006-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 - 200 217 application/json;+charset=utf-8 29.1616ms (791a596a)
+2022-04-04T14:11:48.9186739-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 58 (ca22a1cb)
+2022-04-04T14:11:48.9187482-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:11:48.9191097-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:11:48.9191914-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:11:48.9201101-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:11:48.9265980-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Irish'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:11:48.9365537-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='50646eb8-1d81-4a1f-8116-d6bd2caf5206', @p1='2022-04-04T14:11:48.9288332-03:00' (DbType = DateTime), @p2='Irish Restaurant' (Nullable = false), @p3='Irish' (Nullable = false), @p4='2022-04-04T14:11:48.9288418-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:11:48.9395075-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:11:48.9401025-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 20.8742ms (afa2e885)
+2022-04-04T14:11:48.9401423-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:11:48.9403353-03:00 80000002-0007-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 58 - 200 213 application/json;+charset=utf-8 21.6682ms (791a596a)
+2022-04-04T14:12:03.7383921-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 (ca22a1cb)
+2022-04-04T14:12:03.7388493-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:12:03.7393160-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:12:03.7394107-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:12:03.7404590-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:12:03.7469492-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Mexican'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:12:03.7566884-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='eaa9f969-505e-4021-ba11-368836f59f9c', @p1='2022-04-04T14:12:03.7492372-03:00' (DbType = DateTime), @p2='Mexican Restaurant' (Nullable = false), @p3='Mexican' (Nullable = false), @p4='2022-04-04T14:12:03.7492441-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:12:03.7602698-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:12:03.7608316-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 21.3667ms (afa2e885)
+2022-04-04T14:12:03.7608984-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:12:03.7611854-03:00 8000000a-000e-fc00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 - 200 217 application/json;+charset=utf-8 22.8044ms (791a596a)
+2022-04-04T14:12:20.7201849-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 (ca22a1cb)
+2022-04-04T14:12:20.7205667-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:12:20.7210791-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:12:20.7211725-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:12:20.7220179-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:12:20.7288345-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='German'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:12:20.7412967-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='73076bb5-b346-4589-8a12-d7eaee62a0fb', @p1='2022-04-04T14:12:20.7307057-03:00' (DbType = DateTime), @p2='German Restaurant' (Nullable = false), @p3='German' (Nullable = false), @p4='2022-04-04T14:12:20.7307967-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:12:20.7523928-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:12:20.7530422-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 31.8037ms (afa2e885)
+2022-04-04T14:12:20.7530944-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:12:20.7533501-03:00 8000000c-000e-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 - 200 215 application/json;+charset=utf-8 33.1640ms (791a596a)
+2022-04-04T14:12:58.6438478-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 58 (ca22a1cb)
+2022-04-04T14:12:58.6439996-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:12:58.6444404-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:12:58.6445417-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:12:58.6457207-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:12:58.6577675-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__categoryRestaurant_Name_0='Greek'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:12:58.6696062-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='1a1a7c81-fad0-4809-8856-1077380bfe29', @p1='2022-04-04T14:12:58.6598580-03:00' (DbType = DateTime), @p2='Greek Restaurant' (Nullable = false), @p3='Greek' (Nullable = false), @p4='2022-04-04T14:12:58.6598675-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:12:58.6807256-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:12:58.6812907-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 36.7061ms (afa2e885)
+2022-04-04T14:12:58.6813283-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:12:58.6815399-03:00 8000000e-000e-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 58 - 200 212 application/json;+charset=utf-8 37.9305ms (791a596a)
+2022-04-04T14:13:09.4277327-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 (ca22a1cb)
+2022-04-04T14:13:09.4281530-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:13:09.4285814-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:13:09.4286768-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:13:09.4293764-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:13:09.4347759-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Spanish'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:13:09.4428018-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='f1f0d73f-ecfb-4ad9-98dc-014ef0fcfc09', @p1='2022-04-04T14:13:09.4368985-03:00' (DbType = DateTime), @p2='Spanish Restaurant' (Nullable = false), @p3='Spanish' (Nullable = false), @p4='2022-04-04T14:13:09.4369069-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:13:09.4456860-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:13:09.4461809-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 17.4627ms (afa2e885)
+2022-04-04T14:13:09.4462139-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:13:09.4464226-03:00 80000002-0000-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 - 200 217 application/json;+charset=utf-8 18.7703ms (791a596a)
+2022-04-04T14:13:21.3398493-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 (ca22a1cb)
+2022-04-04T14:13:21.3403670-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:13:21.3409042-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:13:21.3410194-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:13:21.3420542-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:13:21.3484042-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__categoryRestaurant_Name_0='Bulgarian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:13:21.3616262-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='0dfa1435-13b0-4cb4-9465-bc260b8dd93f', @p1='2022-04-04T14:13:21.3508179-03:00' (DbType = DateTime), @p2='Bulgarian Restaurant' (Nullable = false), @p3='Bulgarian' (Nullable = false), @p4='2022-04-04T14:13:21.3508328-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:13:21.3644772-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:13:21.3650095-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 23.9401ms (afa2e885)
+2022-04-04T14:13:21.3650590-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:13:21.3652862-03:00 80000010-000a-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 - 200 221 application/json;+charset=utf-8 25.6119ms (791a596a)
+2022-04-04T14:13:35.8540715-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 64 (ca22a1cb)
+2022-04-04T14:13:35.8545195-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:13:35.8549999-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:13:35.8550937-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:13:35.8560038-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:13:35.8622794-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Romanian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:13:35.8710228-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='d3602819-25bd-4b83-aedd-6ed27d00f148', @p1='2022-04-04T14:13:35.8641816-03:00' (DbType = DateTime), @p2='Romanian Restaurant' (Nullable = false), @p3='Romanian' (Nullable = false), @p4='2022-04-04T14:13:35.8641925-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:13:35.8766294-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:13:35.8771155-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 21.9817ms (afa2e885)
+2022-04-04T14:13:35.8771457-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:13:35.8773101-03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 64 - 200 219 application/json;+charset=utf-8 23.2664ms (791a596a)
+2022-04-04T14:13:50.9057763-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 (ca22a1cb)
+2022-04-04T14:13:50.9058704-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:13:50.9063106-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:13:50.9063902-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:13:50.9072338-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:13:50.9182084-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__categoryRestaurant_Name_0='Hungarian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:13:50.9255808-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='372932b6-e32a-4c48-966f-259bd6d1233e', @p1='2022-04-04T14:13:50.9198259-03:00' (DbType = DateTime), @p2='Hungarian Restaurant' (Nullable = false), @p3='Hungarian' (Nullable = false), @p4='2022-04-04T14:13:50.9198320-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:13:50.9286119-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:13:50.9292348-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 22.7976ms (afa2e885)
+2022-04-04T14:13:50.9292742-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:13:50.9294589-03:00 8000000c-0008-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 - 200 220 application/json;+charset=utf-8 23.8515ms (791a596a)
+2022-04-04T14:14:01.9713790-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 (ca22a1cb)
+2022-04-04T14:14:01.9714516-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:14:01.9722651-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:14:01.9723794-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:14:01.9732680-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:14:01.9838921-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__categoryRestaurant_Name_0='Slovak'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:14:01.9916384-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='40fe5229-4e40-429d-8d69-18e156a0927f', @p1='2022-04-04T14:14:01.9860033-03:00' (DbType = DateTime), @p2='Slovak Restaurant' (Nullable = false), @p3='Slovak' (Nullable = false), @p4='2022-04-04T14:14:01.9860138-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:14:02.0022823-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:14:02.0028435-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 30.404ms (afa2e885)
+2022-04-04T14:14:02.0028806-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:14:02.0030506-03:00 80000006-000f-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 - 200 215 application/json;+charset=utf-8 31.7137ms (791a596a)
+2022-04-04T14:14:13.5597498-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 (ca22a1cb)
+2022-04-04T14:14:13.5598616-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:14:13.5602994-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:14:13.5603967-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:14:13.5613513-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:14:13.5667158-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Polish'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:14:13.5749953-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='5048a4f0-580d-4c15-b2fb-2fa6408fdb88', @p1='2022-04-04T14:14:13.5685846-03:00' (DbType = DateTime), @p2='Polish Restaurant' (Nullable = false), @p3='Polish' (Nullable = false), @p4='2022-04-04T14:14:13.5687129-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:14:13.5856757-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:14:13.5861888-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 25.7478ms (afa2e885)
+2022-04-04T14:14:13.5862213-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:14:13.5863853-03:00 80000004-000d-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 - 200 215 application/json;+charset=utf-8 26.8429ms (791a596a)
+2022-04-04T14:14:14.0543992-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 (ca22a1cb)
+2022-04-04T14:14:14.0544830-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:14:14.0549019-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:14:14.0550184-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:14:14.0558625-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:14:14.0690956-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__categoryRestaurant_Name_0='Polish'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:14:14.0738235-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Already exists CategoryRestaurant the same name (f3b56d83)
+2022-04-04T14:14:14.0784123-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:14:14.0822941-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 27.204ms (afa2e885)
+2022-04-04T14:14:14.0823341-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:14:14.0825097-03:00 80000011-000c-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 - 400 78 application/json;+charset=utf-8 28.1270ms (791a596a)
+2022-04-04T14:14:19.5031962-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 (ca22a1cb)
+2022-04-04T14:14:19.5035939-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:14:19.5039258-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:14:19.5040027-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:14:19.5045904-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:14:19.5102422-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Polish'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:14:19.5144709-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Already exists CategoryRestaurant the same name (f3b56d83)
+2022-04-04T14:14:19.5153223-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Executing "BadRequestObjectResult", writing value of type '"<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:14:19.5164915-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 12.4533ms (afa2e885)
+2022-04-04T14:14:19.5165291-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:14:19.5166911-03:00 8000000d-0001-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 60 - 400 78 application/json;+charset=utf-8 13.5103ms (791a596a)
+2022-04-04T14:14:33.3302054-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 68 (ca22a1cb)
+2022-04-04T14:14:33.3302823-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:14:33.3306944-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:14:33.3307891-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:14:33.3314872-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:14:33.3376865-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Belarusian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:14:33.3461716-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='1bad3df1-18a7-4502-8dd8-4d0285daa5ca', @p1='2022-04-04T14:14:33.3397318-03:00' (DbType = DateTime), @p2='Belarusian Restaurant' (Nullable = false), @p3='Belarusian' (Nullable = false), @p4='2022-04-04T14:14:33.3398793-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:14:33.3645844-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:14:33.3651465-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 34.3172ms (afa2e885)
+2022-04-04T14:14:33.3651802-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:14:33.3654417-03:00 80000006-0003-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 68 - 200 223 application/json;+charset=utf-8 35.2386ms (791a596a)
+2022-04-04T14:14:47.8113558-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 (ca22a1cb)
+2022-04-04T14:14:47.8116418-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:14:47.8120729-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:14:47.8121912-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:14:47.8130157-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:14:47.8275142-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__categoryRestaurant_Name_0='Russian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:14:47.8352213-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='e5d7edc6-e0d0-402e-971d-3f35d283a0c5', @p1='2022-04-04T14:14:47.8294247-03:00' (DbType = DateTime), @p2='Russian Restaurant' (Nullable = false), @p3='Russian' (Nullable = false), @p4='2022-04-04T14:14:47.8294475-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:14:47.8381952-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:14:47.8387216-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 26.4784ms (afa2e885)
+2022-04-04T14:14:47.8387617-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:14:47.8389299-03:00 80000008-000f-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 62 - 200 217 application/json;+charset=utf-8 27.6063ms (791a596a)
+2022-04-04T14:15:14.5099721-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 (ca22a1cb)
+2022-04-04T14:15:14.5100635-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:15:14.5105166-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:15:14.5105943-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:15:14.5115536-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:15:14.5317140-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__categoryRestaurant_Name_0='Ukrainian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:15:14.5448802-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='e8b1624a-fe39-4130-bb60-e0bf4b1c0194', @p1='2022-04-04T14:15:14.5339976-03:00' (DbType = DateTime), @p2='Ukrainian Restaurant' (Nullable = false), @p3='Ukrainian' (Nullable = false), @p4='2022-04-04T14:15:14.5340039-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:15:14.5475974-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:15:14.5481258-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 37.4888ms (afa2e885)
+2022-04-04T14:15:14.5481638-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:15:14.5483293-03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 66 - 200 221 application/json;+charset=utf-8 38.3682ms (791a596a)
+2022-04-04T14:15:28.9232483-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 64 (ca22a1cb)
+2022-04-04T14:15:28.9236641-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:15:28.9242060-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:15:28.9243021-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:15:28.9249702-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:15:28.9543682-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__categoryRestaurant_Name_0='Canadian'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:15:28.9603123-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='e81377ae-590d-45a4-9ff9-160798b42583', @p1='2022-04-04T14:15:28.9547279-03:00' (DbType = DateTime), @p2='Canadian Restaurant' (Nullable = false), @p3='Canadian' (Nullable = false), @p4='2022-04-04T14:15:28.9547313-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:15:28.9710981-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:15:28.9716133-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 47.2671ms (afa2e885)
+2022-04-04T14:15:28.9716457-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:15:28.9718333-03:00 80000002-000a-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 64 - 200 219 application/json;+charset=utf-8 48.5884ms (791a596a)
+2022-04-04T14:15:45.9302521-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 64 (ca22a1cb)
+2022-04-04T14:15:45.9303221-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:15:45.9307559-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:15:45.9308679-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:15:45.9319887-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:15:45.9388516-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__categoryRestaurant_Name_0='American'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Name\" = @__categoryRestaurant_Name_0" (0723d8ff)
+2022-04-04T14:15:45.9503658-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='c01567a6-03a3-444b-b274-8f6e205136ac', @p1='2022-04-04T14:15:45.9406772-03:00' (DbType = DateTime), @p2='American Restaurant' (Nullable = false), @p3='American' (Nullable = false), @p4='2022-04-04T14:15:45.9406806-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"CategoryRestaurants\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"UpdatedAt\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2022-04-04T14:15:45.9610655-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:15:45.9616517-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)" in 30.7174ms (afa2e885)
+2022-04-04T14:15:45.9616905-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:15:45.9618954-03:00 8000000e-0008-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/category-restaurants application/json-patch+json 64 - 200 219 application/json;+charset=utf-8 31.6685ms (791a596a)
+2022-04-04T14:16:00.6373004-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/category-restaurants - - (ca22a1cb)
+2022-04-04T14:16:00.6380818-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.GetAllWithFilter (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:16:00.6381957-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllWithFilter\", controller = \"CategoryRestaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel]] GetAllWithFilter(IHunger.Infra.CrossCutting.Filters.CategoryRestaurantFilter)" on controller "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:16:00.6390326-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:16:00.6459877-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='25'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+LIMIT @__p_0" (0723d8ff)
+2022-04-04T14:16:00.6501506-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.CategoryRestaurant.CategoryRestaurantViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T14:16:00.6510610-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.GetAllWithFilter (IHunger.WebAPI)" in 12.8034ms (afa2e885)
+2022-04-04T14:16:00.6511207-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CategoryRestaurantController.GetAllWithFilter (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:16:00.6513406-03:00 80000008-0003-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/category-restaurants - - - 200 3843 application/json;+charset=utf-8 14.0504ms (791a596a)
+2022-04-04T14:40:56.2110341-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/restaurants application/json-patch+json 569 (ca22a1cb)
+2022-04-04T14:40:56.2111088-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:40:56.2118649-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:40:56.2150474-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Restaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Restaurant.RestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.Restaurant.RestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.RestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:40:56.2344153-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:40:56.3222348-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@__restaurant_Name_0='Asian Restaurant'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\", c0.\"Id\", c0.\"CreatedAt\", c0.\"IdRestaurant\", c0.\"Starts\", c0.\"Text\", c0.\"UpdatedAt\"
+FROM public.\"Restaurant\" AS r
+INNER JOIN public.\"AddressRestaurants\" AS a ON r.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON r.\"IdCategoryRestaurant\" = c.\"Id\"
+LEFT JOIN public.\"Comment\" AS c0 ON r.\"Id\" = c0.\"IdRestaurant\"
+WHERE r.\"Name\" = @__restaurant_Name_0
+ORDER BY r.\"Id\", a.\"Id\", c.\"Id\"" (0723d8ff)
+2022-04-04T14:40:56.3374835-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__id_0='d7185c84-1669-4d78-8449-45462dd73af4'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:40:56.3999568-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='7a0785bb-df7a-403a-8626-72d1a196b1d9', @p1='Rio de Janeiro' (Nullable = false), @p2='Brazil' (Nullable = false), @p3='2022-04-04T14:40:56.3890428-03:00' (DbType = DateTime), @p4='Meier' (Nullable = false), @p5='-22.903726', @p6='-43.277279', @p7='Rua doutor pache de faria' (Nullable = false), @p8='2022-04-04T14:40:56.3894915-03:00' (DbType = DateTime), @p9='20710020' (Nullable = false)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AddressRestaurants\" (\"Id\", \"City\", \"County\", \"CreatedAt\", \"District\", \"Latitude\", \"Longitude\", \"Street\", \"UpdatedAt\", \"ZipCode\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2022-04-04T14:40:56.4072570-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@p10='592db5ef-1d26-4ff1-a00b-31fa707715e0', @p11='2022-04-04T14:40:56.3884233-03:00' (DbType = DateTime), @p12='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porta facilisis lacus, eu tempus libero.' (Nullable = false), @p13='7a0785bb-df7a-403a-8626-72d1a196b1d9', @p14='d7185c84-1669-4d78-8449-45462dd73af4', @p15='https://media.istockphoto.com/photos/chinese-food-blank-background-picture-id545286388?s=612x612' (Nullable = false), @p16='Asian Restaurant' (Nullable = false), @p17='2022-04-04T14:40:56.3888929-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Restaurant\" (\"Id\", \"CreatedAt\", \"Description\", \"IdAddressRestaurant\", \"IdCategoryRestaurant\", \"Image\", \"Name\", \"UpdatedAt\")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);" (0723d8ff)
+2022-04-04T14:40:56.4184446-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:40:56.4256326-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)" in 210.5282ms (afa2e885)
+2022-04-04T14:40:56.4256723-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:40:56.4258318-03:00 80000006-0008-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/restaurants application/json-patch+json 569 - 200 795 application/json;+charset=utf-8 214.8229ms (791a596a)
+2022-04-04T14:44:09.1936801-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/restaurants application/json-patch+json 589 (ca22a1cb)
+2022-04-04T14:44:09.1937428-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:44:09.1943902-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:44:09.1944732-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Restaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Restaurant.RestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.Restaurant.RestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.RestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:44:09.2094788-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:44:09.2263692-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__restaurant_Name_0='Italian Restaurant'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\", c0.\"Id\", c0.\"CreatedAt\", c0.\"IdRestaurant\", c0.\"Starts\", c0.\"Text\", c0.\"UpdatedAt\"
+FROM public.\"Restaurant\" AS r
+INNER JOIN public.\"AddressRestaurants\" AS a ON r.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON r.\"IdCategoryRestaurant\" = c.\"Id\"
+LEFT JOIN public.\"Comment\" AS c0 ON r.\"Id\" = c0.\"IdRestaurant\"
+WHERE r.\"Name\" = @__restaurant_Name_0
+ORDER BY r.\"Id\", a.\"Id\", c.\"Id\"" (0723d8ff)
+2022-04-04T14:44:09.2398864-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__id_0='d7185c84-1669-4d78-8449-45462dd73af4'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:44:09.2508796-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='cc0529c2-cac9-4dad-9620-2cbd724940c1', @p1='Rio de Janeiro' (Nullable = false), @p2='Brazil' (Nullable = false), @p3='2022-04-04T14:44:09.2407255-03:00' (DbType = DateTime), @p4='Meier' (Nullable = false), @p5='-22.901254', @p6='-43.282583', @p7='Rua Medina' (Nullable = false), @p8='2022-04-04T14:44:09.2407276-03:00' (DbType = DateTime), @p9='20735130' (Nullable = false)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AddressRestaurants\" (\"Id\", \"City\", \"County\", \"CreatedAt\", \"District\", \"Latitude\", \"Longitude\", \"Street\", \"UpdatedAt\", \"ZipCode\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2022-04-04T14:44:09.2718235-03:00 80000014-000e-fd00-b63f-84710c7967bb [ERR] Failed executing DbCommand ("15"ms) [Parameters=["@p10='dc33974a-2540-42cb-a687-7307a00c6669', @p11='2022-04-04T14:44:09.2407193-03:00' (DbType = DateTime), @p12='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porta facilisis lacus, eu tempus libero.' (Nullable = false), @p13='cc0529c2-cac9-4dad-9620-2cbd724940c1', @p14='d7185c84-1669-4d78-8449-45462dd73af4', @p15='https://media.istockphoto.com/photos/pasta-pizza-and-homemade-food-arrangement-in-a-restaurant-rome-picture-id891284194?s=612x612' (Nullable = false), @p16='Italian Restaurant' (Nullable = false), @p17='2022-04-04T14:44:09.2407230-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Restaurant\" (\"Id\", \"CreatedAt\", \"Description\", \"IdAddressRestaurant\", \"IdCategoryRestaurant\", \"Image\", \"Name\", \"UpdatedAt\")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);" (627a98df)
+2022-04-04T14:44:09.6279371-03:00 80000014-000e-fd00-b63f-84710c7967bb [ERR] An exception occurred in the database while saving changes for context type '"IHunger.Infra.Data.Context.DataIdentityDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 22001: value too long for type character varying(100)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 22001
+    MessageText: value too long for type character varying(100)
+    File: varchar.c
+    Line: 632
+    Routine: varchar
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 22001: value too long for type character varying(100)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 22001
+    MessageText: value too long for type character varying(100)
+    File: varchar.c
+    Line: 632
+    Routine: varchar
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-04-04T14:44:09.8009581-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)" in 606.3918ms (afa2e885)
+2022-04-04T14:44:09.8021443-03:00 80000014-000e-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:44:09.8968219-03:00 80000014-000e-fd00-b63f-84710c7967bb [ERR] An error occurred while saving the entity changes. See the inner exception for details. (cec04302)
+2022-04-04T14:44:38.5856760-03:00  [INF] User profile is available. Using '"C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-04T14:44:39.1357895-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-04T14:44:39.1382133-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-04T14:44:39.1402680-03:00  [INF] Content root path: "D:\TI\git\IHunger_API\IHunger\1 - Application\IHunger.WebAPI" (b5d60022)
+2022-04-04T14:44:39.1631084-03:00 80000016-000e-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - - (ca22a1cb)
+2022-04-04T14:44:39.5107575-03:00 80000016-000e-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 350.6638ms (791a596a)
+2022-04-04T14:44:39.6639446-03:00 8000000a-000f-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-04T14:44:39.6690559-03:00 8000000a-000f-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 3.2614ms (791a596a)
+2022-04-04T14:44:39.8842653-03:00 80000016-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-04T14:44:40.0515738-03:00 80000016-0008-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 167.2887ms (791a596a)
+2022-04-04T14:45:16.2524651-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/restaurants application/json-patch+json 545 (ca22a1cb)
+2022-04-04T14:45:16.2568370-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:45:16.4651183-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:45:16.4908559-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Restaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Restaurant.RestaurantViewModel]] Create(IHunger.WebAPI.ViewModels.Restaurant.RestaurantCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.RestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:45:17.5730786-03:00 80000004-0005-ff00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. (4007092b)
+2022-04-04T14:45:17.7862018-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:45:18.4722119-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("74"ms) [Parameters=["@__restaurant_Name_0='Italian Restaurant'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\", c0.\"Id\", c0.\"CreatedAt\", c0.\"IdRestaurant\", c0.\"Starts\", c0.\"Text\", c0.\"UpdatedAt\"
+FROM public.\"Restaurant\" AS r
+INNER JOIN public.\"AddressRestaurants\" AS a ON r.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON r.\"IdCategoryRestaurant\" = c.\"Id\"
+LEFT JOIN public.\"Comment\" AS c0 ON r.\"Id\" = c0.\"IdRestaurant\"
+WHERE r.\"Name\" = @__restaurant_Name_0
+ORDER BY r.\"Id\", a.\"Id\", c.\"Id\"" (0723d8ff)
+2022-04-04T14:45:18.5161930-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("12"ms) [Parameters=["@__id_0='77a3f4b4-0f7b-4c32-b5c2-bd2764c74768'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryRestaurants\" AS c
+WHERE c.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:45:18.7336944-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='043b808e-5444-4fc7-9307-c40b73a10423', @p1='Rio de Janeiro' (Nullable = false), @p2='Brazil' (Nullable = false), @p3='2022-04-04T14:45:18.6508175-03:00' (DbType = DateTime), @p4='Meier' (Nullable = false), @p5='-22.901254', @p6='-43.282583', @p7='Rua Medina' (Nullable = false), @p8='2022-04-04T14:45:18.6511612-03:00' (DbType = DateTime), @p9='20735130' (Nullable = false)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"AddressRestaurants\" (\"Id\", \"City\", \"County\", \"CreatedAt\", \"District\", \"Latitude\", \"Longitude\", \"Street\", \"UpdatedAt\", \"ZipCode\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2022-04-04T14:45:18.7456036-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p10='cee439bc-c38e-424c-91e7-8b094bcf7c7b', @p11='2022-04-04T14:45:18.6485814-03:00' (DbType = DateTime), @p12='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porta facilisis lacus, eu tempus libero.' (Nullable = false), @p13='043b808e-5444-4fc7-9307-c40b73a10423', @p14='77a3f4b4-0f7b-4c32-b5c2-bd2764c74768', @p15='https://images.freejpg.com.ar/400/1212/waiter-in-an-italian-restaurant-F100030624.jpg' (Nullable = false), @p16='Italian Restaurant' (Nullable = false), @p17='2022-04-04T14:45:18.6506540-03:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Restaurant\" (\"Id\", \"CreatedAt\", \"Description\", \"IdAddressRestaurant\", \"IdCategoryRestaurant\", \"Image\", \"Name\", \"UpdatedAt\")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);" (0723d8ff)
+2022-04-04T14:45:18.7887130-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:45:18.8462743-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)" in 2350.4764ms (afa2e885)
+2022-04-04T14:45:18.8467957-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:45:18.8521683-03:00 80000004-0005-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/restaurants application/json-patch+json 545 - 200 770 application/json;+charset=utf-8 2599.8181ms (791a596a)
+2022-04-04T14:51:52.9205580-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/restaurants - - (ca22a1cb)
+2022-04-04T14:51:52.9255659-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.GetAllWithFilter (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:51:52.9504201-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllWithFilter\", controller = \"Restaurant\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.Restaurant.RestaurantViewModel]] GetAllWithFilter(IHunger.Infra.CrossCutting.Filters.RestaurantFilter)" on controller "IHunger.WebAPI.V1.Controllers.RestaurantController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:51:53.0427015-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:51:53.0484888-03:00 80000005-000a-ff00-b63f-84710c7967bb [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. (5b3e5b60)
+2022-04-04T14:51:53.1147896-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__p_0='25'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.\"Id\", t.\"CreatedAt\", t.\"Description\", t.\"IdAddressRestaurant\", t.\"IdCategoryRestaurant\", t.\"Image\", t.\"Name\", t.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\", c0.\"Id\", c0.\"CreatedAt\", c0.\"IdRestaurant\", c0.\"Starts\", c0.\"Text\", c0.\"UpdatedAt\"
+FROM (
+    SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\"
+    FROM public.\"Restaurant\" AS r
+    LIMIT @__p_0
+) AS t
+INNER JOIN public.\"AddressRestaurants\" AS a ON t.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON t.\"IdCategoryRestaurant\" = c.\"Id\"
+LEFT JOIN public.\"Comment\" AS c0 ON t.\"Id\" = c0.\"IdRestaurant\"
+ORDER BY t.\"Id\", a.\"Id\", c.\"Id\"" (0723d8ff)
+2022-04-04T14:51:53.1458814-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.Restaurant.RestaurantViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T14:51:53.1488085-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.RestaurantController.GetAllWithFilter (IHunger.WebAPI)" in 198.2834ms (afa2e885)
+2022-04-04T14:51:53.1488658-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.RestaurantController.GetAllWithFilter (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:51:53.1491379-03:00 80000005-000a-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/restaurants - - - 200 1882 application/json;+charset=utf-8 228.6009ms (791a596a)
+2022-04-04T14:54:40.0922909-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/products application/json-patch+json 329 (ca22a1cb)
+2022-04-04T14:54:40.0926047-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:54:40.0938664-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:54:40.0967433-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Product\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Product.ProductViewModel]] Create(IHunger.WebAPI.ViewModels.Product.ProductCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.ProductController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:54:40.1464225-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:54:40.1673375-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='592db5ef-1d26-4ff1-a00b-31fa707715e0'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"Restaurant\" AS r
+INNER JOIN public.\"AddressRestaurants\" AS a ON r.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON r.\"IdCategoryRestaurant\" = c.\"Id\"
+WHERE r.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:54:40.1841150-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__id_0='692461c9-248d-44a0-8555-969e3833074d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryProducts\" AS c
+WHERE c.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:54:40.2436106-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("20"ms) [Parameters=["@p0='aaba6da7-8edf-401f-b28f-be62187099ac', @p1='2022-04-04T14:54:40.2161489-03:00' (DbType = DateTime), @p2='Rice and fish' (Nullable = false), @p3='692461c9-248d-44a0-8555-969e3833074d', @p4='592db5ef-1d26-4ff1-a00b-31fa707715e0', @p5='https://en.freejpg.com.ar/image-900/b2/b22b/F100009991-sushi.jpg' (Nullable = false), @p6='True', @p7='Sushi' (Nullable = false), @p8='50', @p9='2022-04-04T14:54:40.2166494-03:00' (DbType = DateTime), @p10='False', @p11='False'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Products\" (\"Id\", \"CreatedAt\", \"Description\", \"IdCategoryProduct\", \"IdRestaurant\", \"Image\", \"Kosher\", \"Name\", \"Price\", \"UpdatedAt\", \"Vegan\", \"Vegetarian\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);" (0723d8ff)
+2022-04-04T14:54:40.2623478-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:54:40.2665955-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)" in 169.774ms (afa2e885)
+2022-04-04T14:54:40.2666347-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:54:40.2668534-03:00 80000015-0004-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/products application/json-patch+json 329 - 200 386 application/json;+charset=utf-8 174.5801ms (791a596a)
+2022-04-04T14:57:48.7167706-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/products application/json-patch+json 336 (ca22a1cb)
+2022-04-04T14:57:48.7169929-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T14:57:48.7174342-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T14:57:48.7176208-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Product\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Product.ProductViewModel]] Create(IHunger.WebAPI.ViewModels.Product.ProductCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.ProductController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T14:57:48.7195626-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T14:57:48.7485619-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='592db5ef-1d26-4ff1-a00b-31fa707715e0'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"Restaurant\" AS r
+INNER JOIN public.\"AddressRestaurants\" AS a ON r.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON r.\"IdCategoryRestaurant\" = c.\"Id\"
+WHERE r.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:57:48.7584514-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__id_0='692461c9-248d-44a0-8555-969e3833074d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryProducts\" AS c
+WHERE c.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T14:57:48.7650741-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='8fde3a49-15dc-466c-9ce6-24e25612a735', @p1='2022-04-04T14:57:48.7591506-03:00' (DbType = DateTime), @p2='Soap and noodle' (Nullable = false), @p3='692461c9-248d-44a0-8555-969e3833074d', @p4='592db5ef-1d26-4ff1-a00b-31fa707715e0', @p5='https://en.freejpg.com.ar/image-900/ef/efd8/F100029595-ramen_dish.jpg' (Nullable = false), @p6='True', @p7='Lame' (Nullable = false), @p8='100', @p9='2022-04-04T14:57:48.7591576-03:00' (DbType = DateTime), @p10='False', @p11='False'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Products\" (\"Id\", \"CreatedAt\", \"Description\", \"IdCategoryProduct\", \"IdRestaurant\", \"Image\", \"Kosher\", \"Name\", \"Price\", \"UpdatedAt\", \"Vegan\", \"Vegetarian\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);" (0723d8ff)
+2022-04-04T14:57:48.7682531-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T14:57:48.7689084-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)" in 51.2305ms (afa2e885)
+2022-04-04T14:57:48.7689468-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T14:57:48.7691482-03:00 80000007-000a-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/products application/json-patch+json 336 - 200 393 application/json;+charset=utf-8 52.3837ms (791a596a)
+2022-04-04T15:02:37.7706962-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/products application/json-patch+json 339 (ca22a1cb)
+2022-04-04T15:02:37.7707938-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T15:02:37.7712184-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T15:02:37.7713309-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Product\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Product.ProductViewModel]] Create(IHunger.WebAPI.ViewModels.Product.ProductCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.ProductController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T15:02:37.7724513-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T15:02:37.7856062-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__id_0='592db5ef-1d26-4ff1-a00b-31fa707715e0'"], CommandType='Text', CommandTimeout='30']"
+""SELECT r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"Restaurant\" AS r
+INNER JOIN public.\"AddressRestaurants\" AS a ON r.\"IdAddressRestaurant\" = a.\"Id\"
+INNER JOIN public.\"CategoryRestaurants\" AS c ON r.\"IdCategoryRestaurant\" = c.\"Id\"
+WHERE r.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T15:02:37.7961322-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__id_0='692461c9-248d-44a0-8555-969e3833074d'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM public.\"CategoryProducts\" AS c
+WHERE c.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T15:02:37.8025259-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='a17cd2d2-7a3b-45de-a3fa-8a8a760c8fea', @p1='2022-04-04T15:02:37.7967355-03:00' (DbType = DateTime), @p2='A little of everything' (Nullable = false), @p3='692461c9-248d-44a0-8555-969e3833074d', @p4='592db5ef-1d26-4ff1-a00b-31fa707715e0', @p5='https://en.freejpg.com.ar/image-900/45/457c/F100009987-sushi.jpg' (Nullable = false), @p6='True', @p7='Combo' (Nullable = false), @p8='500', @p9='2022-04-04T15:02:37.7967516-03:00' (DbType = DateTime), @p10='False', @p11='False'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Products\" (\"Id\", \"CreatedAt\", \"Description\", \"IdCategoryProduct\", \"IdRestaurant\", \"Image\", \"Kosher\", \"Name\", \"Price\", \"UpdatedAt\", \"Vegan\", \"Vegetarian\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);" (0723d8ff)
+2022-04-04T15:02:37.8130972-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T15:02:37.8137860-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)" in 42.3935ms (afa2e885)
+2022-04-04T15:02:37.8138296-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T15:02:37.8142410-03:00 80000012-0006-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/products application/json-patch+json 339 - 200 396 application/json;+charset=utf-8 43.3577ms (791a596a)
+2022-04-04T15:02:59.4748707-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/products - - (ca22a1cb)
+2022-04-04T15:02:59.4755846-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.GetAllWithFilter (IHunger.WebAPI)"' (500cc934)
+2022-04-04T15:02:59.4862821-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllWithFilter\", controller = \"Product\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.Product.ProductViewModel]] GetAllWithFilter(IHunger.Infra.CrossCutting.Filters.ProductFilter)" on controller "IHunger.WebAPI.V1.Controllers.ProductController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T15:02:59.4928678-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T15:02:59.5012653-03:00 8000000c-0008-ff00-b63f-84710c7967bb [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. (5b3e5b60)
+2022-04-04T15:02:59.5379811-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__p_0='25'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.\"Id\", t.\"CreatedAt\", t.\"Description\", t.\"IdCategoryProduct\", t.\"IdRestaurant\", t.\"Image\", t.\"Kosher\", t.\"Name\", t.\"Price\", t.\"UpdatedAt\", t.\"Vegan\", t.\"Vegetarian\", r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM (
+    SELECT p.\"Id\", p.\"CreatedAt\", p.\"Description\", p.\"IdCategoryProduct\", p.\"IdRestaurant\", p.\"Image\", p.\"Kosher\", p.\"Name\", p.\"Price\", p.\"UpdatedAt\", p.\"Vegan\", p.\"Vegetarian\"
+    FROM public.\"Products\" AS p
+    LIMIT @__p_0
+) AS t
+INNER JOIN public.\"Restaurant\" AS r ON t.\"IdRestaurant\" = r.\"Id\"
+INNER JOIN public.\"CategoryProducts\" AS c ON t.\"IdCategoryProduct\" = c.\"Id\"" (0723d8ff)
+2022-04-04T15:02:59.5721637-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.Product.ProductViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T15:02:59.5747778-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.ProductController.GetAllWithFilter (IHunger.WebAPI)" in 88.3992ms (afa2e885)
+2022-04-04T15:02:59.5748379-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.GetAllWithFilter (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T15:02:59.5751538-03:00 8000000c-0008-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/products - - - 200 3008 application/json;+charset=utf-8 100.2971ms (791a596a)
+2022-04-04T15:03:23.2385460-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/products?IdRestaurant=592db5ef-1d26-4ff1-a00b-31fa707715e0 - - (ca22a1cb)
+2022-04-04T15:03:23.2400520-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.GetAllWithFilter (IHunger.WebAPI)"' (500cc934)
+2022-04-04T15:03:23.2403301-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAllWithFilter\", controller = \"Product\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.Product.ProductViewModel]] GetAllWithFilter(IHunger.Infra.CrossCutting.Filters.ProductFilter)" on controller "IHunger.WebAPI.V1.Controllers.ProductController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T15:03:23.2496111-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T15:03:23.2567253-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='25'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.\"Id\", t.\"CreatedAt\", t.\"Description\", t.\"IdCategoryProduct\", t.\"IdRestaurant\", t.\"Image\", t.\"Kosher\", t.\"Name\", t.\"Price\", t.\"UpdatedAt\", t.\"Vegan\", t.\"Vegetarian\", r.\"Id\", r.\"CreatedAt\", r.\"Description\", r.\"IdAddressRestaurant\", r.\"IdCategoryRestaurant\", r.\"Image\", r.\"Name\", r.\"UpdatedAt\", c.\"Id\", c.\"CreatedAt\", c.\"Description\", c.\"Name\", c.\"UpdatedAt\"
+FROM (
+    SELECT p.\"Id\", p.\"CreatedAt\", p.\"Description\", p.\"IdCategoryProduct\", p.\"IdRestaurant\", p.\"Image\", p.\"Kosher\", p.\"Name\", p.\"Price\", p.\"UpdatedAt\", p.\"Vegan\", p.\"Vegetarian\"
+    FROM public.\"Products\" AS p
+    LIMIT @__p_0
+) AS t
+INNER JOIN public.\"Restaurant\" AS r ON t.\"IdRestaurant\" = r.\"Id\"
+INNER JOIN public.\"CategoryProducts\" AS c ON t.\"IdCategoryProduct\" = c.\"Id\"" (0723d8ff)
+2022-04-04T15:03:23.2592564-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.Product.ProductViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T15:03:23.2600017-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.ProductController.GetAllWithFilter (IHunger.WebAPI)" in 19.5607ms (afa2e885)
+2022-04-04T15:03:23.2600659-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.ProductController.GetAllWithFilter (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T15:03:23.2603092-03:00 8000000e-0009-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/products?IdRestaurant=592db5ef-1d26-4ff1-a00b-31fa707715e0 - - - 200 3008 application/json;+charset=utf-8 21.7983ms (791a596a)
+2022-04-04T16:10:40.6326571-03:00  [INF] User profile is available. Using '"C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-04T16:10:41.5935793-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-04T16:10:41.5961301-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-04T16:10:41.5990654-03:00  [INF] Content root path: "D:\TI\git\IHunger_API\IHunger\1 - Application\IHunger.WebAPI" (b5d60022)
+2022-04-04T16:10:41.6274821-03:00 80000014-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - - (ca22a1cb)
+2022-04-04T16:10:42.0474853-03:00 80000014-0000-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 422.3357ms (791a596a)
+2022-04-04T16:10:42.0950133-03:00 80000015-000a-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-04T16:10:42.1004796-03:00 80000015-000a-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 3.7451ms (791a596a)
+2022-04-04T16:10:42.4063069-03:00 80000010-000c-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-04T16:10:42.5943976-03:00 80000010-000c-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.0488ms (791a596a)
+2022-04-04T16:10:45.7867280-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/auth/login application/json-patch+json 59 (ca22a1cb)
+2022-04-04T16:10:45.7909688-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:10:46.0371607-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Login (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:10:46.0676717-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Login\", controller = \"Auth\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(IHunger.WebAPI.ViewModels.User.LoginUserViewModel)" on controller "IHunger.WebAPI.V1.Controllers.AuthController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:10:47.1888175-03:00 80000002-0002-fe00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. (4007092b)
+2022-04-04T16:10:47.4338273-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:10:48.1313988-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("83"ms) [Parameters=["@__normalizedUserName_0='ADMIN@ADMIN.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedUserName\" = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2022-04-04T16:10:48.3349561-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__user_Id_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-04-04T16:10:48.3897630-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-04-04T16:10:48.4050167-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2022-04-04T16:10:48.4212406-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedEmail_0='ADMIN@ADMIN.COM'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"AccessFailedCount\", a.\"ConcurrencyStamp\", a.\"Email\", a.\"EmailConfirmed\", a.\"IdProfileUser\", a.\"LockoutEnabled\", a.\"LockoutEnd\", a.\"NormalizedEmail\", a.\"NormalizedUserName\", a.\"PasswordHash\", a.\"PhoneNumber\", a.\"PhoneNumberConfirmed\", a.\"SecurityStamp\", a.\"TwoFactorEnabled\", a.\"UserName\"
+FROM public.\"AspNetUsers\" AS a
+WHERE a.\"NormalizedEmail\" = @__normalizedEmail_0
+LIMIT 2" (0723d8ff)
+2022-04-04T16:10:48.4363179-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__user_Id_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Id\", a.\"ClaimType\", a.\"ClaimValue\", a.\"UserId\"
+FROM public.\"AspNetUserClaims\" AS a
+WHERE a.\"UserId\" = @__user_Id_0" (0723d8ff)
+2022-04-04T16:10:48.4440234-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='2e761013-9be2-4cf9-83e0-02a39054235b'"], CommandType='Text', CommandTimeout='30']"
+""SELECT a0.\"Name\"
+FROM public.\"AspNetUserRoles\" AS a
+INNER JOIN public.\"AspNetRoles\" AS a0 ON a.\"RoleId\" = a0.\"Id\"
+WHERE a.\"UserId\" = @__userId_0" (0723d8ff)
+2022-04-04T16:10:48.5002843-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__id_0='f3a7ce7e-23c5-4160-8b16-a4f169f1927f'"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"BirthDate\", p.\"CreatedAt\", p.\"IdAddressUser\", p.\"LastName\", p.\"Name\", p.\"Type\", p.\"UpdatedAt\", a.\"Id\", a.\"City\", a.\"County\", a.\"CreatedAt\", a.\"District\", a.\"Latitude\", a.\"Longitude\", a.\"Street\", a.\"UpdatedAt\", a.\"ZipCode\"
+FROM public.\"ProfileUsers\" AS p
+INNER JOIN public.\"AddressUsers\" AS a ON p.\"IdAddressUser\" = a.\"Id\"
+WHERE p.\"Id\" = @__id_0
+LIMIT 1" (0723d8ff)
+2022-04-04T16:10:48.5162821-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:10:48.5827730-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.AuthController.Login (IHunger.WebAPI)" in 2510.3329ms (afa2e885)
+2022-04-04T16:10:48.5832064-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.AuthController.Login (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:10:48.5923091-03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/auth/login application/json-patch+json 59 - 200 3018 application/json;+charset=utf-8 2805.5460ms (791a596a)
+2022-04-04T16:13:32.9917850-03:00  [INF] User profile is available. Using '"C:\Users\pc\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2022-04-04T16:13:33.4873827-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-04-04T16:13:33.4896547-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-04-04T16:13:33.4916339-03:00  [INF] Content root path: "D:\TI\git\IHunger_API\IHunger\1 - Application\IHunger.WebAPI" (b5d60022)
+2022-04-04T16:13:33.5128331-03:00 80000002-000f-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/index.html - - (ca22a1cb)
+2022-04-04T16:13:33.8535211-03:00 80000002-000f-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/index.html - - - 200 - text/html;charset=utf-8 343.5852ms (791a596a)
+2022-04-04T16:13:34.0166669-03:00 8000000e-0003-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2022-04-04T16:13:34.0212331-03:00 8000000e-0003-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 4.2334ms (791a596a)
+2022-04-04T16:13:34.1823494-03:00 8000001c-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - (ca22a1cb)
+2022-04-04T16:13:34.3754757-03:00 8000001c-0006-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.0808ms (791a596a)
+2022-04-04T16:14:06.6575225-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:14:06.6614312-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:14:06.8840929-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:14:06.9118346-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:14:08.0285208-03:00 80000016-0000-ff00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. (4007092b)
+2022-04-04T16:14:08.2588113-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:14:08.8563334-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("76"ms) [Parameters=["@__coupon_Code_0='20OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:14:09.0515054-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='6c02a2db-85cb-441f-8015-0e8fc3eefe39', @p1='20OFF' (Nullable = false), @p2='2022-04-04T16:14:08.9593789-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:14:08.9627680-03:00' (DbType = DateTime), @p5='20'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:14:09.0966374-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:14:09.1499104-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 2232.891ms (afa2e885)
+2022-04-04T16:14:09.1504362-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:14:09.1581673-03:00 80000016-0000-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 228 application/json;+charset=utf-8 2500.7280ms (791a596a)
+2022-04-04T16:14:17.3102333-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:14:17.3104946-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:14:17.3135441-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:14:17.3138372-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:14:17.3693976-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:14:17.3792187-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__coupon_Code_0='50OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:14:17.3891806-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='f099eecd-dbed-4de0-a20e-8a12b9e779db', @p1='50OFF' (Nullable = false), @p2='2022-04-04T16:14:17.3828980-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:14:17.3829056-03:00' (DbType = DateTime), @p5='50'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:14:17.3923702-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:14:17.3935173-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 79.5774ms (afa2e885)
+2022-04-04T16:14:17.3935722-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:14:17.3942494-03:00 80000013-000a-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 228 application/json;+charset=utf-8 83.9010ms (791a596a)
+2022-04-04T16:14:24.6568004-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:14:24.6568972-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:14:24.6578501-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:14:24.6579641-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:14:24.6692925-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:14:24.6752018-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__coupon_Code_0='10OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:14:24.6859041-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='68e20902-bfe9-4b60-91da-533fece730bb', @p1='10OFF' (Nullable = false), @p2='2022-04-04T16:14:24.6779250-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:14:24.6779336-03:00' (DbType = DateTime), @p5='10'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:14:24.6891175-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:14:24.6897686-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 31.7554ms (afa2e885)
+2022-04-04T16:14:24.6898130-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:14:24.6900230-03:00 80000008-0005-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 228 application/json;+charset=utf-8 33.2435ms (791a596a)
+2022-04-04T16:14:35.4626969-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:14:35.4627915-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:14:35.4632502-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:14:35.4633309-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:14:35.4642049-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:14:35.4696786-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__coupon_Code_0='30OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:14:35.4796843-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='b81fd601-ca56-46b3-9697-fb579b364849', @p1='30OFF' (Nullable = false), @p2='2022-04-04T16:14:35.4713895-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:14:35.4714012-03:00' (DbType = DateTime), @p5='30'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:14:35.4825020-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:14:35.4832211-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 19.829ms (afa2e885)
+2022-04-04T16:14:35.4832725-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:14:35.4834880-03:00 8000001d-0004-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 229 application/json;+charset=utf-8 20.8014ms (791a596a)
+2022-04-04T16:14:42.3029585-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:14:42.3030775-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:14:42.3035840-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:14:42.3036770-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:14:42.3043964-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:14:42.3106373-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__coupon_Code_0='40OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:14:42.3231054-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='3e6a7af1-39ad-47dc-9d36-183c0d39d19d', @p1='40OFF' (Nullable = false), @p2='2022-04-04T16:14:42.3132898-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:14:42.3133077-03:00' (DbType = DateTime), @p5='40'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:14:42.3264014-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:14:42.3273823-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 23.6308ms (afa2e885)
+2022-04-04T16:14:42.3274551-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:14:42.3277749-03:00 80000015-000a-fe00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 229 application/json;+charset=utf-8 24.8244ms (791a596a)
+2022-04-04T16:14:52.3199683-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:14:52.3203383-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:14:52.3207914-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:14:52.3208808-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:14:52.3216488-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:14:52.3273004-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__coupon_Code_0='60OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:14:52.3359075-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='ac73632a-f725-4376-8033-f1937608d247', @p1='60OFF' (Nullable = false), @p2='2022-04-04T16:14:52.3293360-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:14:52.3293435-03:00' (DbType = DateTime), @p5='60'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:14:52.3397355-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:14:52.3404051-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 19.4488ms (afa2e885)
+2022-04-04T16:14:52.3405239-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:14:52.3408816-03:00 8000001f-0004-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 228 application/json;+charset=utf-8 20.8967ms (791a596a)
+2022-04-04T16:15:01.2163166-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:15:01.2163987-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:15:01.2169120-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:15:01.2170489-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:15:01.2179082-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:15:01.2312473-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__coupon_Code_0='70OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:15:01.2382206-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='83497863-06ed-46c8-911f-143fc901d989', @p1='70OFF' (Nullable = false), @p2='2022-04-04T16:15:01.2327609-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:15:01.2327696-03:00' (DbType = DateTime), @p5='70'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:15:01.2415088-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:15:01.2422292-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 25.0614ms (afa2e885)
+2022-04-04T16:15:01.2422815-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:15:01.2425124-03:00 80000021-0004-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 229 application/json;+charset=utf-8 26.1929ms (791a596a)
+2022-04-04T16:15:08.2044800-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:15:08.2046317-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:15:08.2052148-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:15:08.2053323-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:15:08.2067603-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:15:08.2125755-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__coupon_Code_0='80OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:15:08.2210710-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='2fefdc52-06c4-4b0d-915d-6f70350726e8', @p1='80OFF' (Nullable = false), @p2='2022-04-04T16:15:08.2146949-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:15:08.2148382-03:00' (DbType = DateTime), @p5='80'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:15:08.2241428-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:15:08.2247272-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 19.345ms (afa2e885)
+2022-04-04T16:15:08.2247608-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:15:08.2250003-03:00 80000002-0007-fd00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 229 application/json;+charset=utf-8 20.5718ms (791a596a)
+2022-04-04T16:15:15.5158892-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 (ca22a1cb)
+2022-04-04T16:15:15.5159859-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:15:15.5164267-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:15:15.5165136-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:15:15.5173999-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:15:15.5282094-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__coupon_Code_0='90OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:15:15.5364287-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='fdaf7a4c-3c96-4f10-bf07-b28db4a1120d', @p1='90OFF' (Nullable = false), @p2='2022-04-04T16:15:15.5299921-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:15:15.5301384-03:00' (DbType = DateTime), @p5='90'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:15:15.5395559-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:15:15.5401224-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 23.5649ms (afa2e885)
+2022-04-04T16:15:15.5401654-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:15:15.5403549-03:00 80000019-0002-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 78 - 200 229 application/json;+charset=utf-8 24.4734ms (791a596a)
+2022-04-04T16:15:24.3229669-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 80 (ca22a1cb)
+2022-04-04T16:15:24.3230418-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] CORS policy execution successful. (5409d6ef)
+2022-04-04T16:15:24.3238266-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:15:24.3239253-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Create\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] Create(IHunger.WebAPI.ViewModels.Coupon.CouponCreatedViewModel)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:15:24.3248054-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:15:24.3314081-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__coupon_Code_0='100OFF'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE (c.\"Code\" = @__coupon_Code_0) AND (c.\"ExpireAt\" < now())" (0723d8ff)
+2022-04-04T16:15:24.3401956-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='e2dda0b4-51df-4e5c-932b-09e4deca4598', @p1='100OFF' (Nullable = false), @p2='2022-04-04T16:15:24.3338931-03:00' (DbType = DateTime), @p3='2023-04-04T19:13:42.7840000Z' (DbType = DateTime), @p4='2022-04-04T16:15:24.3340532-03:00' (DbType = DateTime), @p5='100'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO public.\"Coupons\" (\"Id\", \"Code\", \"CreatedAt\", \"ExpireAt\", \"UpdatedAt\", \"Value\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2022-04-04T16:15:24.3429437-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2022-04-04T16:15:24.3434898-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)" in 19.5181ms (afa2e885)
+2022-04-04T16:15:24.3435332-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.Create (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:15:24.3437474-03:00 80000010-0003-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 POST https://localhost:44372/api/v1/coupons application/json-patch+json 80 - 200 231 application/json;+charset=utf-8 20.8055ms (791a596a)
+2022-04-04T16:15:30.1431067-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2 GET https://localhost:44372/api/v1/coupons?ative=true - - (ca22a1cb)
+2022-04-04T16:15:30.1436121-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Executing endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.GetAll (IHunger.WebAPI)"' (500cc934)
+2022-04-04T16:15:30.1480077-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"GetAll\", controller = \"Coupon\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel]] GetAll(Boolean)" on controller "IHunger.WebAPI.V1.Controllers.CouponController" ("IHunger.WebAPI"). (122b2fdf)
+2022-04-04T16:15:30.1562663-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Entity Framework Core "6.0.1" initialized '"DataIdentityDbContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.2+854d2438884c0bf3a4ba8ccde2c47f7ba1ea3a4c"' with options: "SensitiveDataLoggingEnabled " (d2805559)
+2022-04-04T16:15:30.1759611-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"Code\", c.\"CreatedAt\", c.\"ExpireAt\", c.\"UpdatedAt\", c.\"Value\"
+FROM public.\"Coupons\" AS c
+WHERE c.\"ExpireAt\" > now()" (0723d8ff)
+2022-04-04T16:15:30.1933028-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Executing "ObjectResult", writing value of type '"System.Collections.Generic.List`1[[IHunger.WebAPI.ViewModels.Coupon.CouponViewModel, IHunger.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2022-04-04T16:15:30.1994241-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Executed action "IHunger.WebAPI.V1.Controllers.CouponController.GetAll (IHunger.WebAPI)" in 51.3483ms (afa2e885)
+2022-04-04T16:15:30.1994757-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Executed endpoint '"IHunger.WebAPI.V1.Controllers.CouponController.GetAll (IHunger.WebAPI)"' (99874f2b)
+2022-04-04T16:15:30.1996540-03:00 8000001e-0006-ff00-b63f-84710c7967bb [INF] Request finished HTTP/2 GET https://localhost:44372/api/v1/coupons?ative=true - - - 200 2092 application/json;+charset=utf-8 56.5521ms (791a596a)

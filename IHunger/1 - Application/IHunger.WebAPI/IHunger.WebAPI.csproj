@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="Extensions\" />
+    <Folder Include="Logs\" />
     <Folder Include="V1\Controllers\" />
   </ItemGroup>
 

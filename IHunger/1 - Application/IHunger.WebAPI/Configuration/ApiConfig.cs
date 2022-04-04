@@ -35,7 +35,6 @@ namespace IHunger.WebAPI.Configuration
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
-
             });
             
             services.AddCors(options =>

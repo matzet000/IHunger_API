@@ -13,6 +13,7 @@ namespace IHunger.Domain.Interfaces
         Task Add(TEntity entity);
         Task<TEntity> GetById(Guid id);
         Task<List<TEntity>> GetAll();
+        Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
         void Update(TEntity entity);
         void Remove(Guid id);
         Task<List<TEntity>> Search(
